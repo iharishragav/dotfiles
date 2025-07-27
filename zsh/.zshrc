@@ -1,10 +1,13 @@
-#zshrc
-echo "eval \"\$(starship init zsh)\"" >> ${ZSOTDIR:-$HOME}/.zshrc
+# ─── Starship Prompt ───
+if [[ -z "$STARSHIP_SOURCED" ]]; then
+  eval "$(starship init zsh)"
+  export STARSHIP_SOURCED=1
+fi
 
-# Return if not interactive shell
+# ─── Return if not interactive ───
 [[ $- != *i* ]] && return
 
-# Aliases
+# ─── Aliases ───
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ..='cd ..'
@@ -21,7 +24,7 @@ alias Gs='git status'
 alias c='clear'
 alias l='lsd'
 
-# Memory cleanup functions
+# ─── Memory Cleanup ───
 freemem() {
   echo -e "\nBefore:"
   free -h
@@ -34,63 +37,16 @@ freeswap() {
   sudo swapoff -a && sudo swapon -a
 }
 
-# Git branch in prompt (Zsh style function)
-parse_git_branch() {
-  local branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
-  [[ -n "$branch" ]] && echo " (git: $branch)"
-}
-
-# PROMPT: fallback if Starship is not used
-if [[ -z "$STARSHIP_SHELL" ]]; then
-  PROMPT='%F{cyan}[%n💀%m] %1~$(parse_git_branch)%f %# '
-fi
-
-# neofetch on shell start
-#command -v neofetch &>/dev/null && neofetch
-
-# PATH exports (clean and organized)
+# ─── PATH Exports ───
 export JAVA_HOME="/usr/local/jdk-21.0.5+11"
 export JRE_HOME="$JAVA_HOME"
 export PATH="$HOME/.local/bin:$JAVA_HOME/bin:$HOME/go/bin:$PATH"
 
-
-# plugins (zsh-autosuggestions + zsh-syntax-highlighting)
-
-if [[ -r ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ─── ZSH Plugins ───
+if [[ -f "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
-if [[ -r ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && ! typeset -f _zsh_highlight &>/dev/null; then
+  source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
-
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
-eval "$(starship init zsh)"
