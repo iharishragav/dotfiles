@@ -42,6 +42,29 @@ export JAVA_HOME="/usr/local/jdk-21.0.5+11"
 export JRE_HOME="$JAVA_HOME"
 export PATH="$HOME/.local/bin:$JAVA_HOME/bin:$HOME/go/bin:$PATH"
 
+
+# Use emacs-style keybindings (default in most setups)
+bindkey -e
+
+# Ctrl + Backspace = delete previous word
+bindkey '^H' backward-kill-word
+
+# Ctrl + Delete = delete next word
+bindkey '^[[3;5~' kill-word
+
+# Arrow up/down for partial history search
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+
+# Ctrl + Right Arrow → move to next word
+bindkey '^[[1;5C' forward-word
+
+# Ctrl + Left Arrow → move to previous word
+bindkey '^[[1;5D' backward-word
 # ─── ZSH Plugins ───
 if [[ -f "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
   source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -50,3 +73,5 @@ fi
 if [[ -f "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && ! typeset -f _zsh_highlight &>/dev/null; then
   source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
+
+
