@@ -1,0 +1,50 @@
+{
+    "positionX": "center",
+    "positionY": "top",
+    "layer": "overlay",
+    "control-center-layer": "top",
+    "layer-shell": true,
+    "cssPriority": "user",
+    "control-center-margin-top": 10,
+    "control-center-margin-bottom": 10,
+    "control-center-margin-right": 10,
+    "control-center-margin-left": 10,
+    "notification-window-width": 500,
+    "notification-body-image-height": 100,
+    "notification-body-image-width": 100,
+    "timeout": 10,
+    "timeout-low": 5,
+    "timeout-critical": 0,
+    "notification-padding": 10,
+    "notification-spacing": 10,
+    "notification-icon-size": 64,
+    "notification-max-height": 200,
+    "notification-corner-radius": 10,
+    "control-center-corner-radius": 10,
+    "control-center-width": 500,
+    "control-center-height": 800,
+    "control-center-background": "#1f1f1f",
+    "control-center-border-size": 2,
+    "control-center-border-color": "#ffffff",
+    "notification-background": "#1f1f1f",
+    "notification-border-size": 2,
+    "notification-border-color": "#ffffff",
+    "notification-text-color": "#e2e2e2",
+    "close-button-background": "#ffffff",
+    "close-button-text-color": "#1f1f1f",
+    "widgets": [
+        "title",
+        "dnd",
+        "notifications"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "Notifications",
+            "clear-all-button": true,
+            "button-text": "Clear All"
+        },
+        "dnd": {
+            "text": "Do Not Disturb"
+        }
+    }
+}

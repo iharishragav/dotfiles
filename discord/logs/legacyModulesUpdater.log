@@ -1,0 +1,22 @@
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Modules initializing
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Distribution: remote
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Host updates: enabled
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Module updates: enabled
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Module install path: /home/kamalesh/.config/discord/0.0.104/modules
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Module installed file path: /home/kamalesh/.config/discord/0.0.104/modules/installed.json
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Module download path: /home/kamalesh/.config/discord/0.0.104/modules/pending
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Bootstrapping...
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_desktop_core@0 from /opt/discord/resources/bootstrap/discord_desktop_core.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_desktop_core@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_desktop_core.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_erlpack@0 from /opt/discord/resources/bootstrap/discord_erlpack.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_erlpack@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_erlpack.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_spellcheck@0 from /opt/discord/resources/bootstrap/discord_spellcheck.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_spellcheck@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_spellcheck.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_utils@0 from /opt/discord/resources/bootstrap/discord_utils.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_utils@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_utils.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_voice@0 from /opt/discord/resources/bootstrap/discord_voice.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_voice@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_voice.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Installing discord_zstd@0 from /opt/discord/resources/bootstrap/discord_zstd.zip
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Failed installing discord_zstd@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_zstd.zip'
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Finished module installations. [success: 0] [failure: 6]
+8/13/2025, 1:35:24 PM GMT+5:30 [Modules] Checking for host updates.

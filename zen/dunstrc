@@ -1,0 +1,15 @@
+[global]
+    font = JetBrainsMono Nerd Font 12
+    frame_color = "#ffffff"
+    separator_color = frame
+    background = "#1f1f1f"
+    foreground = "#e2e2e2"
+    corner_radius = 6
+    transparency = 10
+    width = 400
+    offset = 20x50
+    padding = 16
+    horizontal_padding = 16
+    icon_position = left
+    geometry = "0x0+0-0"
+    origin = top-center
