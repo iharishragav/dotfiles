@@ -1,0 +1,23 @@
+2025-10-23 13:11:49.473 [error] Error getting repo info: Failed to execute git
+2025-10-23 13:11:49.473 [error] Error: Failed to execute git
+	at t.Git._exec (/tmp/.mount_cursor3hnK1A/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:34408)
+	at async t.Git.exec (/tmp/.mount_cursor3hnK1A/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:33531)
+	at async t.GitProvider.executeGitCommandStable (/tmp/.mount_cursor3hnK1A/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1287776)
+	at async t.GitProvider.getRepoInfo (/tmp/.mount_cursor3hnK1A/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1263728)
+2025-10-23 13:11:49.486 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-23 13:11:49.486 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-23 13:11:49.770 [error] NoWorkspaceUriError
+2025-10-23 13:11:49.919 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:11:49.949 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:11:50.010 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:11:50.014 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:11:55.894 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:11:55.895 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:11:55.914 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:11:55.928 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:11:56.027 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:11:56.032 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:11:56.131 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:11:56.135 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:11:59.063 [error] Error getting git status: Failed to execute git
+2025-10-23 13:12:04.904 [error] Error getting git status: Failed to execute git

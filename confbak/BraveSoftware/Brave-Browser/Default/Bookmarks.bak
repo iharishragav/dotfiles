@@ -1,0 +1,69 @@
+{
+   "checksum": "0e99e5362e339ecbcee3eb5b24037b92",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13405671137268675",
+            "date_last_used": "0",
+            "guid": "e2b05951-08ef-4f03-80a0-18564d640504",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Downloads",
+            "type": "url",
+            "url": "chrome://downloads/"
+         }, {
+            "date_added": "13406033700055818",
+            "date_last_used": "0",
+            "guid": "2063953d-1267-4622-a0a2-b80e558ac5b8",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Download Arduino command",
+            "type": "url",
+            "url": "https://chatgpt.com/c/68ff39bb-4640-8321-ac9b-f4a498e2d912"
+         }, {
+            "date_added": "13406302145707940",
+            "date_last_used": "0",
+            "guid": "055b85f8-28c7-49dd-80f8-81e279cc346e",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "PEC Hacks 3.0 PPT Format.pdf - Discord Banner",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAG3RKlCK-M/ZG8UNXOmJbO-znevSSJU9Q/edit"
+         } ],
+         "date_added": "13405668790634067",
+         "date_last_used": "0",
+         "date_modified": "13406302145707940",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13405668790634067",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13405668790634067",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

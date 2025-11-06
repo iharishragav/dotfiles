@@ -1,0 +1,25 @@
+{
+	"windowstate": {
+		"isFullScreen": false,
+		"isMaximized": true,
+		"width": 1920,
+		"height": 1052,
+		"x": 0,
+		"y": 28,
+		"frame": true,
+		"screenLayout": "0:0:1920:1080",
+		"backgroundColor": "#FFFFFF"
+	},
+	"workspaces": [
+		{
+			"x": 0,
+			"y": 28,
+			"width": 1920,
+			"height": 1052,
+			"isMaximized": true,
+			"isFullScreen": false,
+			"file": "/home/kamal/Arduino/led/led.ino",
+			"time": 1761565743809
+		}
+	]
+}

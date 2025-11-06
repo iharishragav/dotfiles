@@ -1,0 +1,9 @@
+2025-10-24 15:35:01.345 [info] updateURL https://api2.cursor.sh/updates/api/update/linux-x64/cursor/1.7.54/8aa42934aae45760914e714576fb79b644a2dd4a0eb5759d5116b9fb967ac782/stable
+2025-10-24 15:35:01.346 [info] update#setState idle
+2025-10-24 15:35:04.765 [error] vscode-file: Refused to load resource /tmp/.mount_cursorN5m0cb/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/tmp/.mount_cursorN5m0cb/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff)
+2025-10-24 15:35:31.348 [info] update#setState checking for updates
+2025-10-24 15:35:32.494 [info] update#setState idle
+2025-10-24 16:36:43.458 [info] update#setState checking for updates
+2025-10-24 16:36:44.465 [info] update#setState idle
+2025-10-24 16:52:17.260 [info] Extension host with pid 23199 exited with code: 0, signal: unknown.
+2025-10-24 16:52:36.573 [info] Extension host with pid 29037 exited with code: 0, signal: unknown.

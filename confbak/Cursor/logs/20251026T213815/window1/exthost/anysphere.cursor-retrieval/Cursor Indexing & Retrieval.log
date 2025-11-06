@@ -1,0 +1,1287 @@
+2025-10-26 21:38:26.286 [error] Error getting repo info: Failed to execute git
+2025-10-26 21:38:26.286 [error] Error: Failed to execute git
+	at t.Git._exec (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:34408)
+	at async t.Git.exec (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:33531)
+	at async t.GitProvider.executeGitCommandStable (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1287776)
+	at async t.GitProvider.getRepoInfo (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1263728)
+2025-10-26 21:38:26.286 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-26 21:38:26.286 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-26 21:38:26.286 [info] Using existing keys for an index
+2025-10-26 21:38:26.286 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-26 21:38:26.302 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-26 21:38:26.313 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '/home/kamal/ObsidianVault/target/anytask/.git/HEAD')
+2025-10-26 21:38:26.371 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-26 21:38:26.375 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-26 21:38:26.499 [info] Using existing keys for an index
+2025-10-26 21:38:26.499 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-26 21:38:26.506 [info] Setting global status from status tracker: synced
+2025-10-26 21:38:26.506 [info] Doing a startup handshake.
+2025-10-26 21:38:26.871 [info] Finished computing merkle tree in 50.095438000000286 ms.
+2025-10-26 21:38:26.873 [info] Doing the initial handshake with hash: 93e47292d0f062ef16f5071ea505dd30826a511ba3179ece8287e216c8a93da9
+2025-10-26 21:38:26.878 [info] Computed simhash vector of length: 256
+2025-10-26 21:38:26.878 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:38:26.878 [info] Handshake start
+2025-10-26 21:38:30.883 [warning] Retrying handshake with timeout 4000. Error:  [deadline_exceeded] the operation timed out
+2025-10-26 21:38:30.883 [info] Handshake start
+2025-10-26 21:38:31.236 [info] Handshake timing: 354.43564200000037, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"f03840d9-e55b-4f00-832c-8ea83e0c800d","status":"STATUS_EMPTY","copyTaskHandle":""},{"codebaseId":"1972706c-b8f3-4a77-a08a-25e762e28100","status":"STATUS_OUT_OF_SYNC","copyTaskHandle":""}]}
+2025-10-26 21:38:31.236 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"f03840d9-e55b-4f00-832c-8ea83e0c800d","status":"STATUS_EMPTY","copyTaskHandle":""},{"codebaseId":"1972706c-b8f3-4a77-a08a-25e762e28100","status":"STATUS_OUT_OF_SYNC","copyTaskHandle":""}]}
+2025-10-26 21:38:31.236 [info] Starting fast remote sync.
+2025-10-26 21:38:31.237 [info] Total num embeddable files: 111
+2025-10-26 21:38:31.238 [info] Root hash: 93e47292d0f062ef16f5071ea505dd30826a511ba3179ece8287e216c8a93da9
+2025-10-26 21:38:31.238 [info] Starting repository upload from scratch.
+2025-10-26 21:38:31.238 [info] In the out of sync case.
+2025-10-26 21:38:31.239 [info] Uploading 111 files.
+2025-10-26 21:38:31.241 [info] Waiting on semaphore to be released 1
+2025-10-26 21:38:31.243 [info] Total number of files to embed: 111
+2025-10-26 21:38:31.243 [info] Not aborted
+2025-10-26 21:38:31.243 [info] Starting while loop.
+2025-10-26 21:38:31.252 [info] syncing batch of 2 files and 5840 bytes
+2025-10-26 21:38:31.440 [info] Waiting on semaphore to be released 1
+2025-10-26 21:38:31.642 [info] Waiting on semaphore to be released 1
+2025-10-26 21:38:31.794 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./todo.md
+2025-10-26 21:38:31.795 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./burp_spider_commands.sh
+2025-10-26 21:38:31.796 [info] syncing batch of 4 files and 11203 bytes
+2025-10-26 21:38:31.841 [info] Waiting on semaphore to be released 1
+2025-10-26 21:38:32.041 [info] setting numJobsToGo to 8
+2025-10-26 21:38:32.041 [info] [startSync]: numJobs: 8
+2025-10-26 21:38:32.041 [info] Uploading 8 files.
+2025-10-26 21:38:32.042 [info] Total number of files to embed: 111
+2025-10-26 21:38:32.042 [info] Not aborted
+2025-10-26 21:38:32.042 [info] Starting while loop.
+2025-10-26 21:38:32.045 [info] syncing batch of 2 files and 11707 bytes
+2025-10-26 21:38:32.780 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./extract_endpoints.sh
+2025-10-26 21:38:32.780 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./anytask.md
+2025-10-26 21:38:32.780 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./js_analysis.md
+2025-10-26 21:38:32.781 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./endpoint_testing.md
+2025-10-26 21:38:32.783 [info] syncing batch of 8 files and 43933 bytes
+2025-10-26 21:38:33.750 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/02_full_portscan.md
+2025-10-26 21:38:33.751 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/05_nse_vuln.md
+2025-10-26 21:38:33.752 [info] syncing batch of 4 files and 33587 bytes
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Testing_Checklist.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Infrastructure_Analysis.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Key Observations.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./adminpanel_analysis.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/05_nse_vuln.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/02_top_ports.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/01_host_discovery.md
+2025-10-26 21:38:33.831 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/06_evasion_timing.md
+2025-10-26 21:38:33.835 [info] syncing batch of 16 files and 225504 bytes
+2025-10-26 21:38:35.770 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/06_evasion_timing.md
+2025-10-26 21:38:35.770 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/02_top_ports.md
+2025-10-26 21:38:35.770 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/03_service_detection.md
+2025-10-26 21:38:35.770 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/06_evasion_srcport.md
+2025-10-26 21:38:35.771 [info] syncing batch of 2 files and 10792 bytes
+2025-10-26 21:38:36.356 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d21f11b.91723031.js
+2025-10-26 21:38:36.356 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/06_evasion_srcport.md
+2025-10-26 21:38:36.357 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/03_service_detection.md
+2025-10-26 21:38:36.357 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/02_full_portscan.md
+2025-10-26 21:38:36.357 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminDiscounts.ad4fabce.js
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nmap_scan_20250817_234020/05_nse_default.md
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0bd97b.1b772ca2.js
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AccountType~AdminJobs.d8e69094.js
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Testing_Strategy.md
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0d7ea3.b216a7ae.js
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./nikto scan.md
+2025-10-26 21:38:36.358 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./burp_commands.md
+2025-10-26 21:38:36.359 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/IntellectualProperty.e78c46d6.js
+2025-10-26 21:38:36.359 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Phase1_Guide.md
+2025-10-26 21:38:36.359 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminUser.67c82cd5.js
+2025-10-26 21:38:36.359 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Test_Cases.md
+2025-10-26 21:38:36.386 [info] syncing batch of 20 files and 439700 bytes
+2025-10-26 21:38:36.393 [info] syncing batch of 12 files and 263820 bytes
+2025-10-26 21:38:37.985 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/05_nse_default.md
+2025-10-26 21:38:37.986 [info] Completed job successfully: 1972706c-b8f3-4a77-a08a-25e762e28100 ./nmap_scan_20250817_234020/01_host_discovery.md
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/TermsConditions.fb56cf6a.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminDisputes~AdminOrders~AdminUser~Inbox~Jobs~Orders.d1983ce7.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d230ff4.2f86d9c2.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AccountLimits.e77ad347.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Category~Search.e639a35d.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d20fce7.c3f497ff.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0da020.f7b94203.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/app.c75afe34.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d2217d5.c659de42.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ConnectEtn.faf3ca04.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ConnectApp.8dca4e29.js
+2025-10-26 21:38:38.408 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminFeedback.1adf96a5.js
+2025-10-26 21:38:38.411 [info] syncing batch of 20 files and 439700 bytes
+2025-10-26 21:38:38.412 [info] syncing batch of 4 files and 48448 bytes
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Billing.c7ed3ffa.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0d2e85.3da67b37.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ForgottenPassword.16098299.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d209542.d12702a9.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d207b69.cdba6428.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Admin.9fc47fb4.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0d7e78.5b51b1f8.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/HowPaymentsWork.e2b09161.js
+2025-10-26 21:38:38.600 [info] Completed 50 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d213e5c.e9dd6e61.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminOrders~Orders.4e12cefa.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Category.07eb2155.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/MyTasks.f911fa3a.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Checkout~ConnectApp~settings.7d7ec1f9.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ConfirmEmail.98e9ca13.js
+2025-10-26 21:38:38.600 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/DashboardProfile.a6a0367e.js
+2025-10-26 21:38:38.601 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Sitemap.c685cf10.js
+2025-10-26 21:38:38.601 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d229826.c45cd135.js
+2025-10-26 21:38:38.601 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/BecomeSeller.56a0a354.js
+2025-10-26 21:38:38.601 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/MeetTheSellers.66ecced6.js
+2025-10-26 21:38:38.601 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d207eea.c1b08c30.js
+2025-10-26 21:38:38.603 [info] syncing batch of 20 files and 368217 bytes
+2025-10-26 21:38:38.605 [info] syncing batch of 5 files and 109925 bytes
+2025-10-26 21:38:39.385 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminDisputes~AdminOrders~Orders.8f34a2f4.js
+2025-10-26 21:38:39.385 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./test_discovered_endpoints.sh
+2025-10-26 21:38:39.385 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminDisputes.99681bd7.js
+2025-10-26 21:38:39.385 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./analyze_js_files.sh
+2025-10-26 21:38:40.365 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d20ec34.9e41ea04.js
+2025-10-26 21:38:40.366 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Jobs.bbe92fc8.js
+2025-10-26 21:38:40.366 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ConfirmToken.b35eff83.js
+2025-10-26 21:38:40.366 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Search.d8ba172f.js
+2025-10-26 21:38:40.366 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Checkout.a320f8e1.js
+2025-10-26 21:38:40.550 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0e5ed4.15a4d711.js
+2025-10-26 21:38:40.550 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./tech  stack.md
+2025-10-26 21:38:40.550 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminOrders.2fc8b829.js
+2025-10-26 21:38:40.550 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./infra scan.md
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Parameter_Discovery_Guide.md
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminReports.d29e701d.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./Advanced_Bypass_Techniques.md
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./waf_scan_20250817_235258.md
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Orders.0c1d0090.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0c420a.2e801c7f.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Inbox.0db18b05.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/PrivacyPolicy.e1967572.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminTasksApproval.a50ba4f4.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/settings.ca81b866.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d2109fd.845a4135.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/ErrorPage.fefbf1e9.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminJobs.edb49a29.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminTasks.edd70afb.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AccountType~AdminFeatured~AdminJobs~DashboardProfile~MyTasks.6b841651.js
+2025-10-26 21:38:40.551 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/SSO.8e6ca918.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminFeatured.e44609c8.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0c8e31.be6eb041.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Toolkit.2d683b49.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminGiftCards.7a4bf415.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Welcome.8c3907cd.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/tasks.3738105c.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/WhatIsAnyTasks.318a7128.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d21a5a3.c7161062.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminAccounting.10f7c444.js
+2025-10-26 21:38:40.579 [info] Completed 100 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AccountType.6a270c7a.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminReviews.f0189bd4.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0aa573.ee84f137.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Transactions.0c5ac768.js
+2025-10-26 21:38:40.579 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/WritingYourBrief.67801307.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AnytaskProtection.12d10e8c.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-vendors.108c0350.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/Rewards.da6feb2c.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/AdminPayments.2ea4e1c1.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/SavedTasks.37b4561f.js
+2025-10-26 21:38:40.580 [info] Completed job successfully: f03840d9-e55b-4f00-832c-8ea83e0c800d ./admin_js_files/chunk-2d0cff03.3c3ea3c7.js
+2025-10-26 21:38:40.893 [info] Finishing sync (hasUpdates: true, isErr: false)
+2025-10-26 21:38:40.893 [info] Finishing sync (hasUpdates: true, isErr: false)
+2025-10-26 21:38:42.491 [info] Finished indexing repository.
+2025-10-26 21:38:42.491 [info] Indexing job successfully done or aborted.
+2025-10-26 21:38:49.711 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-26 21:38:49.711 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-26 21:38:49.727 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '/home/kamal/ObsidianVault/target/anytask/.git/HEAD')
+2025-10-26 21:38:49.743 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '/home/kamal/ObsidianVault/target/anytask/.git/HEAD')
+2025-10-26 21:38:49.871 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-26 21:38:49.887 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-26 21:38:49.891 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-26 21:38:49.892 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-26 21:38:53.866 [error] Error getting git status: Failed to execute git
+2025-10-26 21:39:12.870 [info] multiCodebaseIndexingJob dispose
+2025-10-26 21:39:12.870 [info] Aborting indexing job.
+2025-10-26 21:39:18.869 [error] Error getting repo info: Failed to execute git
+2025-10-26 21:39:18.869 [error] Error: Failed to execute git
+	at t.Git._exec (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:34408)
+	at async t.Git.exec (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:33531)
+	at async t.GitProvider.executeGitCommandStable (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1287776)
+	at async t.GitProvider.getRepoInfo (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1263728)
+2025-10-26 21:39:18.872 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-26 21:39:18.872 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-26 21:39:18.884 [info] Making keys for a new index
+2025-10-26 21:39:18.886 [info] Using the default key from the server for a new index
+2025-10-26 21:39:18.886 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-26 21:39:19.277 [info] Using existing keys for an index
+2025-10-26 21:39:19.277 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-26 21:39:19.474 [info] Doing a startup handshake.
+2025-10-26 21:39:19.504 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-26 21:39:19.518 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '/home/kamal/spiderfoot-4.0/.git/HEAD')
+2025-10-26 21:39:19.584 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-26 21:39:19.588 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-26 21:39:19.619 [info] Finished computing merkle tree in 29.517605999999432 ms.
+2025-10-26 21:39:19.621 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:39:19.624 [warning] Error reading high level folder description. Ignoring. Error: ENOENT: no such file or directory, open '/home/kamal/.config/Cursor/User/workspaceStorage/4a47e4f4533785f17e99ae426e133ae8/anysphere.cursor-retrieval/high_level_folder_description.txt'
+2025-10-26 21:39:19.629 [info] Computed simhash vector of length: 256
+2025-10-26 21:39:19.629 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:39:19.629 [info] Handshake start
+2025-10-26 21:39:23.633 [warning] Retrying handshake with timeout 4000. Error:  [deadline_exceeded] the operation timed out
+2025-10-26 21:39:23.633 [info] Handshake start
+2025-10-26 21:39:24.045 [info] Handshake timing: 414.5043119999991, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_EMPTY","copyTaskHandle":""}]}
+2025-10-26 21:39:24.045 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_EMPTY","copyTaskHandle":""}]}
+2025-10-26 21:39:24.046 [info] Starting fast remote sync.
+2025-10-26 21:39:24.046 [info] Total num embeddable files: 599
+2025-10-26 21:39:24.047 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:39:24.047 [info] Starting repository upload from scratch.
+2025-10-26 21:39:24.051 [info] Uploading 599 files.
+2025-10-26 21:39:24.053 [info] Total number of files to embed: 599
+2025-10-26 21:39:24.053 [info] Not aborted
+2025-10-26 21:39:24.053 [info] Starting while loop.
+2025-10-26 21:39:24.058 [info] syncing batch of 2 files and 15274 bytes
+2025-10-26 21:39:24.295 [error] Error getting git status: Failed to execute git
+2025-10-26 21:39:24.611 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docker-compose-full.yml
+2025-10-26 21:39:24.611 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./LICENSE
+2025-10-26 21:39:24.612 [info] syncing batch of 4 files and 88568 bytes
+2025-10-26 21:39:25.680 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./sflib.py
+2025-10-26 21:39:25.680 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./Dockerfile
+2025-10-26 21:39:25.680 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.gitignore
+2025-10-26 21:39:25.680 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docker-compose.yml
+2025-10-26 21:39:25.682 [info] syncing batch of 8 files and 89361 bytes
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/bandit
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/integration/test_sfcli.py
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/integration/test_sf.py
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./sfcli.py
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/integration/test_sfwebui.py
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./requirements.txt
+2025-10-26 21:39:27.817 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/integration/__init__.py
+2025-10-26 21:39:27.818 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./sf.py
+2025-10-26 21:39:27.821 [info] syncing batch of 16 files and 127382 bytes
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.pylintrc
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/acceptance/run
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./generate-certificate
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/acceptance/requirements.txt
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/acceptance/scan.robot
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/conftest.py
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/__init__.py
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/run
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/update-requirements
+2025-10-26 21:39:30.420 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/requirements.txt
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/test_spiderfootcli.py
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/test_spiderfootwebui.py
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/test_spiderfootscanner.py
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/test_spiderfoot.py
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.github/ISSUE_TEMPLATE.md
+2025-10-26 21:39:30.421 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.github/workflows/codeql-analysis.yml
+2025-10-26 21:39:30.442 [info] syncing batch of 20 files and 55606 bytes
+2025-10-26 21:39:30.444 [info] syncing batch of 12 files and 101852 bytes
+2025-10-26 21:39:32.467 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_wikipediaedits.py
+2025-10-26 21:39:32.467 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_nmap.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_reversewhois.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_phishstats.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_darksearch.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spyonweb.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_archiveorg.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfootthreadpool.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfootevent.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfootplugin.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfootdb.py
+2025-10-26 21:39:32.468 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfoottarget.py
+2025-10-26 21:39:32.471 [info] syncing batch of 20 files and 88959 bytes
+2025-10-26 21:39:32.472 [info] syncing batch of 4 files and 68461 bytes
+2025-10-26 21:39:32.672 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.github/workflows/tests.yaml
+2025-10-26 21:39:32.672 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./VERSION
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./sfscan.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docs/make.bat
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docs/index.rst
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docs/Makefile
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docs/spiderfoot.rst
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docs/conf.py
+2025-10-26 21:39:32.673 [info] Completed 50 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_circllu.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_abusech.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp__stor_db.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_torexits.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_certspotter.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_yandexdns.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ethereum.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_alienvault.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_zetalytics.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_malwarepatrol.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_countryname.py
+2025-10-26 21:39:32.673 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsraw.py
+2025-10-26 21:39:32.677 [info] syncing batch of 20 files and 36279 bytes
+2025-10-26 21:39:32.684 [info] syncing batch of 20 files and 38061 bytes
+2025-10-26 21:39:33.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./sfwebui.py
+2025-10-26 21:39:33.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hashes.py
+2025-10-26 21:39:33.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_instagram.py
+2025-10-26 21:39:33.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_intelx.py
+2025-10-26 21:39:33.483 [info] syncing batch of 4 files and 6947 bytes
+2025-10-26 21:39:35.130 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_punkspider.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_builtwith.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_snallygaster.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_socialprofiles.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_viewdns.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_binaryedge.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_mnemonic.py
+2025-10-26 21:39:35.131 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_testsslsh.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_crt.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spyse.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_multiproxy.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ripe.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_jsonwhoiscom.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_opencorporates.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_iban.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_azureblobstorage.py
+2025-10-26 21:39:35.132 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_maltiverse.py
+2025-10-26 21:39:35.133 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_vxvault.py
+2025-10-26 21:39:35.133 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cloudflaredns.py
+2025-10-26 21:39:35.133 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hackertarget.py
+2025-10-26 21:39:35.158 [info] syncing batch of 20 files and 41837 bytes
+2025-10-26 21:39:35.159 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/spiderfoot/test_spiderfoothelpers.py
+2025-10-26 21:39:35.159 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/__init__.py
+2025-10-26 21:39:35.159 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/test_modules.py
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./THANKYOU
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_openbugbounty.py
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./.dockerignore
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_template.py
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./setup.cfg
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dehashed.py
+2025-10-26 21:39:35.160 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_numverify.py
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dronebl.py
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./README.md
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_webanalytics.py
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_emailcrawlr.py
+2025-10-26 21:39:35.161 [info] Completed 100 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./Dockerfile.full
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./docker-compose-dev.yml
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsresolve.py
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_greensnow.py
+2025-10-26 21:39:35.161 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_crobat_api.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_digitaloceanspace.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_fullcontact.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_sslcert.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_neutrinoapi.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_strangeheaders.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_sublist3r.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_fraudguard.py
+2025-10-26 21:39:35.162 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_binstring.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_virustotal.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_filemeta.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_phishtank.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_adguard_dns.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipapicom.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsdumpster.py
+2025-10-26 21:39:35.163 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_voipbl.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_metadefender.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_github.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_whatcms.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_openphish.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_creditcard.py
+2025-10-26 21:39:35.164 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_pgp.py
+2025-10-26 21:39:35.201 [info] syncing batch of 20 files and 53938 bytes
+2025-10-26 21:39:35.219 [info] syncing batch of 20 files and 74562 bytes
+2025-10-26 21:39:35.539 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_company.py
+2025-10-26 21:39:35.540 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_surbl.py
+2025-10-26 21:39:35.540 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_emergingthreats.py
+2025-10-26 21:39:35.540 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_dnstwist.py
+2025-10-26 21:39:35.542 [info] syncing batch of 4 files and 11279 bytes
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_abusix.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_webframework.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_comodo.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_keybase.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_adblock.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_securitytrails.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spider.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_botvrij.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ahmia.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hybrid_analysis.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipregistry.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_grayhatwarfare.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_myspace.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bitcoin.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_threatfox.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_trufflehog.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_grep_app.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_shodan.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_focsec.py
+2025-10-26 21:39:36.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_talosintel.py
+2025-10-26 21:39:36.798 [info] Completed 150 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:36.802 [info] syncing batch of 20 files and 76329 bytes
+2025-10-26 21:39:37.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_duckduckgo.py
+2025-10-26 21:39:37.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_haveibeenpwned.py
+2025-10-26 21:39:37.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_base64.py
+2025-10-26 21:39:37.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_openstreetmap.py
+2025-10-26 21:39:37.516 [info] syncing batch of 4 files and 12052 bytes
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spamhaus.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_subdomain_takeover.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_uceprotect.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_social.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_slideshare.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_trufflehog.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_opendns.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp__stor_stdout.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bingsharedip.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnscommonsrv.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_virustotal.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp__stor_stdout.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spamhaus.py
+2025-10-26 21:39:37.793 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_cmseek.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_botscout.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_abuseipdb.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_debounce.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_threatfox.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_fsecure_riddler.py
+2025-10-26 21:39:37.794 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_alienvaultiprep.py
+2025-10-26 21:39:37.797 [info] syncing batch of 20 files and 83291 bytes
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_googlesearch.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_junkfiles.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_whois.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_fortinet.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_googlemaps.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_twilio.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_clearbit.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_wafw00f.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsgrep.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_fullhunt.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_venmo.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_greynoise.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_social.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_pastebin.py
+2025-10-26 21:39:37.903 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_etherscan.py
+2025-10-26 21:39:37.904 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_wigle.py
+2025-10-26 21:39:37.904 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hybrid_analysis.py
+2025-10-26 21:39:37.904 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tldsearch.py
+2025-10-26 21:39:37.904 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_mnemonic.py
+2025-10-26 21:39:37.904 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bitcoinwhoswho.py
+2025-10-26 21:39:37.907 [info] syncing batch of 20 files and 91532 bytes
+2025-10-26 21:39:38.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_zoneh.py
+2025-10-26 21:39:38.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_koodous.py
+2025-10-26 21:39:38.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_c99.py
+2025-10-26 21:39:38.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_errors.py
+2025-10-26 21:39:38.614 [info] syncing batch of 4 files and 14248 bytes
+2025-10-26 21:39:38.630 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_archiveorg.py
+2025-10-26 21:39:38.630 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_googleobjectstorage.py
+2025-10-26 21:39:38.630 [info] Completed 200 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:38.630 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_customfeed.py
+2025-10-26 21:39:38.630 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_nbtscan.py
+2025-10-26 21:39:38.630 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_honeypot.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hashes.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spamcop.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bitcoin.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_flickr.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_apple_itunes.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_searchcode.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hosting.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_abusix.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_callername.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_voipbl.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_psbdmp.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_commoncrawl.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_junkfiles.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_urlscan.py
+2025-10-26 21:39:38.631 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_crossref.py
+2025-10-26 21:39:38.633 [info] syncing batch of 20 files and 78860 bytes
+2025-10-26 21:39:39.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ripe.py
+2025-10-26 21:39:39.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_recondev.py
+2025-10-26 21:39:39.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_robtex.py
+2025-10-26 21:39:39.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_trumail.py
+2025-10-26 21:39:39.612 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_adblock.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsbrute.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_blocklistde.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_securitytrails.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_gleif.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_greensnow.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_stevenblack_hosts.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_retirejs.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipstack.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_textmagic.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_opennic.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_riskiq.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_threatminer.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_networksdb.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_crossref.py
+2025-10-26 21:39:39.613 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_subdomain_takeover.py
+2025-10-26 21:39:39.617 [info] syncing batch of 20 files and 71522 bytes
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_base64.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_whois.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_emailformat.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_onionsearchengine.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_whoisology.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_blockchain.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bitcoinabuse.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spider.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_abuseipdb.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_recondev.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_onyphe.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_botvrij.py
+2025-10-26 21:39:39.697 [info] Completed 250 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipinfo.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_gravatar.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_isc.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_badpackets.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_sorbs.py
+2025-10-26 21:39:39.697 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_xforce.py
+2025-10-26 21:39:39.698 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_nbtscan.py
+2025-10-26 21:39:39.698 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_duckduckgo.py
+2025-10-26 21:39:39.701 [info] syncing batch of 20 files and 90788 bytes
+2025-10-26 21:39:40.476 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnszonexfer.py
+2025-10-26 21:39:40.476 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_email.py
+2025-10-26 21:39:40.476 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_searchcode.py
+2025-10-26 21:39:40.476 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_xforce.py
+2025-10-26 21:39:40.477 [info] syncing batch of 4 files and 21992 bytes
+2025-10-26 21:39:40.633 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_quad9.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_citadel.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_koodous.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_psbdmp.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_pastebin.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_fullcontact.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_wikileaks.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_stevenblack_hosts.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_trashpanda.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_cmseek.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_scylla.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_networksdb.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_urlscan.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_spur.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_crt.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsdb.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_pageinfo.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_fraudguard.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_names.py
+2025-10-26 21:39:40.634 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_nameapi.py
+2025-10-26 21:39:40.637 [info] syncing batch of 20 files and 91400 bytes
+2025-10-26 21:39:41.596 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_projectdiscovery.py
+2025-10-26 21:39:41.596 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_opencorporates.py
+2025-10-26 21:39:41.596 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_phone.py
+2025-10-26 21:39:41.596 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_arin.py
+2025-10-26 21:39:41.597 [info] syncing batch of 4 files and 13161 bytes
+2025-10-26 21:39:41.677 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/__init__.py
+2025-10-26 21:39:41.677 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_pgp.py
+2025-10-26 21:39:41.677 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bgpview.py
+2025-10-26 21:39:41.677 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_threatcrowd.py
+2025-10-26 21:39:41.677 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_yandexdns.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_googlesafebrowsing.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipapicom.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_seon.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_coinblocker.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_similar.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_arin.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_emailcrawlr.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cookie.py
+2025-10-26 21:39:41.678 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_gravatar.py
+2025-10-26 21:39:41.678 [info] Completed 300 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_nameapi.py
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bingsharedip.py
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_sociallinks.py
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnsneighbor.py
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_maltiverse.py
+2025-10-26 21:39:41.679 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_h1nobbdde.py
+2025-10-26 21:39:41.697 [info] syncing batch of 20 files and 85630 bytes
+2025-10-26 21:39:42.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_s3bucket.py
+2025-10-26 21:39:42.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_viewdns.py
+2025-10-26 21:39:42.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_iknowwhatyoudownload.py
+2025-10-26 21:39:42.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_onioncity.py
+2025-10-26 21:39:42.490 [info] syncing batch of 4 files and 16924 bytes
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_onesixtyone.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_accounts.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_twitter.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_censys.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_abusech.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipqualityscore.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_portscan_tcp.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_open_passive_dns_database.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_adguard_dns.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_retirejs.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hostio.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_neutrinoapi.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dnszonexfer.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cinsscore.py
+2025-10-26 21:39:42.714 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_nuclei.py
+2025-10-26 21:39:42.715 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_pulsedive.py
+2025-10-26 21:39:42.715 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_googlemaps.py
+2025-10-26 21:39:42.715 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_leakix.py
+2025-10-26 21:39:42.715 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_onesixtyone.py
+2025-10-26 21:39:42.715 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_c99.py
+2025-10-26 21:39:42.717 [info] syncing batch of 20 files and 115935 bytes
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_emailrep.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_apple_itunes.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_greynoise.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_wappalyzer.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_robtex.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_pulsedive.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_bingsearch.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_isc.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsbrute.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_opennic.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_binstring.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_skymem.py
+2025-10-26 21:39:42.779 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_company.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_errors.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_googleobjectstorage.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cleanbrowsing.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_twilio.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_torch.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_portscan_tcp.py
+2025-10-26 21:39:42.780 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_crxcavator.py
+2025-10-26 21:39:42.780 [info] Completed 350 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:42.782 [info] syncing batch of 20 files and 138075 bytes
+2025-10-26 21:39:43.480 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_whoxy.py
+2025-10-26 21:39:43.480 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_onionsearchengine.py
+2025-10-26 21:39:43.480 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_dns_for_family.py
+2025-10-26 21:39:43.480 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bitcoinabuse.py
+2025-10-26 21:39:43.481 [info] syncing batch of 4 files and 26278 bytes
+2025-10-26 21:39:43.608 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsdb.py
+2025-10-26 21:39:43.608 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_tool_whatweb.py
+2025-10-26 21:39:43.608 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_venmo.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_hunter.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_botscout.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_crxcavator.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_abstractapi.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_threatcrowd.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cleantalk.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_grep_app.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cinsscore.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_skymem.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_intfiles.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_cybercrimetracker.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hostio.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_quad9.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_googlesafebrowsing.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_coinblocker.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_snov.py
+2025-10-26 21:39:43.609 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_uceprotect.py
+2025-10-26 21:39:43.613 [info] syncing batch of 20 files and 132026 bytes
+2025-10-26 21:39:44.482 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hosting.py
+2025-10-26 21:39:44.483 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_keybase.py
+2025-10-26 21:39:44.483 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_strangeheaders.py
+2025-10-26 21:39:44.483 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_github.py
+2025-10-26 21:39:44.484 [info] syncing batch of 4 files and 36654 bytes
+2025-10-26 21:39:44.640 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_ipapico.py
+2025-10-26 21:39:44.640 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_twitter.py
+2025-10-26 21:39:44.640 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_webserver.py
+2025-10-26 21:39:44.640 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./test/unit/modules/test_sfp_whoisology.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_punkspider.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_wafw00f.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_binaryedge.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_slideshare.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_emergingthreats.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_names.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_onyphe.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_iknowwhatyoudownload.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_snallygaster.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_onioncity.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_focsec.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_torch.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_h1nobbdde.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cleanbrowsing.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_blockchain.py
+2025-10-26 21:39:44.641 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_dnstwist.py
+2025-10-26 21:39:44.644 [info] syncing batch of 20 files and 226399 bytes
+2025-10-26 21:39:45.493 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_template.py
+2025-10-26 21:39:45.493 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cloudflaredns.py
+2025-10-26 21:39:45.493 [info] Completed 400 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:45.493 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_grayhatwarfare.py
+2025-10-26 21:39:45.493 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/target.py
+2025-10-26 21:39:45.495 [info] syncing batch of 4 files and 46830 bytes
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_seon.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_wikipediaedits.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_malwarepatrol.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_open_passive_dns_database.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_emailformat.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_clearbit.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bitcoinwhoswho.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_etherscan.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_metadefender.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_commoncrawl.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_shodan.py
+2025-10-26 21:39:45.646 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsneighbor.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_badpackets.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_nmap.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_trumail.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_openphish.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bingsearch.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dehashed.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_talosintel.py
+2025-10-26 21:39:45.647 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_intfiles.py
+2025-10-26 21:39:45.649 [info] syncing batch of 20 files and 121757 bytes
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_sorbs.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_alienvault.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ahmia.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_callername.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hunter.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_wikileaks.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_webframework.py
+2025-10-26 21:39:45.876 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_scylla.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_fortinet.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_torexits.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_phishstats.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_webserver.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp__stor_db.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_crobat_api.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_wappalyzer.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cookie.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_accounts.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ethereum.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsgrep.py
+2025-10-26 21:39:45.877 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_nuclei.py
+2025-10-26 21:39:45.880 [info] syncing batch of 20 files and 142522 bytes
+2025-10-26 21:39:46.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_builtwith.py
+2025-10-26 21:39:46.489 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_digitaloceanspace.py
+2025-10-26 21:39:46.490 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_snov.py
+2025-10-26 21:39:46.490 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsresolve.py
+2025-10-26 21:39:46.491 [info] syncing batch of 4 files and 24252 bytes
+2025-10-26 21:39:46.658 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_socialprofiles.py
+2025-10-26 21:39:46.658 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_surbl.py
+2025-10-26 21:39:46.658 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_s3bucket.py
+2025-10-26 21:39:46.658 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_hackertarget.py
+2025-10-26 21:39:46.658 [info] Completed 450 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/db.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_citadel.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/event.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_abstractapi.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dronebl.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_myspace.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_gleif.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_filemeta.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_trashpanda.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_vxvault.py
+2025-10-26 21:39:46.659 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_honeypot.py
+2025-10-26 21:39:46.660 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_email.py
+2025-10-26 21:39:46.660 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_stackoverflow.py
+2025-10-26 21:39:46.660 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_intelx.py
+2025-10-26 21:39:46.660 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_haveibeenpwned.py
+2025-10-26 21:39:46.660 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipqualityscore.py
+2025-10-26 21:39:46.669 [info] syncing batch of 20 files and 178989 bytes
+2025-10-26 21:39:47.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsraw.py
+2025-10-26 21:39:47.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_pageinfo.py
+2025-10-26 21:39:47.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_multiproxy.py
+2025-10-26 21:39:47.514 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_projectdiscovery.py
+2025-10-26 21:39:47.515 [info] syncing batch of 4 files and 9783 bytes
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnsdumpster.py
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cleantalk.py
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_threatminer.py
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_wigle.py
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_whatweb.py
+2025-10-26 21:39:47.669 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipstack.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_phone.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_openbugbounty.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_countryname.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_emailrep.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_instagram.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_blocklistde.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_similar.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipinfo.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_sociallinks.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_fullhunt.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_circllu.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_creditcard.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_numverify.py
+2025-10-26 21:39:47.670 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_googlesearch.py
+2025-10-26 21:39:47.672 [info] syncing batch of 20 files and 209112 bytes
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_fsecure_riddler.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spyonweb.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dnscommonsrv.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_iban.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_alienvaultiprep.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_zetalytics.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/__init__.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_riskiq.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_sslcert.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_webanalytics.py
+2025-10-26 21:39:47.798 [info] Completed 500 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spamcop.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_zoneh.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_openstreetmap.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_opendns.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_reversewhois.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_certspotter.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tldsearch.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_leakix.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_darksearch.py
+2025-10-26 21:39:47.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_azureblobstorage.py
+2025-10-26 21:39:47.799 [info] syncing batch of 3 files and 1181330 bytes
+2025-10-26 21:39:47.802 [info] syncing batch of 17 files and 1098241 bytes
+2025-10-26 21:39:48.479 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/__init__.py
+2025-10-26 21:39:48.479 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/js/spiderfoot.newscan.js
+2025-10-26 21:39:48.479 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/HEADER.tmpl
+2025-10-26 21:39:48.479 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/js/spiderfoot.opts.js
+2025-10-26 21:39:48.482 [info] syncing batch of 4 files and 20846 bytes
+2025-10-26 21:39:48.655 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipapico.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spyse.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_spur.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_customfeed.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_whatcms.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_jsonwhoiscom.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_ipregistry.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_cybercrimetracker.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_bgpview.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_sublist3r.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_phishtank.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_flickr.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_textmagic.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_dns_for_family.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_comodo.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_censys.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_tool_testsslsh.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_debounce.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./modules/sfp_whoxy.py
+2025-10-26 21:39:48.656 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/correlation.py
+2025-10-26 21:39:48.659 [info] syncing batch of 20 files and 14928 bytes
+2025-10-26 21:39:49.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/README.md
+2025-10-26 21:39:49.481 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/vulnerability_mediumlow.yaml
+2025-10-26 21:39:49.482 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/name_only_from_pasteleak_site.yaml
+2025-10-26 21:39:49.482 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/dev_or_test_system.yaml
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/opts.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/scanlist.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/FOOTER.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/js/spiderfoot.scanlist.js
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/newscan.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/js/viz.js
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/scaninfo.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/templates/error.tmpl
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/js/spiderfoot.js
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/helpers.py
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/package.json
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/subdomains.txt
+2025-10-26 21:39:50.666 [info] Completed 550 jobs for absoluteDirectoryPath: undefined
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/__init__.py
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/subdomains-10000.txt
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/css/dark.css
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/static/css/spiderfoot.css
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/__version__.py
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/logger.py
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/threadpool.py
+2025-10-26 21:39:50.666 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/LICENSE
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/stale_host.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/multiple_malicious.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/vulnerability_high.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/strong_affiliate_certs.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/data_from_docmeta.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/email_only_from_pasteleak_site.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/human_name_in_whois.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/email_in_multiple_breaches.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_ipaddress.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/dns_zone_transfer_possible.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/cloud_bucket_open.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/strong_similardomain_crossref.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/database_exposed.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/root_path_needs_auth.yaml
+2025-10-26 21:39:50.813 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/email_in_whois.yaml
+2025-10-26 21:39:50.814 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/cert_expired.yaml
+2025-10-26 21:39:50.814 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/egress_ip_from_wikipedia.yaml
+2025-10-26 21:39:50.814 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_hostname.yaml
+2025-10-26 21:39:50.814 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/open_port_version.yaml
+2025-10-26 21:39:50.814 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_registrar.yaml
+2025-10-26 21:39:51.523 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/names.dict
+2025-10-26 21:39:51.523 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/german.dict
+2025-10-26 21:39:51.523 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/plugin.py
+2025-10-26 21:39:52.798 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/spanish.dict
+2025-10-26 21:39:52.800 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/english.dict
+2025-10-26 21:39:52.800 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./spiderfoot/dicts/ispell/__init__.py
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/data_from_base64.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_country.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/multiple_malicious_cohost.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/host_only_from_certificatetransparency.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/host_only_from_bruteforce.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/http_errors.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/internal_host.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_webserver.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/template.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_email.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/outlier_cloud.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/vulnerability_critical.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/multiple_malicious_affiliate.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/cloud_bucket_open_related.yaml
+2025-10-26 21:39:52.801 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./correlations/remote_desktop_exposed.yaml
+2025-10-26 21:39:53.130 [info] Finishing sync (hasUpdates: true, isErr: false)
+2025-10-26 21:39:53.720 [info] Finished indexing repository.
+2025-10-26 21:39:53.720 [info] Indexing job successfully done or aborted.
+2025-10-26 21:40:24.291 [error] Error getting git status: Failed to execute git
+2025-10-26 21:40:32.441 [error] Error getting git status: Failed to execute git
+2025-10-26 21:44:24.794 [error] Error getting git status: Failed to execute git
+2025-10-26 21:44:25.474 [info] multiCodebaseIndexingJob dispose
+2025-10-26 21:44:25.474 [info] Aborting indexing job.
+2025-10-26 21:44:25.474 [info] Setting global status from status tracker: synced
+2025-10-26 21:44:25.474 [info] Doing a startup handshake.
+2025-10-26 21:44:25.480 [info] Finished computing merkle tree in 4.5405969999847 ms.
+2025-10-26 21:44:25.481 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:44:25.485 [info] Computed simhash vector of length: 256
+2025-10-26 21:44:25.486 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:44:25.486 [info] Handshake start
+2025-10-26 21:44:25.821 [info] Handshake timing: 336.21822899999097, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:44:25.821 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:44:25.821 [info] Starting fast remote sync.
+2025-10-26 21:44:25.822 [info] Total num embeddable files: 599
+2025-10-26 21:44:25.822 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:44:25.824 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 21:44:28.532 [info] Finished indexing repository.
+2025-10-26 21:44:28.532 [info] Indexing job successfully done or aborted.
+2025-10-26 21:49:16.136 [error] Error getting user commits: Failed to execute git
+2025-10-26 21:49:31.474 [info] multiCodebaseIndexingJob dispose
+2025-10-26 21:49:31.474 [info] Aborting indexing job.
+2025-10-26 21:49:31.474 [info] Setting global status from status tracker: synced
+2025-10-26 21:49:31.474 [info] Doing a startup handshake.
+2025-10-26 21:49:31.501 [info] Finished computing merkle tree in 25.455857999972068 ms.
+2025-10-26 21:49:31.502 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:49:31.507 [info] Computed simhash vector of length: 256
+2025-10-26 21:49:31.507 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:49:31.507 [info] Handshake start
+2025-10-26 21:49:35.516 [warning] Retrying handshake with timeout 4000. Error:  [deadline_exceeded] the operation timed out
+2025-10-26 21:49:35.516 [info] Handshake start
+2025-10-26 21:49:38.515 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-26 21:49:38.515 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-26 21:49:42.517 [warning] Retrying handshake with timeout 8000. Error:  [canceled] This operation was aborted
+2025-10-26 21:49:42.517 [info] Handshake start
+2025-10-26 21:49:45.567 [info] Handshake timing: 3051.530700000003, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:49:45.567 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:49:45.567 [info] Starting fast remote sync.
+2025-10-26 21:49:45.568 [info] Total num embeddable files: 599
+2025-10-26 21:49:45.568 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:49:45.569 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 21:49:45.975 [info] Finished indexing repository.
+2025-10-26 21:49:45.975 [info] Indexing job successfully done or aborted.
+2025-10-26 21:54:37.474 [info] multiCodebaseIndexingJob dispose
+2025-10-26 21:54:37.475 [info] Aborting indexing job.
+2025-10-26 21:54:37.475 [info] Setting global status from status tracker: synced
+2025-10-26 21:54:37.475 [info] Doing a startup handshake.
+2025-10-26 21:54:37.480 [info] Finished computing merkle tree in 3.195833000005223 ms.
+2025-10-26 21:54:37.481 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:54:37.485 [info] Computed simhash vector of length: 256
+2025-10-26 21:54:37.485 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:54:37.485 [info] Handshake start
+2025-10-26 21:54:37.806 [info] Handshake timing: 321.3589220000431, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:54:37.806 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:54:37.806 [info] Starting fast remote sync.
+2025-10-26 21:54:37.806 [info] Total num embeddable files: 599
+2025-10-26 21:54:37.806 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:54:37.807 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 21:54:38.215 [info] Finished indexing repository.
+2025-10-26 21:54:38.215 [info] Indexing job successfully done or aborted.
+2025-10-26 21:59:16.125 [error] Error getting user commits: Failed to execute git
+2025-10-26 21:59:43.476 [info] multiCodebaseIndexingJob dispose
+2025-10-26 21:59:43.476 [info] Aborting indexing job.
+2025-10-26 21:59:43.476 [info] Setting global status from status tracker: synced
+2025-10-26 21:59:43.476 [info] Doing a startup handshake.
+2025-10-26 21:59:43.499 [info] Finished computing merkle tree in 21.728417000034824 ms.
+2025-10-26 21:59:43.501 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:59:43.504 [info] Computed simhash vector of length: 256
+2025-10-26 21:59:43.504 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 21:59:43.504 [info] Handshake start
+2025-10-26 21:59:43.969 [info] Handshake timing: 466.70560400001705, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:59:43.970 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 21:59:43.970 [info] Starting fast remote sync.
+2025-10-26 21:59:43.970 [info] Total num embeddable files: 599
+2025-10-26 21:59:43.970 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 21:59:43.972 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 21:59:46.644 [info] Finished indexing repository.
+2025-10-26 21:59:46.644 [info] Indexing job successfully done or aborted.
+2025-10-26 22:04:49.477 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:04:49.479 [info] Aborting indexing job.
+2025-10-26 22:04:49.479 [info] Setting global status from status tracker: synced
+2025-10-26 22:04:49.479 [info] Doing a startup handshake.
+2025-10-26 22:04:49.484 [info] Finished computing merkle tree in 3.5804860000498593 ms.
+2025-10-26 22:04:49.484 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:04:49.488 [info] Computed simhash vector of length: 256
+2025-10-26 22:04:49.488 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:04:49.488 [info] Handshake start
+2025-10-26 22:04:49.923 [info] Handshake timing: 436.24032399989665, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:04:49.923 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:04:49.923 [info] Starting fast remote sync.
+2025-10-26 22:04:49.923 [info] Total num embeddable files: 599
+2025-10-26 22:04:49.923 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:04:49.925 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:04:55.042 [info] Finished indexing repository.
+2025-10-26 22:04:55.042 [info] Indexing job successfully done or aborted.
+2025-10-26 22:09:16.137 [error] Error getting user commits: Failed to execute git
+2025-10-26 22:09:55.477 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:09:55.478 [info] Aborting indexing job.
+2025-10-26 22:09:55.478 [info] Setting global status from status tracker: synced
+2025-10-26 22:09:55.478 [info] Doing a startup handshake.
+2025-10-26 22:09:55.483 [info] Finished computing merkle tree in 3.129731999943033 ms.
+2025-10-26 22:09:55.483 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:09:55.487 [info] Computed simhash vector of length: 256
+2025-10-26 22:09:55.487 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:09:55.487 [info] Handshake start
+2025-10-26 22:09:55.875 [info] Handshake timing: 388.17789699998684, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:09:55.875 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:09:55.875 [info] Starting fast remote sync.
+2025-10-26 22:09:55.876 [info] Total num embeddable files: 599
+2025-10-26 22:09:55.877 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:09:55.878 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:10:00.993 [info] Finished indexing repository.
+2025-10-26 22:10:00.993 [info] Indexing job successfully done or aborted.
+2025-10-26 22:15:01.478 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:15:01.478 [info] Aborting indexing job.
+2025-10-26 22:15:01.478 [info] Setting global status from status tracker: synced
+2025-10-26 22:15:01.478 [info] Doing a startup handshake.
+2025-10-26 22:15:01.485 [info] Finished computing merkle tree in 4.606160000432283 ms.
+2025-10-26 22:15:01.486 [info] Doing the initial handshake with hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:15:01.489 [info] Computed simhash vector of length: 256
+2025-10-26 22:15:01.489 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:15:01.489 [info] Handshake start
+2025-10-26 22:15:02.237 [info] Handshake timing: 749.534368999768, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:15:02.238 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:15:02.238 [info] Starting fast remote sync.
+2025-10-26 22:15:02.238 [info] Total num embeddable files: 599
+2025-10-26 22:15:02.238 [info] Root hash: 6d7120936eb73ce1cd5c70de4e65d0744a188ffee51dd94a265468f41b0a4bd9
+2025-10-26 22:15:02.240 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:15:07.357 [info] Finished indexing repository.
+2025-10-26 22:15:07.357 [info] Indexing job successfully done or aborted.
+2025-10-26 22:19:16.136 [error] Error getting user commits: Failed to execute git
+2025-10-26 22:20:07.482 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:20:07.482 [info] Aborting indexing job.
+2025-10-26 22:20:07.482 [info] Setting global status from status tracker: synced
+2025-10-26 22:20:07.482 [info] Doing a startup handshake.
+2025-10-26 22:20:07.488 [info] Finished computing merkle tree in 3.317598999943584 ms.
+2025-10-26 22:20:07.489 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:20:07.493 [info] Computed simhash vector of length: 256
+2025-10-26 22:20:07.493 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:20:07.493 [info] Handshake start
+2025-10-26 22:20:08.096 [info] Handshake timing: 605.1012889998965, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_OUT_OF_SYNC","copyTaskHandle":""}]}
+2025-10-26 22:20:08.096 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_OUT_OF_SYNC","copyTaskHandle":""}]}
+2025-10-26 22:20:08.096 [info] Starting fast remote sync.
+2025-10-26 22:20:08.097 [info] Total num embeddable files: 600
+2025-10-26 22:20:08.098 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:20:08.098 [info] In the out of sync case.
+2025-10-26 22:20:08.101 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:08.298 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:08.499 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:08.699 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:08.899 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:09.100 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:09.300 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:09.501 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:09.701 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:09.902 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:10.103 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:10.303 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:10.502 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:10.703 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:10.903 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:11.103 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:11.304 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:11.505 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:11.706 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:11.907 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:12.104 [warning] Retrying sync merkle subtree with timeout 4000. Error:  [deadline_exceeded] the operation timed out
+2025-10-26 22:20:12.107 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:12.307 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:12.508 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:12.708 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:12.909 [info] Waiting on semaphore to be released 1
+2025-10-26 22:20:13.109 [info] setting numJobsToGo to 1
+2025-10-26 22:20:13.110 [info] [startSync]: numJobs: 1
+2025-10-26 22:20:13.110 [info] Uploading 1 files.
+2025-10-26 22:20:13.111 [info] Total number of files to embed: 600
+2025-10-26 22:20:13.111 [info] Not aborted
+2025-10-26 22:20:13.111 [info] Starting while loop.
+2025-10-26 22:20:13.782 [info] Completed job successfully: 3267ee6d-0f45-4df0-9708-7cda3b99b095 ./req-no-pyyaml.txt
+2025-10-26 22:20:14.100 [info] Finishing sync (hasUpdates: true, isErr: false)
+2025-10-26 22:20:14.571 [info] Finished indexing repository.
+2025-10-26 22:20:14.571 [info] Indexing job successfully done or aborted.
+2025-10-26 22:20:32.183 [error] Error getting git status: Failed to execute git
+2025-10-26 22:20:58.978 [error] Error getting git status: Failed to execute git
+2025-10-26 22:25:13.481 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:25:13.481 [info] Aborting indexing job.
+2025-10-26 22:25:13.481 [info] Setting global status from status tracker: synced
+2025-10-26 22:25:13.481 [info] Doing a startup handshake.
+2025-10-26 22:25:13.486 [info] Finished computing merkle tree in 3.2329719997942448 ms.
+2025-10-26 22:25:13.487 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:25:13.491 [info] Computed simhash vector of length: 256
+2025-10-26 22:25:13.491 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:25:13.491 [info] Handshake start
+2025-10-26 22:25:13.944 [info] Handshake timing: 453.975258000195, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:25:13.944 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:25:13.944 [info] Starting fast remote sync.
+2025-10-26 22:25:13.945 [info] Total num embeddable files: 600
+2025-10-26 22:25:13.945 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:25:13.948 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:25:18.995 [info] Finished indexing repository.
+2025-10-26 22:25:18.995 [info] Indexing job successfully done or aborted.
+2025-10-26 22:29:16.140 [error] Error getting user commits: Failed to execute git
+2025-10-26 22:30:19.482 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:30:19.482 [info] Aborting indexing job.
+2025-10-26 22:30:19.482 [info] Setting global status from status tracker: synced
+2025-10-26 22:30:19.482 [info] Doing a startup handshake.
+2025-10-26 22:30:19.488 [info] Finished computing merkle tree in 3.9983379999175668 ms.
+2025-10-26 22:30:19.489 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:30:19.492 [info] Computed simhash vector of length: 256
+2025-10-26 22:30:19.493 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:30:19.493 [info] Handshake start
+2025-10-26 22:30:20.311 [info] Handshake timing: 819.4670630004257, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:30:20.311 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:30:20.311 [info] Starting fast remote sync.
+2025-10-26 22:30:20.312 [info] Total num embeddable files: 600
+2025-10-26 22:30:20.312 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:30:20.314 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:30:23.586 [info] Finished indexing repository.
+2025-10-26 22:30:23.587 [info] Indexing job successfully done or aborted.
+2025-10-26 22:35:25.483 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:35:25.483 [info] Aborting indexing job.
+2025-10-26 22:35:25.483 [info] Setting global status from status tracker: synced
+2025-10-26 22:35:25.483 [info] Doing a startup handshake.
+2025-10-26 22:35:25.488 [info] Finished computing merkle tree in 3.1072169998660684 ms.
+2025-10-26 22:35:25.489 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:35:25.493 [info] Computed simhash vector of length: 256
+2025-10-26 22:35:25.493 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:35:25.493 [info] Handshake start
+2025-10-26 22:35:26.043 [info] Handshake timing: 550.8207870000042, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:35:26.043 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:35:26.043 [info] Starting fast remote sync.
+2025-10-26 22:35:26.043 [info] Total num embeddable files: 600
+2025-10-26 22:35:26.044 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:35:26.045 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:35:30.837 [info] Finished indexing repository.
+2025-10-26 22:35:30.837 [info] Indexing job successfully done or aborted.
+2025-10-26 22:39:16.139 [error] Error getting user commits: Failed to execute git
+2025-10-26 22:40:31.486 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:40:31.486 [info] Aborting indexing job.
+2025-10-26 22:40:31.486 [info] Setting global status from status tracker: synced
+2025-10-26 22:40:31.486 [info] Doing a startup handshake.
+2025-10-26 22:40:31.491 [info] Finished computing merkle tree in 3.3045599996112287 ms.
+2025-10-26 22:40:31.492 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:40:31.495 [info] Computed simhash vector of length: 256
+2025-10-26 22:40:31.495 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:40:31.495 [info] Handshake start
+2025-10-26 22:40:31.828 [info] Handshake timing: 333.95847399998456, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:40:31.828 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:40:31.828 [info] Starting fast remote sync.
+2025-10-26 22:40:31.829 [info] Total num embeddable files: 600
+2025-10-26 22:40:31.829 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:40:31.831 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:40:36.617 [info] Finished indexing repository.
+2025-10-26 22:40:36.617 [info] Indexing job successfully done or aborted.
+2025-10-26 22:45:37.488 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:45:37.488 [info] Aborting indexing job.
+2025-10-26 22:45:37.488 [info] Setting global status from status tracker: synced
+2025-10-26 22:45:37.488 [info] Doing a startup handshake.
+2025-10-26 22:45:37.496 [info] Finished computing merkle tree in 4.582824000157416 ms.
+2025-10-26 22:45:37.497 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:45:37.500 [info] Computed simhash vector of length: 256
+2025-10-26 22:45:37.500 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:45:37.500 [info] Handshake start
+2025-10-26 22:45:38.179 [info] Handshake timing: 679.8938230001368, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:45:38.179 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:45:38.179 [info] Starting fast remote sync.
+2025-10-26 22:45:38.180 [info] Total num embeddable files: 600
+2025-10-26 22:45:38.180 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:45:38.182 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:45:42.985 [info] Finished indexing repository.
+2025-10-26 22:45:42.985 [info] Indexing job successfully done or aborted.
+2025-10-26 22:49:16.137 [error] Error getting user commits: Failed to execute git
+2025-10-26 22:50:43.490 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:50:43.490 [info] Aborting indexing job.
+2025-10-26 22:50:43.490 [info] Setting global status from status tracker: synced
+2025-10-26 22:50:43.490 [info] Doing a startup handshake.
+2025-10-26 22:50:43.498 [info] Finished computing merkle tree in 4.434554000385106 ms.
+2025-10-26 22:50:43.499 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:50:43.503 [info] Computed simhash vector of length: 256
+2025-10-26 22:50:43.503 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:50:43.503 [info] Handshake start
+2025-10-26 22:50:43.827 [info] Handshake timing: 325.1638739993796, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:50:43.827 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:50:43.827 [info] Starting fast remote sync.
+2025-10-26 22:50:43.828 [info] Total num embeddable files: 600
+2025-10-26 22:50:43.828 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:50:43.830 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:50:48.557 [info] Finished indexing repository.
+2025-10-26 22:50:48.557 [info] Indexing job successfully done or aborted.
+2025-10-26 22:55:49.491 [info] multiCodebaseIndexingJob dispose
+2025-10-26 22:55:49.491 [info] Aborting indexing job.
+2025-10-26 22:55:49.491 [info] Setting global status from status tracker: synced
+2025-10-26 22:55:49.491 [info] Doing a startup handshake.
+2025-10-26 22:55:49.498 [info] Finished computing merkle tree in 4.247607000172138 ms.
+2025-10-26 22:55:49.499 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:55:49.502 [info] Computed simhash vector of length: 256
+2025-10-26 22:55:49.503 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 22:55:49.503 [info] Handshake start
+2025-10-26 22:55:49.848 [info] Handshake timing: 347.13047100044787, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:55:49.849 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 22:55:49.849 [info] Starting fast remote sync.
+2025-10-26 22:55:49.849 [info] Total num embeddable files: 600
+2025-10-26 22:55:49.849 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 22:55:49.851 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 22:55:55.437 [info] Finished indexing repository.
+2025-10-26 22:55:55.437 [info] Indexing job successfully done or aborted.
+2025-10-26 22:59:16.141 [error] Error getting user commits: Failed to execute git
+2025-10-26 23:00:55.492 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:00:55.492 [info] Aborting indexing job.
+2025-10-26 23:00:55.492 [info] Setting global status from status tracker: synced
+2025-10-26 23:00:55.492 [info] Doing a startup handshake.
+2025-10-26 23:00:55.498 [info] Finished computing merkle tree in 3.2193189999088645 ms.
+2025-10-26 23:00:55.499 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:00:55.502 [info] Computed simhash vector of length: 256
+2025-10-26 23:00:55.502 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 23:00:55.502 [info] Handshake start
+2025-10-26 23:00:56.220 [info] Handshake timing: 718.3176209991798, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:00:56.220 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:00:56.220 [info] Starting fast remote sync.
+2025-10-26 23:00:56.221 [info] Total num embeddable files: 600
+2025-10-26 23:00:56.221 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:00:56.223 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 23:01:01.132 [info] Finished indexing repository.
+2025-10-26 23:01:01.132 [info] Indexing job successfully done or aborted.
+2025-10-26 23:06:01.492 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:06:01.494 [info] Aborting indexing job.
+2025-10-26 23:06:01.494 [info] Setting global status from status tracker: synced
+2025-10-26 23:06:01.494 [info] Doing a startup handshake.
+2025-10-26 23:06:01.499 [info] Finished computing merkle tree in 3.195678999647498 ms.
+2025-10-26 23:06:01.500 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:06:01.503 [info] Computed simhash vector of length: 256
+2025-10-26 23:06:01.503 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 23:06:01.503 [info] Handshake start
+2025-10-26 23:06:01.997 [info] Handshake timing: 494.7100019995123, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:06:01.997 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:06:01.997 [info] Starting fast remote sync.
+2025-10-26 23:06:01.997 [info] Total num embeddable files: 600
+2025-10-26 23:06:01.997 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:06:01.999 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 23:06:06.754 [info] Finished indexing repository.
+2025-10-26 23:06:06.754 [info] Indexing job successfully done or aborted.
+2025-10-26 23:09:16.156 [error] Error getting user commits: Failed to execute git
+2025-10-26 23:11:07.493 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:11:07.493 [info] Aborting indexing job.
+2025-10-26 23:11:07.493 [info] Setting global status from status tracker: synced
+2025-10-26 23:11:07.493 [info] Doing a startup handshake.
+2025-10-26 23:11:07.499 [info] Finished computing merkle tree in 3.070282000117004 ms.
+2025-10-26 23:11:07.500 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:11:07.503 [info] Computed simhash vector of length: 256
+2025-10-26 23:11:07.503 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 23:11:07.503 [info] Handshake start
+2025-10-26 23:11:08.104 [info] Handshake timing: 601.9488190002739, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:11:08.104 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:11:08.104 [info] Starting fast remote sync.
+2025-10-26 23:11:08.104 [info] Total num embeddable files: 600
+2025-10-26 23:11:08.105 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:11:08.106 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 23:11:12.874 [info] Finished indexing repository.
+2025-10-26 23:11:12.874 [info] Indexing job successfully done or aborted.
+2025-10-26 23:16:13.496 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:16:13.496 [info] Aborting indexing job.
+2025-10-26 23:16:13.496 [info] Setting global status from status tracker: synced
+2025-10-26 23:16:13.496 [info] Doing a startup handshake.
+2025-10-26 23:16:13.502 [info] Finished computing merkle tree in 3.516796000301838 ms.
+2025-10-26 23:16:13.503 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:16:13.508 [info] Computed simhash vector of length: 256
+2025-10-26 23:16:13.508 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 23:16:13.508 [info] Handshake start
+2025-10-26 23:16:14.143 [info] Handshake timing: 636.3638880001381, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:16:14.143 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:16:14.143 [info] Starting fast remote sync.
+2025-10-26 23:16:14.144 [info] Total num embeddable files: 600
+2025-10-26 23:16:14.144 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:16:14.146 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 23:16:18.821 [info] Finished indexing repository.
+2025-10-26 23:16:18.821 [info] Indexing job successfully done or aborted.
+2025-10-26 23:19:16.147 [error] Error getting user commits: Failed to execute git
+2025-10-26 23:21:19.496 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:21:19.496 [info] Aborting indexing job.
+2025-10-26 23:21:19.496 [info] Setting global status from status tracker: synced
+2025-10-26 23:21:19.496 [info] Doing a startup handshake.
+2025-10-26 23:21:19.504 [info] Finished computing merkle tree in 4.525550999678671 ms.
+2025-10-26 23:21:19.505 [info] Doing the initial handshake with hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:21:19.508 [info] Computed simhash vector of length: 256
+2025-10-26 23:21:19.509 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-26 23:21:19.509 [info] Handshake start
+2025-10-26 23:21:19.802 [info] Handshake timing: 294.8626879993826, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:21:19.802 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3267ee6d-0f45-4df0-9708-7cda3b99b095","status":"STATUS_UP_TO_DATE","copyTaskHandle":""}]}
+2025-10-26 23:21:19.802 [info] Starting fast remote sync.
+2025-10-26 23:21:19.803 [info] Total num embeddable files: 600
+2025-10-26 23:21:19.803 [info] Root hash: 783a8b924a95db75e69b2ad68e904696ec384af99f1135e57bfec008c8c8a02b
+2025-10-26 23:21:19.805 [info] Finishing sync (hasUpdates: false, isErr: false)
+2025-10-26 23:21:24.551 [info] Finished indexing repository.
+2025-10-26 23:21:24.551 [info] Indexing job successfully done or aborted.
+2025-10-26 23:23:18.959 [info] multiCodebaseIndexingJob dispose
+2025-10-26 23:23:18.959 [info] Aborting indexing job.

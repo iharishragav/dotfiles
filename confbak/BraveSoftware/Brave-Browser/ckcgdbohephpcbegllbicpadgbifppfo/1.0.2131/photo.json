@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "campaigns": [],
+  "campaigns2": [
+    {
+      "campaignId": "fdc55060-2a69-4eaa-971d-320dec7ca3fc",
+      "logo": {
+        "imageUrl": "fe4bb2a3-3220-4372-a6aa-2370213f2d15/7ff7390c-9317-414d-9cd2-1feeb1c96de6.png",
+        "destinationUrl": "https://brave.com/whats-new/ios/",
+        "alt": "Brave - You unlocked new features!",
+        "companyName": "Brave"
+      },
+      "wallpapers": [
+        {
+          "imageUrl": "fe4bb2a3-3220-4372-a6aa-2370213f2d15/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+          "creativeInstanceId": "c10d6cca-655d-436f-b68a-01de92a0d39e",
+          "focalPoint": {
+            "x": 1280,
+            "y": 720
+          },
+          "conditionMatchers": [
+            {
+              "prefPath": "[virtual]:operating_system|locale|language",
+              "condition": "es"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+              "condition": "[R≤]:5"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+              "condition": "[R≤]:2"
+            }
+          ]
+        },
+        {
+          "imageUrl": "fd9699c0-ef33-42c2-81b0-6c4583f19b2f/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+          "creativeInstanceId": "18bb8b40-6179-48f7-9d16-254c6b326c10",
+          "focalPoint": {
+            "x": 1280,
+            "y": 720
+          },
+          "logo": {
+            "imageUrl": "fd9699c0-ef33-42c2-81b0-6c4583f19b2f/94399c24-1616-46b9-a395-c793edec4cbd.png",
+            "destinationUrl": "https://brave.com/whats-new/ios/",
+            "alt": "Brave - You unlocked new features!",
+            "companyName": "Brave"
+          },
+          "conditionMatchers": [
+            {
+              "prefPath": "[virtual]:operating_system|locale|language",
+              "condition": "de"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+              "condition": "[R≤]:5"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+              "condition": "[R≤]:2"
+            }
+          ]
+        },
+        {
+          "imageUrl": "4b26b072-f570-4242-9bdd-ff8ac4d1bd97/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+          "creativeInstanceId": "3a9333c4-3a1d-4900-bc76-6598c4bfb297",
+          "focalPoint": {
+            "x": 1280,
+            "y": 720
+          },
+          "logo": {
+            "imageUrl": "4b26b072-f570-4242-9bdd-ff8ac4d1bd97/8c0ab282-53ea-4b54-b63d-e5a505188b12.png",
+            "destinationUrl": "https://brave.com/whats-new/ios/",
+            "alt": "Brave - You unlocked new features!",
+            "companyName": "Brave"
+          },
+          "conditionMatchers": [
+            {
+              "prefPath": "[virtual]:operating_system|locale|language",
+              "condition": "fr"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+              "condition": "[R≤]:5"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+              "condition": "[R≤]:2"
+            }
+          ]
+        },
+        {
+          "imageUrl": "8c28b043-328e-44d1-8a4e-508627153c3d/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+          "creativeInstanceId": "5f651149-ceae-4a1a-95a5-646b1d3d53c2",
+          "focalPoint": {
+            "x": 1280,
+            "y": 720
+          },
+          "logo": {
+            "imageUrl": "8c28b043-328e-44d1-8a4e-508627153c3d/d7922d2a-8640-4838-ad1a-006343792b7f.png",
+            "destinationUrl": "https://brave.com/whats-new/ios/",
+            "alt": "Brave - You unlocked new features!",
+            "companyName": "Brave"
+          },
+          "conditionMatchers": [
+            {
+              "prefPath": "[virtual]:operating_system|locale|language",
+              "condition": "en"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+              "condition": "[R≤]:5"
+            },
+            {
+              "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+              "condition": "[R≤]:2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

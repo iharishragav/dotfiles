@@ -1,0 +1,14 @@
+2025-10-23 13:29:44.818 [info] updateURL https://api2.cursor.sh/updates/api/update/linux-x64/cursor/1.7.54/8aa42934aae45760914e714576fb79b644a2dd4a0eb5759d5116b9fb967ac782/stable
+2025-10-23 13:29:44.819 [info] update#setState idle
+2025-10-23 13:29:48.002 [error] vscode-file: Refused to load resource /tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff)
+2025-10-23 13:30:14.821 [info] update#setState checking for updates
+2025-10-23 13:30:15.292 [info] update#setState idle
+2025-10-23 13:31:02.119 [info] Extension host with pid 20559 exited with code: 0, signal: unknown.
+2025-10-23 13:31:02.168 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 20552]: crashed with code 15 and reason 'killed'
+2025-10-23 13:32:49.441 [info] Extension host with pid 21012 exited with code: 0, signal: unknown.
+2025-10-23 13:32:49.493 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 20996]: crashed with code 15 and reason 'killed'
+2025-10-23 13:36:13.392 [error] [sudo-prompt] received stderr: /bin/bash: line 1: /tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor: Permission denied
+
+2025-10-23 13:36:22.990 [error] [sudo-prompt] received stderr: /bin/bash: line 1: /tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor: Permission denied
+
+2025-10-23 13:37:02.938 [info] Extension host with pid 21571 exited with code: 0, signal: unknown.

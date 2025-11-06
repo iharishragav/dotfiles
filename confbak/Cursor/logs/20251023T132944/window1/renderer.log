@@ -1,0 +1,113 @@
+2025-10-23 13:29:47.654 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-23 13:29:47.660 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.661 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.661 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.662 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.662 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.663 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.663 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.663 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:47.663 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:29:48.547 [info] Started local extension host with pid 20559.
+2025-10-23 13:29:49.815 [warning] No search provider registered for scheme: file, waiting
+2025-10-23 13:29:49.966 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-23 13:29:51.913 [info] [ShellExec] Created session 37bfb5b6-309f-42cf-84b8-d5f647008f24 on LocalProcess host
+2025-10-23 13:29:52.835 [info] [perf] Render performance baseline is 25ms
+2025-10-23 13:31:03.833 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-23 13:31:03.838 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.838 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.839 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.839 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.839 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.840 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.840 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.840 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:03.840 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:31:04.524 [info] Started local extension host with pid 21012.
+2025-10-23 13:31:05.268 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-23 13:31:06.200 [warning] No search provider registered for scheme: file, waiting
+2025-10-23 13:31:07.412 [info] [ShellExec] Created session febb4a8d-b653-473c-b136-5f6aeed80db4 on LocalProcess host
+2025-10-23 13:31:18.618 [info] [perf] Render performance baseline is 30ms
+2025-10-23 13:32:51.257 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-23 13:32:51.263 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.264 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.264 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.264 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.264 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.264 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.265 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.265 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:51.265 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-23 13:32:52.028 [info] Started local extension host with pid 21571.
+2025-10-23 13:32:52.800 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-23 13:32:53.701 [warning] No search provider registered for scheme: file, waiting
+2025-10-23 13:32:54.911 [info] [ShellExec] Created session 5c36ae08-f214-461f-a252-f2b7a4b94629 on LocalProcess host
+2025-10-23 13:32:55.505 [info] [perf] Render performance baseline is 33ms
+2025-10-23 13:33:08.232 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/usr/share/themes/Breeze-Dark","external":"file:///usr/share/themes/Breeze-Dark","path":"/usr/share/themes/Breeze-Dark","scheme":"file"},"name":"Breeze-Dark","index":0}]
+2025-10-23 13:33:08.232 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-23 13:34:01.525 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/usr/share/themes/Breeze-Dark","external":"file:///usr/share/themes/Breeze-Dark","path":"/usr/share/themes/Breeze-Dark","scheme":"file"},"name":"Breeze-Dark","index":0}]
+2025-10-23 13:34:01.525 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-23 13:34:16.046 [warning] ToolCallEventService: Tracked tool call start - call_2EcPqhINuta5ZphfFdBO7q4M
+fc_00fdf68c3a0bcf3c0168f9e17fa0d0819b8d561628f09fbc14 (todo_write)
+2025-10-23 13:34:16.583 [warning] ToolCallEventService: Tracked tool call end - call_2EcPqhINuta5ZphfFdBO7q4M
+fc_00fdf68c3a0bcf3c0168f9e17fa0d0819b8d561628f09fbc14
+2025-10-23 13:34:18.537 [warning] ToolCallEventService: Tracked tool call start - call_yzGONjG1BPnZUFRI4FDGCPl6
+fc_00fdf68c3a0bcf3c0168f9e18201d8819ba04ffe19a91939ae (read_file)
+2025-10-23 13:34:18.719 [warning] ToolCallEventService: Tracked tool call start - call_EuOnBVMlpfAWOsCRCsEHCOzs
+fc_00fdf68c3a0bcf3c0168f9e1824b00819b8fe62b20aa4a9921 (read_file)
+2025-10-23 13:34:18.941 [warning] ToolCallEventService: Tracked tool call start - call_3KwkqWaU5qWNgqImxFsdHOgE
+fc_00fdf68c3a0bcf3c0168f9e1826f54819b92e55747b936ba89 (read_file)
+2025-10-23 13:34:33.477 [warning] ToolCallEventService: Tracked tool call start - call_OgBRFbDKmNFO2qgymeRxdAx0
+fc_00fdf68c3a0bcf3c0168f9e190fd64819b884ab915743c4c28 (ripgrep_raw_search)
+2025-10-23 13:34:33.559 [warning] ToolCallEventService: Tracked tool call start - call_Ny7WNKIJLz3C11hvxAugY80m
+fc_00fdf68c3a0bcf3c0168f9e1911560819bb8f6ba856851899a (ripgrep_raw_search)
+2025-10-23 13:34:33.583 [warning] ToolCallEventService: Tracked tool call start - call_ROsWVL8NUNmtTqkTivwx8Vyu
+fc_00fdf68c3a0bcf3c0168f9e1912fa0819bb63a8a6ad59715eb (ripgrep_raw_search)
+2025-10-23 13:34:33.718 [warning] ToolCallEventService: Tracked tool call start - call_mVeeLcJDsIt7qi3mJrfU0onH
+fc_00fdf68c3a0bcf3c0168f9e191503c819bb2fc5ff328569133 (ripgrep_raw_search)
+2025-10-23 13:34:34.163 [warning] ToolCallEventService: Tracked tool call start - call_0V5zBak0GzMS9hOK4lVJCG7W
+fc_00fdf68c3a0bcf3c0168f9e1917494819b813f88b6c12a9b70 (ripgrep_raw_search)
+2025-10-23 13:34:44.693 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/usr/share/themes/Breeze-Dark","external":"file:///usr/share/themes/Breeze-Dark","path":"/usr/share/themes/Breeze-Dark","scheme":"file"},"name":"Breeze-Dark","index":0}]
+2025-10-23 13:34:44.693 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-23 13:34:58.699 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/usr/share/themes/Breeze-Dark","external":"file:///usr/share/themes/Breeze-Dark","path":"/usr/share/themes/Breeze-Dark","scheme":"file"},"name":"Breeze-Dark","index":0}]
+2025-10-23 13:34:58.699 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-23 13:35:25.084 [warning] ToolCallEventService: Tracked tool call start - call_FgoJ0V2Lh3guALxvONbXyyqm
+fc_02516d28e651b5660168f9e1c4ad1c8199b14546c794d50f1d (read_file)
+2025-10-23 13:35:25.377 [warning] ToolCallEventService: Tracked tool call start - call_ej8C1nH2t1H55jnNCuuijed1
+fc_02516d28e651b5660168f9e1c4cf0c8199b95759e0a79da7d1 (read_file)
+2025-10-23 13:35:28.948 [warning] ToolCallEventService: Tracked tool call start - call_EhOa30OPOlTPpCQ7QfBJgnDX
+fc_02516d28e651b5660168f9e1c801cc8199a6ab615826d17b5c (read_file)
+2025-10-23 13:35:34.655 [warning] ToolCallEventService: Tracked tool call start - call_0xSfXs9eB9U4Oojt6JNEZfoS
+fc_02516d28e651b5660168f9e1cd13748199b0126b7aa3dd6944 (read_file)
+2025-10-23 13:35:59.562 [warning] ToolCallEventService: Tracked tool call start - call_kqf19323ONpOTJFJnSj2CiIb
+fc_02516d28e651b5660168f9e1e3133081998d5cd3cd9b451312 (todo_write)
+2025-10-23 13:35:59.567 [warning] ToolCallEventService: Tracked tool call end - call_kqf19323ONpOTJFJnSj2CiIb
+fc_02516d28e651b5660168f9e1e3133081998d5cd3cd9b451312
+2025-10-23 13:36:01.821 [warning] ToolCallEventService: Tracked tool call start - call_5FEeCdJBGYPvJ1y5wqkVRTxQ
+fc_02516d28e651b5660168f9e1e9476481999109520e6126b487 (apply_patch)
+2025-10-23 13:36:05.272 [error] [text file model] handleSaveError(1) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css
+2025-10-23 13:36:05.286 [warning] ToolCallEventService: Tracked tool call end - call_5FEeCdJBGYPvJ1y5wqkVRTxQ
+fc_02516d28e651b5660168f9e1e9476481999109520e6126b487
+2025-10-23 13:36:07.588 [warning] ToolCallEventService: Tracked tool call start - call_GVETanmInsckl01YQ3WVXKar
+fc_02516d28e651b5660168f9e1ef34788199929223de08649418 (apply_patch)
+2025-10-23 13:36:10.381 [error] [text file model] handleSaveError(1) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+2025-10-23 13:36:10.390 [warning] ToolCallEventService: Tracked tool call end - call_GVETanmInsckl01YQ3WVXKar
+fc_02516d28e651b5660168f9e1ef34788199929223de08649418
+2025-10-23 13:36:13.378 [warning] ToolCallEventService: Tracked tool call start - call_BgdJQYhK1nrseG3TtYkcVdGz
+fc_02516d28e651b5660168f9e1f4d7b0819994dc029b9a08b66f (apply_patch)
+2025-10-23 13:36:13.400 [error] [text file model] handleSaveError(1) - exit - resulted in a save error: Error: Command failed: cd "/usr/share/themes"; "/usr/bin/pkexec" --disable-internal-agent /bin/bash -c "echo SUDOPROMPT; \"/tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor\" --file-write \"/home/kamal/.config/Cursor/code-elevated-zo8yapWY\""
+/bin/bash: line 1: /tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor: Permission denied
+ file:///usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css
+2025-10-23 13:36:22.996 [error] [text file model] handleSaveError(1) - exit - resulted in a save error: Error: Command failed: cd "/usr/share/themes"; "/usr/bin/pkexec" --disable-internal-agent /bin/bash -c "echo SUDOPROMPT; \"/tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor\" --file-write \"/home/kamal/.config/Cursor/code-elevated-7nekjo1I\""
+/bin/bash: line 1: /tmp/.mount_cursoraowBax/usr/share/cursor/bin/cursor: Permission denied
+ file:///usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+2025-10-23 13:36:26.441 [warning] ToolCallEventService: Tracked tool call end - call_BgdJQYhK1nrseG3TtYkcVdGz
+fc_02516d28e651b5660168f9e1f4d7b0819994dc029b9a08b66f
+2025-10-23 13:36:31.928 [warning] ToolCallEventService: Tracked tool call start - call_3fLfovfaLsragAj9eEtg5DMb
+fc_02516d28e651b5660168f9e20750848199a0d301fee1703bc7 (apply_patch)
+2025-10-23 13:36:45.890 [error] [text file model] handleSaveError(2) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+2025-10-23 13:36:46.752 [warning] ToolCallEventService: Tracked tool call end - call_3fLfovfaLsragAj9eEtg5DMb
+fc_02516d28e651b5660168f9e20750848199a0d301fee1703bc7
+2025-10-23 13:36:48.367 [error] [text file model] handleSaveError(1) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css
+2025-10-23 13:36:48.369 [error] [text file model] handleSaveError(2) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-4.0/gtk.css
+2025-10-23 13:36:58.466 [error] [text file model] handleSaveError(2) - exit - resulted in a save error: Error: Unable to write file '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css' (NoPermissions (FileSystemError): Error: EACCES: permission denied, open '/usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css') file:///usr/share/themes/Breeze-Dark/gtk-3.0/gtk.css

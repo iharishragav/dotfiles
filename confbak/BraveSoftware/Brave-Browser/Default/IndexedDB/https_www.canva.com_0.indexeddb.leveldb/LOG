@@ -1,0 +1,51 @@
+2025/10/30-18:08:06.106 615 Creating DB /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.canva.com_0.indexeddb.leveldb since it was missing.
+2025/10/30-18:08:06.108 615 Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.canva.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/10/30-18:08:06.246 639 Level-0 table #5: started
+2025/10/30-18:08:06.247 639 Level-0 table #5: 1826 bytes OK
+2025/10/30-18:08:06.248 639 Delete type=0 #3
+2025/10/30-18:08:06.249 615 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/10/30-18:20:16.861 615 Level-0 table #7: started
+2025/10/30-18:20:16.881 615 Level-0 table #7: 2240911 bytes OK
+2025/10/30-18:20:16.883 615 Delete type=0 #4
+2025/10/30-18:21:31.866 613 Compacting 1@1 + 1@2 files
+2025/10/30-18:21:31.876 613 Generated table #8@1: 319 keys, 17837 bytes
+2025/10/30-18:21:31.876 613 Compacted 1@1 + 1@2 files => 17837 bytes
+2025/10/30-18:21:31.877 613 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-18:21:31.878 613 Delete type=2 #7
+2025/10/30-18:21:31.878 613 Delete type=2 #5
+2025/10/30-18:31:49.137 615 Level-0 table #10: started
+2025/10/30-18:31:49.157 615 Level-0 table #10: 2451491 bytes OK
+2025/10/30-18:31:49.159 615 Delete type=0 #6
+2025/10/30-18:32:09.859 613 Compacting 1@1 + 1@2 files
+2025/10/30-18:32:09.872 613 Generated table #11@1: 316 keys, 17581 bytes
+2025/10/30-18:32:09.872 613 Compacted 1@1 + 1@2 files => 17581 bytes
+2025/10/30-18:32:09.873 613 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-18:32:09.873 613 Delete type=2 #10
+2025/10/30-18:32:09.873 613 Delete type=2 #8
+2025/10/30-18:41:42.648 615 Level-0 table #13: started
+2025/10/30-18:41:42.668 615 Level-0 table #13: 2401570 bytes OK
+2025/10/30-18:41:42.670 615 Delete type=0 #9
+2025/10/30-18:42:15.405 613 Compacting 1@1 + 1@2 files
+2025/10/30-18:42:15.413 613 Generated table #14@1: 343 keys, 73219 bytes
+2025/10/30-18:42:15.414 613 Compacted 1@1 + 1@2 files => 73219 bytes
+2025/10/30-18:42:15.414 613 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-18:42:15.415 613 Delete type=2 #13
+2025/10/30-18:42:15.415 613 Delete type=2 #11
+2025/10/30-19:17:15.361 615 Level-0 table #16: started
+2025/10/30-19:17:15.383 615 Level-0 table #16: 1911081 bytes OK
+2025/10/30-19:17:15.385 615 Delete type=0 #12
+2025/10/30-19:17:28.041 613 Compacting 1@1 + 1@2 files
+2025/10/30-19:17:28.054 613 Generated table #17@1: 357 keys, 15044 bytes
+2025/10/30-19:17:28.054 613 Compacted 1@1 + 1@2 files => 15044 bytes
+2025/10/30-19:17:28.055 613 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-19:17:28.056 613 Delete type=2 #16
+2025/10/30-19:17:28.056 613 Delete type=2 #14
+2025/10/30-19:55:33.428 67a Level-0 table #19: started
+2025/10/30-19:55:33.452 67a Level-0 table #19: 1497310 bytes OK
+2025/10/30-19:55:33.454 67a Delete type=0 #15
+2025/10/30-19:56:04.431 b919 Compacting 1@1 + 1@2 files
+2025/10/30-19:56:04.442 b919 Generated table #20@1: 359 keys, 11333 bytes
+2025/10/30-19:56:04.442 b919 Compacted 1@1 + 1@2 files => 11333 bytes
+2025/10/30-19:56:04.443 b919 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-19:56:04.443 b919 Delete type=2 #17
+2025/10/30-19:56:04.443 b919 Delete type=2 #19

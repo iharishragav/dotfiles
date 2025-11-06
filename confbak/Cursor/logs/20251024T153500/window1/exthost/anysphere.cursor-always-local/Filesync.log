@@ -1,0 +1,57 @@
+2025-10-24 15:35:10.950 [error] Failed to check if file sync is enabled for user {}
+2025-10-24 15:35:10.950 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 15:35:10.950 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 15:35:10.950 [info] [registerEventListeners] Registering event listeners
+2025-10-24 15:35:10.950 [error] Failed to check if file sync is enabled for user {}
+2025-10-24 15:35:10.950 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 15:35:10.950 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 15:35:18.506 [info] [ENABLED STATUS] Filesync enabled from server.
+2025-10-24 15:35:18.799 [info] Starting sync of visible tabs
+2025-10-24 15:35:18.800 [info] Synced all visible tabs in 0.40077999999994063ms
+2025-10-24 15:35:19.294 [info] Fetched fsConfig in 786.2939960000003ms
+2025-10-24 15:35:19.294 [info] FSConfig response: {"checkFilesyncHashPercent":0.004999999888241291,"rateLimiterBreakerResetTimeMs":300000,"rateLimiterRps":10,"rateLimiterBurstCapacity":50,"maxRecentUpdatesStored":100,"maxModelVersionCacheSize":100,"maxFileSizeToSyncBytes":500000,"syncRetryMaxAttempts":3,"syncRetryInitialDelayMs":20,"syncRetryTimeMultiplier":2,"fileSyncStatusMaxCacheSize":5,"successiveSyncsRequiredForReliance":5,"extraSuccessfulSyncsNeededAfterErrors":0,"bigChangeStrippingThresholdBytes":10000,"lastNUpdatesToSend":15,"fileSyncStatusTtlMs":300000,"syncDebounceMs":250,"syncUpdateThreshold":10}
+2025-10-24 15:35:19.294 [info] File sync enabled status: true
+2025-10-24 15:35:19.294 [info] Starting sync of visible tabs
+2025-10-24 15:35:19.294 [info] Synced all visible tabs in 0.11543900000106078ms
+2025-10-24 15:35:19.296 [info] [ENABLED STATUS] Filesync enabled from server.
+2025-10-24 15:35:19.551 [info] Handled visible editors change in 2.25998299999992ms
+2025-10-24 15:35:19.573 [info] Fetched fsConfig in 276.6019030000007ms
+2025-10-24 15:35:19.573 [info] FSConfig response: {"checkFilesyncHashPercent":0.004999999888241291,"rateLimiterBreakerResetTimeMs":300000,"rateLimiterRps":10,"rateLimiterBurstCapacity":50,"maxRecentUpdatesStored":100,"maxModelVersionCacheSize":100,"maxFileSizeToSyncBytes":500000,"syncRetryMaxAttempts":3,"syncRetryInitialDelayMs":20,"syncRetryTimeMultiplier":2,"fileSyncStatusMaxCacheSize":5,"successiveSyncsRequiredForReliance":5,"extraSuccessfulSyncsNeededAfterErrors":0,"bigChangeStrippingThresholdBytes":10000,"lastNUpdatesToSend":15,"fileSyncStatusTtlMs":300000,"syncDebounceMs":250,"syncUpdateThreshold":10}
+2025-10-24 15:35:24.771 [info] Handled visible editors change in 0.7753699999993842ms
+2025-10-24 15:35:24.872 [info] Handled visible editors change in 1.5634329999993497ms
+2025-10-24 16:25:08.520 [info] Handled visible editors change in 1.588886999990791ms
+2025-10-24 16:25:08.558 [info] Handled visible editors change in 1.6606290000490844ms
+2025-10-24 16:25:25.635 [info] Handled visible editors change in 1.0591899999417365ms
+2025-10-24 16:25:25.658 [info] Handled visible editors change in 1.2251209998503327ms
+2025-10-24 16:25:41.502 [info] Handled visible editors change in 0.8629019996151328ms
+2025-10-24 16:25:45.437 [info] Handled visible editors change in 0.855209999717772ms
+2025-10-24 16:26:44.940 [info] Handled visible editors change in 1.1059530000202358ms
+2025-10-24 16:26:44.970 [info] Handled visible editors change in 1.4072229997254908ms
+2025-10-24 16:29:38.878 [info] Handled visible editors change in 1.2767210002057254ms
+2025-10-24 16:29:38.912 [info] Handled visible editors change in 1.7181110000237823ms
+2025-10-24 16:29:46.928 [info] Handled visible editors change in 0.9118359996937215ms
+2025-10-24 16:29:46.948 [info] Handled visible editors change in 1.1786489998921752ms
+2025-10-24 16:29:48.388 [info] Handled visible editors change in 0.8082530000247061ms
+2025-10-24 16:29:48.411 [info] Handled visible editors change in 0.9173059999011457ms
+2025-10-24 16:29:50.741 [info] Handled visible editors change in 0.5774940000846982ms
+2025-10-24 16:29:50.761 [info] Handled visible editors change in 1.2006180002354085ms
+2025-10-24 16:29:56.935 [info] Handled visible editors change in 0.6518149999901652ms
+2025-10-24 16:29:56.957 [info] Handled visible editors change in 1.310453999787569ms
+2025-10-24 16:30:52.056 [info] Handled visible editors change in 1.3784150001592934ms
+2025-10-24 16:30:52.085 [info] Handled visible editors change in 1.1776369996368885ms
+2025-10-24 16:30:55.441 [info] Handled visible editors change in 0.9742160001769662ms
+2025-10-24 16:30:55.463 [info] Handled visible editors change in 0.9975970000959933ms
+2025-10-24 16:32:10.958 [info] Handled visible editors change in 0.6114639998413622ms
+2025-10-24 16:32:10.985 [info] Handled visible editors change in 0.9554999996908009ms
+2025-10-24 16:42:32.271 [info] Handled visible editors change in 0.7029989999718964ms
+2025-10-24 16:42:32.307 [info] Handled visible editors change in 1.1744609996676445ms
+2025-10-24 16:42:37.355 [info] Handled visible editors change in 0.416397999972105ms
+2025-10-24 16:42:37.418 [info] Handled visible editors change in 0.8898419998586178ms
+2025-10-24 16:51:20.234 [info] Handled visible editors change in 1.1536529995501041ms
+2025-10-24 16:52:21.888 [error] Failed to check if file sync is enabled for user {}
+2025-10-24 16:52:21.888 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 16:52:21.888 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 16:52:21.888 [info] [registerEventListeners] Registering event listeners
+2025-10-24 16:52:22.476 [error] Failed to check if file sync is enabled for user {}
+2025-10-24 16:52:22.477 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-24 16:52:22.477 [error] Failed to fetch fsConfig File sync is disabled

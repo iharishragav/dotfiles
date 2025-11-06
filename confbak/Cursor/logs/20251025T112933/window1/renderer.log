@@ -1,0 +1,255 @@
+2025-10-25 11:29:37.356 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-25 11:29:37.363 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.364 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.364 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.365 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.365 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.366 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.366 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.366 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:37.366 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-25 11:29:38.115 [info] Started local extension host with pid 50070.
+2025-10-25 11:29:39.532 [warning] No search provider registered for scheme: file, waiting
+2025-10-25 11:29:42.335 [info] [ShellExec] Created session ef492e9d-46e4-41d8-9ccf-26eae3656ca7 on LocalProcess host
+2025-10-25 11:29:44.826 [error] [237] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at HDr._event (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new dTt (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:92:140920)
+    at L0._createConfiguration (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:16881)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:14653)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Rn (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:26184)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:27368 [237] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+2025-10-25 11:29:44.947 [error] [1a2] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at rvc._event [as onDidChange] (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new Omc (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7246:14444)
+    at LRr.registerEditorListenersToEditor (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:28509)
+    at cEt.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:27469)
+    at _e._deliver (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:2962)
+    at _e._deliverQueue (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:3053)
+    at _e.fire (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:3390)
+    at Xlr.addCodeEditor (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7842:23482)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:16732)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Rn (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:26184)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:27368 [1a2] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+2025-10-25 11:29:45.334 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-25 11:29:46.770 [info] [perf] Render performance baseline is 27ms
+2025-10-25 11:29:48.325 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:29:48.326 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:29:57.876 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:29:57.877 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:30:13.854 [warning] ToolCallEventService: Tracked tool call start - tool_279d0faf-de36-407a-be94-4db6b488f14 (write)
+2025-10-25 11:30:40.687 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:30:40.688 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:31:19.221 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:31:19.221 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:31:22.856 [warning] ToolCallEventService: Tracked tool call start - tool_da3e4134-9d8d-4c4b-9168-d58b0475c06 (list_dir_v2)
+2025-10-25 11:31:36.119 [warning] ToolCallEventService: Tracked tool call start - tool_f42d4d5b-a227-40b3-810c-748bf5b88ff (run_terminal_cmd)
+2025-10-25 11:31:36.301 [info] [ShellExec] Created session 2bbc312b-bb0e-4fa0-b8e4-6d25ed16f4ce on LocalProcess host
+2025-10-25 11:31:36.436 [warning] ToolCallEventService: Tracked tool call end - tool_f42d4d5b-a227-40b3-810c-748bf5b88ff
+2025-10-25 11:31:54.743 [warning] ToolCallEventService: Tracked tool call start - tool_a90618ff-5e6b-40e6-b641-7db11bb363c (run_terminal_cmd)
+2025-10-25 11:31:54.987 [warning] ToolCallEventService: Tracked tool call end - tool_a90618ff-5e6b-40e6-b641-7db11bb363c
+2025-10-25 11:32:06.990 [warning] ToolCallEventService: Tracked tool call start - tool_f54ca311-8db6-4962-b19b-be7bcb803f4 (run_terminal_cmd)
+2025-10-25 11:32:07.238 [warning] ToolCallEventService: Tracked tool call end - tool_f54ca311-8db6-4962-b19b-be7bcb803f4
+2025-10-25 11:32:10.136 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:32:10.136 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:32:55.825 [warning] ToolCallEventService: Tracked tool call start - tool_37d832f9-01ac-48ac-8752-77b5ae4aef2 (run_terminal_cmd)
+2025-10-25 11:32:55.832 [warning] ToolCallEventService: Tracked tool call end - tool_37d832f9-01ac-48ac-8752-77b5ae4aef2
+2025-10-25 11:33:07.430 [warning] ToolCallEventService: Tracked tool call start - tool_f19041d2-6aaa-4ae3-acf5-1c6c4956b22 (run_terminal_cmd)
+2025-10-25 11:33:07.697 [warning] ToolCallEventService: Tracked tool call end - tool_f19041d2-6aaa-4ae3-acf5-1c6c4956b22
+2025-10-25 11:33:13.815 [warning] ToolCallEventService: Tracked tool call start - tool_b0999b98-f2fc-495d-9cac-e3dbc7f4d86 (run_terminal_cmd)
+2025-10-25 11:33:14.100 [warning] ToolCallEventService: Tracked tool call end - tool_b0999b98-f2fc-495d-9cac-e3dbc7f4d86
+2025-10-25 11:33:18.674 [warning] ToolCallEventService: Tracked tool call start - tool_df185da2-d021-4abf-8ee1-0f23eb466c2 (run_terminal_cmd)
+2025-10-25 11:33:18.920 [warning] ToolCallEventService: Tracked tool call end - tool_df185da2-d021-4abf-8ee1-0f23eb466c2
+2025-10-25 11:33:25.023 [warning] ToolCallEventService: Tracked tool call start - tool_cfd259a5-0609-41c8-b200-6d199c71feb (run_terminal_cmd)
+2025-10-25 11:33:25.282 [warning] ToolCallEventService: Tracked tool call end - tool_cfd259a5-0609-41c8-b200-6d199c71feb
+2025-10-25 11:33:29.138 [warning] ToolCallEventService: Tracked tool call start - tool_1ee04da3-5e8e-42bd-9f1d-c3ee315597a (run_terminal_cmd)
+2025-10-25 11:33:29.399 [warning] ToolCallEventService: Tracked tool call end - tool_1ee04da3-5e8e-42bd-9f1d-c3ee315597a
+2025-10-25 11:33:32.967 [warning] ToolCallEventService: Tracked tool call start - tool_7f1ac992-e513-4c6f-b620-3871e55e9ea (run_terminal_cmd)
+2025-10-25 11:33:33.203 [warning] ToolCallEventService: Tracked tool call end - tool_7f1ac992-e513-4c6f-b620-3871e55e9ea
+2025-10-25 11:33:43.668 [warning] ToolCallEventService: Tracked tool call start - tool_71ee297f-0ab7-4af7-8480-965a9c42948 (run_terminal_cmd)
+2025-10-25 11:33:43.919 [warning] ToolCallEventService: Tracked tool call end - tool_71ee297f-0ab7-4af7-8480-965a9c42948
+2025-10-25 11:33:53.590 [warning] ToolCallEventService: Tracked tool call start - tool_3a461996-d00d-41df-818a-e3c0a7550f2 (run_terminal_cmd)
+2025-10-25 11:33:54.347 [warning] ToolCallEventService: Tracked tool call end - tool_3a461996-d00d-41df-818a-e3c0a7550f2
+2025-10-25 11:33:58.320 [warning] ToolCallEventService: Tracked tool call start - tool_60e46d5c-4ad6-4018-bedf-1114826638e (run_terminal_cmd)
+2025-10-25 11:33:58.567 [warning] ToolCallEventService: Tracked tool call end - tool_60e46d5c-4ad6-4018-bedf-1114826638e
+2025-10-25 11:34:08.192 [warning] ToolCallEventService: Tracked tool call start - tool_85b6e67d-e000-47ee-9887-f9f24422474 (run_terminal_cmd)
+2025-10-25 11:34:08.466 [warning] ToolCallEventService: Tracked tool call end - tool_85b6e67d-e000-47ee-9887-f9f24422474
+2025-10-25 11:34:13.213 [warning] ToolCallEventService: Tracked tool call start - tool_490ac397-71c2-4d4e-b97c-b5118806ca4 (run_terminal_cmd)
+2025-10-25 11:34:13.536 [warning] ToolCallEventService: Tracked tool call end - tool_490ac397-71c2-4d4e-b97c-b5118806ca4
+2025-10-25 11:34:15.858 [error] [01b] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at xgr._event [as onDidChangeContext] (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at xzd._updateParentChangeListener (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8134:30437)
+    at new xzd (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8134:30061)
+    at xgr.createScoped (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8134:28306)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:15065)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Object.fn (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6707:1049)
+    at S8o (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:30033)
+    at cet (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:29787)
+    at hDt (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31414)
+    at lRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32816)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32276
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31592)
+    at oRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32269)
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31603)
+    at lP (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:27153)
+    at r (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:44218)
+    at Object.update (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:33345)
+    at RMr.setData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:37822)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65428
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:254
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65418
+    at Ap.updateComposerDataSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:57050)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Ap.updateComposerBubbleSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65385)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Sdr.setBubbleData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:203)
+    at Sdr.getOrCreateBubbleId (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:3557)
+    at Sdr.handleInitialToolCall (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:4328)
+    at qkn.toolWrappedStream (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:25432)
+    at async vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:5596
+    at async NR.handleStreamComposer (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3445:993)
+    at async adr.streamResponse (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7900:11172)
+    at async Ldr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:7354)
+    at async Adr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7963:1709)
+    at async Sdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:616)
+    at async Cdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:3679)
+    at async Edr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:17625)
+    at async uCe.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:39442)
+    at async Rdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:6617)
+    at async Rte.processCodeBlocks (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3486:3452)
+    at async l9.submitChatMaybeAbortCurrent (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:7563)
+    at async ha (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7196:2319) [01b] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+2025-10-25 11:34:17.561 [warning] ToolCallEventService: Tracked tool call start - tool_afd188d6-cd32-4db6-b241-b95a09f9325 (run_terminal_cmd)
+2025-10-25 11:34:17.849 [warning] ToolCallEventService: Tracked tool call end - tool_afd188d6-cd32-4db6-b241-b95a09f9325
+2025-10-25 11:34:29.186 [warning] ToolCallEventService: Tracked tool call start - tool_2ceb0901-0f8c-4ee9-b4be-e101e441c1c (run_terminal_cmd)
+2025-10-25 11:34:29.456 [warning] ToolCallEventService: Tracked tool call end - tool_2ceb0901-0f8c-4ee9-b4be-e101e441c1c
+2025-10-25 11:34:35.694 [warning] ToolCallEventService: Tracked tool call start - tool_c0d9f8b9-7e0d-4185-a1c6-61b81c11197 (run_terminal_cmd)
+2025-10-25 11:34:36.075 [warning] ToolCallEventService: Tracked tool call end - tool_c0d9f8b9-7e0d-4185-a1c6-61b81c11197
+2025-10-25 11:34:49.701 [error] [237] potential listener LEAK detected, having 255 listeners already. MOST frequent listener (37):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at HDr._event (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new dTt (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:92:140920)
+    at L0._createConfiguration (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:16881)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:14653)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Object.fn (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6707:1049)
+    at S8o (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:30033)
+    at cet (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:29787)
+    at hDt (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31414)
+    at lRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32816)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32276
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31592)
+    at oRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32269)
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31603)
+    at lP (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:27153)
+    at r (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:44218)
+    at Object.update (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:33345)
+    at RMr.setData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:37822)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65428
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:254
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65418
+    at Ap.updateComposerDataSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:57050)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Ap.updateComposerBubbleSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65385)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Sdr.setBubbleData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:203)
+    at Sdr.getOrCreateBubbleId (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:3557)
+    at Sdr.handleInitialToolCall (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:4328)
+    at qkn.toolWrappedStream (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:25432)
+    at async vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:5596
+    at async NR.handleStreamComposer (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3445:993)
+    at async adr.streamResponse (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7900:11172)
+    at async Ldr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:7354)
+    at async Adr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7963:1709)
+    at async Sdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:616)
+    at async Cdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:3679)
+    at async Edr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:17625)
+    at async uCe.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:39442)
+    at async Rdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:6617)
+    at async Rte.processCodeBlocks (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3486:3452)
+    at async l9.submitChatMaybeAbortCurrent (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:7563)
+    at async ha (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7196:2319) [237] potential listener LEAK detected, having 255 listeners already. MOST frequent listener (37):
+2025-10-25 11:35:29.528 [warning] ToolCallEventService: Tracked tool call start - tool_4665d9d5-7a48-4200-a26a-fb1a9a24f67 (run_terminal_cmd)
+2025-10-25 11:35:29.840 [warning] ToolCallEventService: Tracked tool call end - tool_4665d9d5-7a48-4200-a26a-fb1a9a24f67
+2025-10-25 11:35:38.062 [warning] ToolCallEventService: Tracked tool call start - tool_a9deb97a-3595-4109-ba80-1945dfc9ef7 (run_terminal_cmd)
+2025-10-25 11:35:38.449 [warning] ToolCallEventService: Tracked tool call end - tool_a9deb97a-3595-4109-ba80-1945dfc9ef7
+2025-10-25 11:35:45.728 [error] [1a2] potential listener LEAK detected, having 262 listeners already. MOST frequent listener (44):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at rvc._event [as onDidChange] (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new FWo (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:293:30060)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:15395)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Object.fn (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6707:1049)
+    at S8o (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:30033)
+    at cet (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:29787)
+    at hDt (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31414)
+    at lRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32816)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32276
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31592)
+    at oRu (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:32269)
+    at uG (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:31603)
+    at lP (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:27153)
+    at r (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:276:44218)
+    at Object.update (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:33345)
+    at RMr.setData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:541:37822)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65428
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:254
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65418
+    at Ap.updateComposerDataSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:57050)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Ap.updateComposerBubbleSetStore (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2580:65385)
+    at vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44637
+    at rvs (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44323)
+    at E5 (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44284)
+    at n.value (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:52:44626)
+    at Sdr.setBubbleData (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:203)
+    at Sdr.getOrCreateBubbleId (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:3557)
+    at Sdr.handleInitialToolCall (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:4328)
+    at qkn.toolWrappedStream (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:25432)
+    at async vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:5596
+    at async NR.handleStreamComposer (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3445:993)
+    at async adr.streamResponse (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7900:11172)
+    at async Ldr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:7354)
+    at async Adr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7963:1709)
+    at async Sdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7954:616)
+    at async Cdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:3679)
+    at async Edr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7957:17625)
+    at async uCe.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:5250:39442)
+    at async Rdr.<anonymous> (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7961:6617)
+    at async Rte.processCodeBlocks (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:3486:3452)
+    at async l9.submitChatMaybeAbortCurrent (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6358:7563)
+    at async ha (vscode-file://vscode-app/tmp/.mount_cursor9COrbS/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7196:2319) [1a2] potential listener LEAK detected, having 262 listeners already. MOST frequent listener (44):
+2025-10-25 11:35:58.079 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:35:58.080 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-25 11:36:08.559 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-25 11:36:08.559 [info] [composer.environmentInfo] worktreePath undefined

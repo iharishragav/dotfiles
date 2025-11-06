@@ -1,0 +1,15 @@
+2025/11/02-14:40:45.386 629 Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_hackthisfall.devfolio.co_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/02-14:40:45.386 629 Recovering log #4
+2025/11/02-14:40:45.387 629 Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_hackthisfall.devfolio.co_0.indexeddb.leveldb/000004.log 
+2025/11/02-15:01:02.587 62a Level-0 table #8: started
+2025/11/02-15:01:02.588 62a Level-0 table #8: 190 bytes OK
+2025/11/02-15:01:02.589 62a Delete type=0 #4
+2025/11/02-15:01:02.589 62a Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2025/11/02-15:01:02.590 62a Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x06' @ 70 : 1
+2025/11/02-15:01:02.590 62a Compacting 1@1 + 1@2 files
+2025/11/02-15:01:02.591 62a Generated table #9@1: 23 keys, 840 bytes
+2025/11/02-15:01:02.591 62a Compacted 1@1 + 1@2 files => 840 bytes
+2025/11/02-15:01:02.591 62a compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/11/02-15:01:02.592 62a Delete type=2 #5
+2025/11/02-15:01:02.592 62a Delete type=2 #8
+2025/11/02-15:01:02.592 62a Manual compaction at level-1 from '\x00\x00\x00\x00\x06' @ 70 : 1 .. (end); will stop at (end)

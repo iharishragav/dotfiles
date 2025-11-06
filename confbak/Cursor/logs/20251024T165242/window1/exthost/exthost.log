@@ -1,0 +1,62 @@
+2025-10-24 16:52:49.276 [info] Extension host with pid 29509 started
+2025-10-24 16:52:49.276 [info] Skipping acquiring lock for /home/kamal/.config/Cursor/User/workspaceStorage/3a53b41e5db13cee75d909aeeb11f73e.
+2025-10-24 16:52:50.399 [info] ExtensionService#_doActivateExtension cursor.cursor-browser-automation, startup: false, activationEvent: 'onCommand:cursor.browserAutomation.stop'
+2025-10-24 16:52:50.520 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2025-10-24 16:52:50.523 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-24 16:52:50.540 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-24 16:52:50.554 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-24 16:52:50.633 [info] ExtensionService#_doActivateExtension anysphere.cursor-always-local, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:50.932 [info] ExtensionService#_doActivateExtension anysphere.cursor-browser-connect, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:50.980 [info] ExtensionService#_doActivateExtension anysphere.cursor-deeplink, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.048 [info] ExtensionService#_doActivateExtension anysphere.cursor-mcp, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.084 [info] ExtensionService#_doActivateExtension anysphere.cursor-playwright, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.379 [info] ExtensionService#_doActivateExtension anysphere.cursor-shadow-workspace, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.458 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.459 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:51.857 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2025-10-24 16:52:51.917 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2025-10-24 16:52:52.124 [info] Eager extensions activated
+2025-10-24 16:52:52.216 [info] ExtensionService#_doActivateExtension anysphere.cursor-retrieval, startup: false, activationEvent: 'onStartupFinished'
+2025-10-24 16:52:52.540 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-24 16:52:52.572 [error] ProxyResolver#addCertificatesV1 Canceled: Canceled
+	at QMe (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:46:119073)
+	at mwe._remoteCall (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:46:125404)
+	at r.<computed>.a.charCodeAt.r.<computed> (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:46:122158)
+	at eo.loadCertificates (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:133:404535)
+	at Object.loadAdditionalCertificates (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:200:23282)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:723:53
+	at Generator.next (<anonymous>)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:35:71
+	at new Promise (<anonymous>)
+	at __awaiter (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:31:12)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:722:43
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:724:16
+	at Generator.next (<anonymous>)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:35:71
+	at new Promise (<anonymous>)
+	at __awaiter (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:31:12)
+	at getOrLoadAdditionalCertificates (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:720:12)
+	at addCertificatesToOptionsV1 (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:699:9)
+	at resolveProxyWithRequest (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:114:9)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:346:77
+	at new Promise (<anonymous>)
+	at PacProxyAgent.resolveP [as resolver] (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/index.js:346:54)
+	at PacProxyAgent.<anonymous> (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:74:37)
+	at Generator.next (<anonymous>)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:8:71
+	at new Promise (<anonymous>)
+	at __awaiter (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:4:12)
+	at PacProxyAgent.connect (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/@vscode/proxy-agent/out/agent.js:56:16)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/node_modules/agent-base/dist/index.js:73:30
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-24 16:52:52.573 [error] Error: Channel has been closed
+	at r (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:142:3270)
+	at Object.appendLine (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:142:3409)
+	at m (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:220900)
+	at t.deactivate (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:220759)
+	at /tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2543718
+	at t.deactivate (/tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2543776)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async Promise.all (index 0)
+	at async Gqt._deactivateAll (file:///tmp/.mount_cursorJ4HPis/usr/share/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:140:12392)
+2025-10-24 16:52:52.577 [info] Extension host with pid 29509 exiting with code 0

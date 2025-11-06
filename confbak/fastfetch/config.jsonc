@@ -1,0 +1,70 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": null,
+  "display": {
+    "separator": "  ",
+    "color": "white",
+    "constants": [
+      "\u001b[38;2;91;102;120m",    // {$1} slate/foreground
+      "\u001b[38;2;155;183;227m",  // {$2} sky blue
+      "\u001b[38;2;182;166;217m",  // {$3} lavender
+      "\u001b[38;2;230;175;192m"   // {$4} pastel pink
+    ]
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "key": "╭───────────────────────────────────╮"
+    },
+    {
+      "type": "kernel",
+      "key": "│ {$2}{$1}  kernel",
+      "format": "{$2}{release>22}{$1} │"
+    },
+    {
+      "type": "command",
+      "key": "│ {$2}{$1}  uptime",
+      "text": "uptime -p | cut -d ' ' -f 2-",
+      "format": "{$2}{>22}{$1} │"
+    },
+    {
+      "type": "shell",
+      "key": "│ {$3}{$1}  shell ",
+      "format": "{$3}{pretty-name>22}{$1} │"
+    },
+    {
+      "type": "command",
+      "key": "│ {$4}{$1}  mem   ",
+      "text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'",
+      "format": "{$4}{>22}{$1} │"
+    },
+    {
+      "type": "packages",
+      "key": "│   pkgs  ",
+      "format": "{all>22} │"
+    },
+    {
+      "type": "command",
+      "key": "│ {$2}{$1}  user  ",
+      "text": "echo $USER",
+      "format": "{$2}{>22}{$1} │"
+    },
+    {
+      "type": "command",
+      "key": "│ {$3}{$1}  hname ",
+      "text": "hostnamectl hostname",
+      "format": "{$3}{>22}{$1} │"
+    },
+    {
+      "type": "os",
+      "key": "│ {$4}󰻀{$1}  distro",
+      "format": "{$4}{pretty-name>22}{$1} │"
+    },
+    {
+      "type": "custom",
+      "key": "╰───────────────────────────────────╯"
+    },
+    "break"
+  ]
+}

@@ -1,0 +1,14 @@
+[2025-10-24T10:05:09.372Z] [INFO] [general] Activating Cursor Playwright MCP Provider
+[2025-10-24T10:05:09.373Z] [INFO] [general] Initializing Playwright MCP Server
+[2025-10-24T10:05:09.448Z] [INFO] [general] Playwright MCP Server and Client initialized successfully
+[2025-10-24T10:05:09.448Z] [INFO] [general] Playwright MCP Provider initialized successfully
+[2025-10-24T10:05:09.448Z] [INFO] [general] Cursor Playwright MCP Provider registered successfully
+[2025-10-24T10:05:09.596Z] [INFO] [general] Calling listOfferings on MCP Client
+[2025-10-24T10:05:09.598Z] [INFO] [general] Calling listOfferings on MCP Client
+[2025-10-24T11:21:30.481Z] [WARN] [general] No Chrome executable found on linux. Checked paths: /usr/bin/google-chrome, /usr/bin/google-chrome-stable, /usr/bin/google-chrome-beta, /usr/bin/google-chrome-unstable, /usr/bin/chromium-browser, /usr/bin/chromium, /snap/bin/chromium, /var/lib/snapd/snap/bin/chromium, /usr/local/bin/chrome, /usr/local/bin/google-chrome
+[2025-10-24T11:22:17.194Z] [INFO] [general] Deactivating Cursor Playwright MCP Provider
+[2025-10-24T11:22:17.257Z] [INFO] [general] Client Transport closed
+[2025-10-24T11:22:17.258Z] [INFO] [general] Client Transport closed
+[2025-10-24T11:22:17.258Z] [INFO] [general] Server Transport closed
+[2025-10-24T11:22:17.258Z] [INFO] [general] MCP Channel closed
+[2025-10-24T11:22:17.258Z] [INFO] [general] Playwright MCP Provider disposed

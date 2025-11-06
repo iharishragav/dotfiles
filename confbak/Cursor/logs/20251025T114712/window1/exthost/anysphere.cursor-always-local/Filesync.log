@@ -1,0 +1,23 @@
+2025-10-25 11:47:21.551 [error] Failed to check if file sync is enabled for user {}
+2025-10-25 11:47:21.551 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-25 11:47:21.551 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-25 11:47:21.551 [info] [registerEventListeners] Registering event listeners
+2025-10-25 11:47:22.188 [error] Failed to check if file sync is enabled for user {}
+2025-10-25 11:47:22.188 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-25 11:47:22.188 [error] Failed to fetch fsConfig File sync is disabled
+2025-10-25 11:47:28.984 [info] [ENABLED STATUS] Filesync enabled from server.
+2025-10-25 11:47:29.612 [info] [ENABLED STATUS] Filesync enabled from server.
+2025-10-25 11:47:29.615 [info] Fetched fsConfig in 628.2080860000005ms
+2025-10-25 11:47:29.615 [info] FSConfig response: {"checkFilesyncHashPercent":0.004999999888241291,"rateLimiterBreakerResetTimeMs":300000,"rateLimiterRps":10,"rateLimiterBurstCapacity":50,"maxRecentUpdatesStored":100,"maxModelVersionCacheSize":100,"maxFileSizeToSyncBytes":500000,"syncRetryMaxAttempts":3,"syncRetryInitialDelayMs":20,"syncRetryTimeMultiplier":2,"fileSyncStatusMaxCacheSize":5,"successiveSyncsRequiredForReliance":5,"extraSuccessfulSyncsNeededAfterErrors":0,"bigChangeStrippingThresholdBytes":10000,"lastNUpdatesToSend":15,"fileSyncStatusTtlMs":300000,"syncDebounceMs":250,"syncUpdateThreshold":10}
+2025-10-25 11:47:29.615 [info] File sync enabled status: true
+2025-10-25 11:47:29.616 [info] Starting sync of visible tabs
+2025-10-25 11:47:29.616 [info] Synced all visible tabs in 0.8332239999999729ms
+2025-10-25 11:47:29.868 [info] Fetched fsConfig in 255.971673ms
+2025-10-25 11:47:29.868 [info] FSConfig response: {"checkFilesyncHashPercent":0.004999999888241291,"rateLimiterBreakerResetTimeMs":300000,"rateLimiterRps":10,"rateLimiterBurstCapacity":50,"maxRecentUpdatesStored":100,"maxModelVersionCacheSize":100,"maxFileSizeToSyncBytes":500000,"syncRetryMaxAttempts":3,"syncRetryInitialDelayMs":20,"syncRetryTimeMultiplier":2,"fileSyncStatusMaxCacheSize":5,"successiveSyncsRequiredForReliance":5,"extraSuccessfulSyncsNeededAfterErrors":0,"bigChangeStrippingThresholdBytes":10000,"lastNUpdatesToSend":15,"fileSyncStatusTtlMs":300000,"syncDebounceMs":250,"syncUpdateThreshold":10}
+2025-10-25 11:48:04.679 [info] Handled visible editors change in 2.128988999997091ms
+2025-10-25 11:48:05.388 [info] Uploaded file burp_spider_commands.sh modelVersion=1 in 449.58204800000385ms
+2025-10-25 11:48:05.389 [info] Handled visible editors change in 602.0584200000012ms
+2025-10-25 11:48:06.992 [info] Handled visible editors change in 0.9958029999979772ms
+2025-10-25 11:48:07.091 [info] Handled visible editors change in 1.3391620000038529ms
+2025-10-25 11:48:43.897 [info] Handled visible editors change in 0.4395760000043083ms
+2025-10-25 11:48:43.956 [info] Handled visible editors change in 1.4355630000063684ms

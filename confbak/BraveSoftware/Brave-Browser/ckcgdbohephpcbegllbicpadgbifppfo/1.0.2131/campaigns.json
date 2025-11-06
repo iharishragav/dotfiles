@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 2,
+  "gracePeriod": "72h",
+  "campaigns": [
+    {
+      "version": 1,
+      "advertiserId": "846dfc87-cea8-46f2-98b1-d9e42ef147b6",
+      "campaignId": "fdc55060-2a69-4eaa-971d-320dec7ca3fc",
+      "startAt": "2025-11-06T05:00:00.000Z",
+      "endAt": "2025-11-07T04:59:00.000Z",
+      "dailyCap": 20,
+      "priority": 51,
+      "ptr": 1,
+      "metrics": "confirmation",
+      "geoTargets": [
+        "AD",
+        "AE",
+        "AF",
+        "AL",
+        "AM",
+        "AO",
+        "AR",
+        "AT",
+        "AU",
+        "AW",
+        "AZ",
+        "BA",
+        "BB",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BM",
+        "BN",
+        "BO",
+        "BR",
+        "BS",
+        "BT",
+        "BW",
+        "BZ",
+        "CA",
+        "CD",
+        "CG",
+        "CH",
+        "CI",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CR",
+        "CV",
+        "CW",
+        "CY",
+        "CZ",
+        "DE",
+        "DJ",
+        "DK",
+        "DM",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "ES",
+        "ET",
+        "FI",
+        "FJ",
+        "FO",
+        "FR",
+        "GA",
+        "GB",
+        "GD",
+        "GE",
+        "GF",
+        "GG",
+        "GH",
+        "GI",
+        "GM",
+        "GN",
+        "GP",
+        "GR",
+        "GT",
+        "GU",
+        "GY",
+        "HK",
+        "HN",
+        "HR",
+        "HT",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IQ",
+        "IS",
+        "IT",
+        "JE",
+        "JM",
+        "JO",
+        "KE",
+        "KG",
+        "KH",
+        "KR",
+        "KW",
+        "KY",
+        "KZ",
+        "LA",
+        "LB",
+        "LC",
+        "LI",
+        "LK",
+        "LS",
+        "LT",
+        "LU",
+        "LV",
+        "LY",
+        "MA",
+        "MC",
+        "ME",
+        "MG",
+        "MK",
+        "ML",
+        "MM",
+        "MN",
+        "MO",
+        "MQ",
+        "MR",
+        "MT",
+        "MU",
+        "MV",
+        "MW",
+        "MX",
+        "MY",
+        "MZ",
+        "NA",
+        "NC",
+        "NE",
+        "NG",
+        "NI",
+        "NL",
+        "NO",
+        "NP",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PF",
+        "PG",
+        "PH",
+        "PK",
+        "PL",
+        "PR",
+        "PS",
+        "PT",
+        "PY",
+        "QA",
+        "RE",
+        "RO",
+        "RS",
+        "RW",
+        "SA",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SL",
+        "SN",
+        "SO",
+        "SR",
+        "SV",
+        "SZ",
+        "TG",
+        "TH",
+        "TN",
+        "TO",
+        "TR",
+        "TT",
+        "TW",
+        "UG",
+        "US",
+        "UY",
+        "UZ",
+        "VC",
+        "VI",
+        "VN",
+        "YE",
+        "ZA",
+        "ZM",
+        "ZW"
+      ],
+      "creativeSets": [
+        {
+          "creativeSetId": "5e13e570-e484-4c33-8096-6f48f9b66df3",
+          "perDay": 20,
+          "perMonth": 0,
+          "perWeek": 0,
+          "totalMax": 20,
+          "value": "0",
+          "creatives": [
+            {
+              "creativeInstanceId": "c10d6cca-655d-436f-b68a-01de92a0d39e",
+              "targetUrl": "https://brave.com/whats-new/ios/",
+              "alt": "Brave - You unlocked new features!",
+              "companyName": "Brave",
+              "wallpaper": {
+                "type": "image",
+                "relativeUrl": "fe4bb2a3-3220-4372-a6aa-2370213f2d15/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+                "button": {
+                  "image": {
+                    "relativeUrl": "fe4bb2a3-3220-4372-a6aa-2370213f2d15/7ff7390c-9317-414d-9cd2-1feeb1c96de6.png"
+                  }
+                },
+                "focalPoint": {
+                  "x": 1280,
+                  "y": 720
+                }
+              },
+              "conditionMatchers": [
+                {
+                  "prefPath": "[virtual]:operating_system|locale|language",
+                  "condition": "es"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+                  "condition": "[R≤]:5"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+                  "condition": "[R≤]:2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "creativeSetId": "93953736-395a-4299-896e-927a06864772",
+          "perDay": 20,
+          "perMonth": 0,
+          "perWeek": 0,
+          "totalMax": 20,
+          "value": "0",
+          "creatives": [
+            {
+              "creativeInstanceId": "18bb8b40-6179-48f7-9d16-254c6b326c10",
+              "targetUrl": "https://brave.com/whats-new/ios/",
+              "alt": "Brave - You unlocked new features!",
+              "companyName": "Brave",
+              "wallpaper": {
+                "type": "image",
+                "relativeUrl": "fd9699c0-ef33-42c2-81b0-6c4583f19b2f/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+                "button": {
+                  "image": {
+                    "relativeUrl": "fd9699c0-ef33-42c2-81b0-6c4583f19b2f/94399c24-1616-46b9-a395-c793edec4cbd.png"
+                  }
+                },
+                "focalPoint": {
+                  "x": 1280,
+                  "y": 720
+                }
+              },
+              "conditionMatchers": [
+                {
+                  "prefPath": "[virtual]:operating_system|locale|language",
+                  "condition": "de"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+                  "condition": "[R≤]:5"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+                  "condition": "[R≤]:2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "creativeSetId": "a8d70494-2cdf-47d2-909d-83fa79be5f7e",
+          "perDay": 20,
+          "perMonth": 0,
+          "perWeek": 0,
+          "totalMax": 20,
+          "value": "0",
+          "creatives": [
+            {
+              "creativeInstanceId": "3a9333c4-3a1d-4900-bc76-6598c4bfb297",
+              "targetUrl": "https://brave.com/whats-new/ios/",
+              "alt": "Brave - You unlocked new features!",
+              "companyName": "Brave",
+              "wallpaper": {
+                "type": "image",
+                "relativeUrl": "4b26b072-f570-4242-9bdd-ff8ac4d1bd97/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+                "button": {
+                  "image": {
+                    "relativeUrl": "4b26b072-f570-4242-9bdd-ff8ac4d1bd97/8c0ab282-53ea-4b54-b63d-e5a505188b12.png"
+                  }
+                },
+                "focalPoint": {
+                  "x": 1280,
+                  "y": 720
+                }
+              },
+              "conditionMatchers": [
+                {
+                  "prefPath": "[virtual]:operating_system|locale|language",
+                  "condition": "fr"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+                  "condition": "[R≤]:5"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+                  "condition": "[R≤]:2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "creativeSetId": "b9ba561e-af4f-4f4b-8cc4-4d42a93f92c7",
+          "perDay": 20,
+          "perMonth": 0,
+          "perWeek": 0,
+          "totalMax": 20,
+          "value": "0",
+          "creatives": [
+            {
+              "creativeInstanceId": "5f651149-ceae-4a1a-95a5-646b1d3d53c2",
+              "targetUrl": "https://brave.com/whats-new/ios/",
+              "alt": "Brave - You unlocked new features!",
+              "companyName": "Brave",
+              "wallpaper": {
+                "type": "image",
+                "relativeUrl": "8c28b043-328e-44d1-8a4e-508627153c3d/0b6ad412-6b3a-42a7-9c87-43640e8fc306.jpg",
+                "button": {
+                  "image": {
+                    "relativeUrl": "8c28b043-328e-44d1-8a4e-508627153c3d/d7922d2a-8640-4838-ad1a-006343792b7f.png"
+                  }
+                },
+                "focalPoint": {
+                  "x": 1280,
+                  "y": 720
+                }
+              },
+              "conditionMatchers": [
+                {
+                  "prefPath": "[virtual]:operating_system|locale|language",
+                  "condition": "en"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|view",
+                  "condition": "[R≤]:5"
+                },
+                {
+                  "prefPath": "[virtual]:ad_events|fdc55060-2a69-4eaa-971d-320dec7ca3fc|click",
+                  "condition": "[R≤]:2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

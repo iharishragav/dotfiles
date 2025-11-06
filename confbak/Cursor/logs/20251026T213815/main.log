@@ -1,0 +1,10 @@
+2025-10-26 21:38:16.363 [info] updateURL https://api2.cursor.sh/updates/api/update/linux-x64/cursor/1.7.54/8aa42934aae45760914e714576fb79b644a2dd4a0eb5759d5116b9fb967ac782/stable
+2025-10-26 21:38:16.364 [info] update#setState idle
+2025-10-26 21:38:19.646 [error] vscode-file: Refused to load resource /tmp/.mount_cursorHdhVdP/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/tmp/.mount_cursorHdhVdP/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff)
+2025-10-26 21:38:46.366 [info] update#setState checking for updates
+2025-10-26 21:38:46.794 [info] update#setState idle
+2025-10-26 21:39:12.874 [info] Extension host with pid 3797 exited with code: 0, signal: unknown.
+2025-10-26 22:38:46.368 [info] update#setState checking for updates
+2025-10-26 22:38:47.286 [info] update#setState idle
+2025-10-26 23:23:18.992 [info] Extension host with pid 4290 exited with code: 0, signal: unknown.
+2025-10-26 23:23:19.486 [error] Blocked vscode-file request vscode-file://vscode-app/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/out/vs/editor/common/services/editorWebWorkerMain.js#TextEditorWorker

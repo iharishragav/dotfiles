@@ -1,0 +1,129 @@
+2025-10-26 21:38:19.277 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-26 21:38:19.283 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.284 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.284 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.285 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.285 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.286 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.286 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.287 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:19.287 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:38:20.035 [info] Started local extension host with pid 3797.
+2025-10-26 21:38:21.900 [warning] No search provider registered for scheme: file, waiting
+2025-10-26 21:38:24.844 [info] [ShellExec] Created session 90313c2b-4631-4efa-aa20-92790a86b6be on LocalProcess host
+2025-10-26 21:38:25.138 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-26 21:38:27.010 [info] [perf] Render performance baseline is 20ms
+2025-10-26 21:38:33.255 [error] [text file model] handleSaveError(0) - exit - resulted in a save error: Error: Unable to write file '/home/kamal/ObsidianVault/target/anytask/Phase1_Guide.md' (Error: File Modified Since) file:///home/kamal/ObsidianVault/target/anytask/Phase1_Guide.md
+2025-10-26 21:38:33.354 [warning] [backup tracker] suspended, ignoring dirty change event file:///home/kamal/ObsidianVault/target/anytask/Infrastructure_Analysis.md 
+2025-10-26 21:38:33.360 [info] [lifecycle]: Shutdown was prevented by final veto (id: veto.backups)
+2025-10-26 21:38:53.976 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-26 21:38:53.976 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 21:39:14.562 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-26 21:39:14.567 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.568 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.568 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.568 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.569 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.569 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.569 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.569 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:14.569 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-26 21:39:15.338 [info] Started local extension host with pid 4290.
+2025-10-26 21:39:16.093 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-26 21:39:16.986 [warning] No search provider registered for scheme: file, waiting
+2025-10-26 21:39:18.231 [info] [ShellExec] Created session 637a6346-be7a-4202-8351-1161748569fe on LocalProcess host
+2025-10-26 21:39:18.609 [info] [perf] Render performance baseline is 30ms
+2025-10-26 21:39:24.399 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 21:39:24.399 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 21:40:24.309 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 21:40:24.309 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 21:40:32.523 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 21:40:32.523 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 21:40:37.723 [warning] ToolCallEventService: Tracked tool call start - tool_43400a74-fdc1-4cff-9df7-22eaeb18486 (todo_write)
+2025-10-26 21:40:37.727 [warning] ToolCallEventService: Tracked tool call end - tool_43400a74-fdc1-4cff-9df7-22eaeb18486
+2025-10-26 21:40:38.641 [warning] ToolCallEventService: Tracked tool call start - tool_aa04fc72-640e-40b6-8cea-d2af16847ab (read_file)
+2025-10-26 21:40:38.912 [warning] ToolCallEventService: Tracked tool call start - tool_fe9f3111-7099-4f21-a759-6dbe8eaf0ad (read_file)
+2025-10-26 21:40:39.014 [warning] ToolCallEventService: Tracked tool call start - tool_ca713570-466d-4f96-b72c-d654516cbd2 (read_file)
+2025-10-26 21:40:39.319 [warning] ToolCallEventService: Tracked tool call start - tool_40feed3b-9800-4147-892a-688bae805e0 (read_file)
+2025-10-26 21:40:49.147 [warning] ToolCallEventService: Tracked tool call start - tool_253448d0-1c52-485d-9913-568401c438b (web_search)
+2025-10-26 21:40:55.388 [warning] ToolCallEventService: Tracked tool call end - tool_253448d0-1c52-485d-9913-568401c438b
+2025-10-26 21:41:06.970 [warning] ToolCallEventService: Tracked tool call start - tool_4e10e2bb-3a63-4835-95dc-df9be37e52e (web_search)
+2025-10-26 21:41:13.248 [warning] ToolCallEventService: Tracked tool call end - tool_4e10e2bb-3a63-4835-95dc-df9be37e52e
+2025-10-26 21:41:28.832 [warning] ToolCallEventService: Tracked tool call start - tool_abeb3830-bd0e-406c-9351-69f0ae5912e (web_search)
+2025-10-26 21:41:36.993 [warning] ToolCallEventService: Tracked tool call end - tool_abeb3830-bd0e-406c-9351-69f0ae5912e
+2025-10-26 21:41:38.781 [warning] ToolCallEventService: Tracked tool call start - tool_8152022a-07af-4be0-9feb-bde56b04c53 (todo_write)
+2025-10-26 21:41:38.784 [warning] ToolCallEventService: Tracked tool call end - tool_8152022a-07af-4be0-9feb-bde56b04c53
+2025-10-26 21:41:39.856 [warning] ToolCallEventService: Tracked tool call start - tool_18b36868-11bf-4231-bd5f-3f2694c3850 (todo_write)
+2025-10-26 21:41:39.859 [warning] ToolCallEventService: Tracked tool call end - tool_18b36868-11bf-4231-bd5f-3f2694c3850
+2025-10-26 21:41:41.090 [warning] ToolCallEventService: Tracked tool call start - tool_e8c87a0e-033c-4582-9248-967120c7503 (read_file)
+2025-10-26 21:41:41.776 [warning] ToolCallEventService: Tracked tool call start - tool_bfad1aad-0de2-4b28-83ba-9a6211fd3e8 (read_file)
+2025-10-26 21:41:42.276 [warning] ToolCallEventService: Tracked tool call start - tool_a0bd0c03-cb45-4d68-a262-09d6d2b36c0 (read_file)
+2025-10-26 21:41:44.471 [warning] ToolCallEventService: Tracked tool call start - tool_34bf0453-3078-47be-ae17-bf15baf5086 (ripgrep_raw_search)
+2025-10-26 21:41:44.743 [warning] ToolCallEventService: Tracked tool call start - tool_9a3fd3a8-6ab3-4498-be49-e2e5101e006 (ripgrep_raw_search)
+2025-10-26 21:41:45.903 [warning] ToolCallEventService: Tracked tool call start - tool_0c05d30b-05b9-4f23-986f-475a9addeba (ripgrep_raw_search)
+2025-10-26 21:41:47.565 [warning] ToolCallEventService: Tracked tool call start - tool_cfb6e7cd-2309-45d0-aa01-ef5957a3042 (ripgrep_raw_search)
+2025-10-26 21:41:47.788 [warning] ToolCallEventService: Tracked tool call start - tool_7e6b60b9-f3b7-4971-be7c-ec4d88fc68f (ripgrep_raw_search)
+2025-10-26 21:41:52.764 [warning] ToolCallEventService: Tracked tool call start - tool_a4773811-baf4-4f3c-9799-faba5357d95 (ripgrep_raw_search)
+2025-10-26 21:41:55.660 [warning] ToolCallEventService: Tracked tool call start - tool_622e2110-f8bd-4c0e-b1e3-0f9659ba9e6 (todo_write)
+2025-10-26 21:41:55.664 [warning] ToolCallEventService: Tracked tool call end - tool_622e2110-f8bd-4c0e-b1e3-0f9659ba9e6
+2025-10-26 21:41:56.883 [warning] ToolCallEventService: Tracked tool call start - tool_772cceeb-63a3-4dc9-92c5-589b9c7caa3 (list_dir_v2)
+2025-10-26 21:41:58.499 [warning] ToolCallEventService: Tracked tool call start - tool_c20e1b08-65c1-4ddd-82bc-3b5f703fa46 (read_file)
+2025-10-26 21:41:58.831 [warning] ToolCallEventService: Tracked tool call start - tool_4500d1ae-4eb2-401c-a233-93fee93b68d (read_file)
+2025-10-26 21:41:58.981 [warning] ToolCallEventService: Tracked tool call start - tool_2b814770-a73c-4389-a761-73b595f6b27 (read_file)
+2025-10-26 21:42:00.621 [warning] ToolCallEventService: Tracked tool call start - tool_3868afc3-2911-4a5d-8f3f-7de5748630b (todo_write)
+2025-10-26 21:42:00.625 [warning] ToolCallEventService: Tracked tool call end - tool_3868afc3-2911-4a5d-8f3f-7de5748630b
+2025-10-26 21:42:01.857 [warning] ToolCallEventService: Tracked tool call start - tool_82c42b0e-e377-4b27-be29-40ee6e1d352 (read_file)
+2025-10-26 21:42:12.096 [warning] ToolCallEventService: Tracked tool call start - tool_603111f5-3f09-461b-8bfc-337177cbdb1 (web_search)
+2025-10-26 21:42:18.754 [warning] ToolCallEventService: Tracked tool call end - tool_603111f5-3f09-461b-8bfc-337177cbdb1
+2025-10-26 21:42:30.803 [warning] ToolCallEventService: Tracked tool call start - tool_00ebf654-5239-4e9c-8446-72c227f4ea4 (run_terminal_cmd)
+2025-10-26 21:42:30.887 [info] [ShellExec] Created session d9dbdb89-710e-418b-9bb5-e0ca815aa2ba on LocalProcess host
+2025-10-26 21:42:31.049 [warning] ToolCallEventService: Tracked tool call end - tool_00ebf654-5239-4e9c-8446-72c227f4ea4
+2025-10-26 21:42:32.844 [warning] ToolCallEventService: Tracked tool call start - tool_77e55cca-d74e-488f-94cb-8b4cffb4f20 (ripgrep_raw_search)
+2025-10-26 21:42:33.111 [warning] ToolCallEventService: Tracked tool call start - tool_16ef9e5a-a533-4ebc-9916-191b25aea2e (ripgrep_raw_search)
+2025-10-26 21:42:34.914 [warning] ToolCallEventService: Tracked tool call start - tool_c92f7d54-1f34-48fa-b72d-03bedc176b5 (read_file)
+2025-10-26 21:42:35.209 [warning] ToolCallEventService: Tracked tool call start - tool_f6e574a4-5198-4e94-9748-71ac766f55a (web_search)
+2025-10-26 21:42:43.700 [warning] ToolCallEventService: Tracked tool call end - tool_f6e574a4-5198-4e94-9748-71ac766f55a
+2025-10-26 21:43:35.711 [warning] ToolCallEventService: Tracked tool call start - tool_2135e02f-220c-4e21-84a7-2b24bfbc10e (run_terminal_cmd)
+2025-10-26 21:43:35.899 [warning] ToolCallEventService: Tracked tool call end - tool_2135e02f-220c-4e21-84a7-2b24bfbc10e
+2025-10-26 21:43:40.265 [warning] ToolCallEventService: Tracked tool call start - tool_1bef87ca-16fa-4008-99ed-9627ea019be (run_terminal_cmd)
+2025-10-26 21:43:40.474 [warning] ToolCallEventService: Tracked tool call end - tool_1bef87ca-16fa-4008-99ed-9627ea019be
+2025-10-26 21:43:42.630 [warning] ToolCallEventService: Tracked tool call start - tool_8ee8a06e-d265-43fa-8ba0-b3900fb8ad4 (read_file)
+2025-10-26 21:43:42.745 [warning] ToolCallEventService: Tracked tool call start - tool_af933e4a-cd8b-4dbb-8231-2790106a4d0 (read_file)
+2025-10-26 21:43:42.849 [warning] ToolCallEventService: Tracked tool call start - tool_6205f59e-00ad-43d0-b9b2-f16e0bbe953 (read_file)
+2025-10-26 21:43:46.415 [warning] ToolCallEventService: Tracked tool call start - tool_9824d200-ab22-424e-9d23-3af96dd844f (todo_write)
+2025-10-26 21:43:46.421 [warning] ToolCallEventService: Tracked tool call end - tool_9824d200-ab22-424e-9d23-3af96dd844f
+2025-10-26 21:43:53.566 [warning] ToolCallEventService: Tracked tool call start - tool_4a651426-9044-4390-983b-2c37fdd4d42 (run_terminal_cmd)
+2025-10-26 21:43:53.730 [warning] ToolCallEventService: Tracked tool call end - tool_4a651426-9044-4390-983b-2c37fdd4d42
+2025-10-26 21:43:57.080 [warning] ToolCallEventService: Tracked tool call start - tool_00718d0b-eecd-4498-9cc9-e849b06d680 (run_terminal_cmd)
+2025-10-26 21:43:57.260 [warning] ToolCallEventService: Tracked tool call end - tool_00718d0b-eecd-4498-9cc9-e849b06d680
+2025-10-26 21:44:05.260 [warning] ToolCallEventService: Tracked tool call start - tool_35b982e7-43ff-4d53-9782-fb9a9593609 (list_dir_v2)
+2025-10-26 21:44:15.068 [warning] ToolCallEventService: Tracked tool call start - tool_aaad3ddc-b421-4c60-954e-9f3b526161c (run_terminal_cmd)
+2025-10-26 21:44:15.284 [warning] ToolCallEventService: Tracked tool call end - tool_aaad3ddc-b421-4c60-954e-9f3b526161c
+2025-10-26 21:44:17.144 [warning] ToolCallEventService: Tracked tool call start - tool_fb6fbb8f-23dd-40dc-b5fe-1844fae4c71 (read_file)
+2025-10-26 21:44:17.314 [warning] ToolCallEventService: Tracked tool call start - tool_8a05d7a7-a408-42a9-8cc9-e5f0a2b3805 (read_file)
+2025-10-26 21:44:18.729 [warning] ToolCallEventService: Tracked tool call start - tool_7e486f95-f4e1-4676-8806-29c16608d8b (todo_write)
+2025-10-26 21:44:18.735 [warning] ToolCallEventService: Tracked tool call end - tool_7e486f95-f4e1-4676-8806-29c16608d8b
+2025-10-26 21:44:24.826 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 21:44:24.826 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 22:08:23.813 [error] [Extension Host] ConnectError: [unavailable] read ETIMEDOUT
+	at o.from (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:750295)
+	at R (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2559310)
+	at Promise.reject (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2571402)
+	at ClientHttp2Stream.<anonymous> (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2569934)
+	at ClientHttp2Stream.emit (node:events:524:28)
+	at emitErrorNT (node:internal/streams/destroy:169:8)
+	at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-10-26 22:08:23.818 [error] [Extension Host] ConnectError: [unavailable] read ETIMEDOUT
+	at o.from (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:750295)
+	at R (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2559310)
+	at Promise.reject (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2571402)
+	at ClientHttp2Stream.<anonymous> (/tmp/.mount_cursorGnmMpC/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2569934)
+	at ClientHttp2Stream.emit (node:events:524:28)
+	at emitErrorNT (node:internal/streams/destroy:169:8)
+	at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-10-26 22:20:32.213 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 22:20:32.214 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-26 22:20:59.013 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/spiderfoot-4.0","external":"file:///home/kamal/spiderfoot-4.0","path":"/home/kamal/spiderfoot-4.0","scheme":"file"},"name":"spiderfoot-4.0","index":0}]
+2025-10-26 22:20:59.013 [info] [composer.environmentInfo] worktreePath undefined

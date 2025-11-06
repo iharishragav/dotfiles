@@ -1,0 +1,10 @@
+2025-10-24 16:52:52.570 [error] Failed to get HTTP/2 ping config from Statsig for backend Canceled
+2025-10-24 16:52:52.572 [error] Failed to get HTTP/2 ping config from Statsig for bidi Canceled
+2025-10-24 16:52:52.573 [error] Failed to get HTTP/2 ping config from Statsig for repo Canceled
+2025-10-24 16:52:52.573 [error] Failed to get HTTP/2 ping config from Statsig for http2_repo Canceled
+2025-10-24 16:52:52.574 [error] Failed to get HTTP/2 ping config from Statsig for geo_cpp Canceled
+2025-10-24 16:52:52.574 [error] Failed to get HTTP/2 ping config from Statsig for cpp_config Canceled
+2025-10-24 16:52:52.574 [error] Failed to get HTTP/2 ping config from Statsig for cmdk Canceled
+2025-10-24 16:52:52.574 [error] Failed to get HTTP/2 ping config from Statsig for telem Canceled
+2025-10-24 16:52:52.575 [error] Failed to get HTTP/2 ping config from Statsig for agentic_composer Canceled
+2025-10-24 16:52:52.575 [error] Failed to get HTTP/2 ping config from Statsig for agent Canceled

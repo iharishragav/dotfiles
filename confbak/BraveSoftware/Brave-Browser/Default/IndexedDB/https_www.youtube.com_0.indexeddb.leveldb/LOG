@@ -1,0 +1,6 @@
+2025/11/06-21:13:42.047 76b Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/06-21:13:42.047 76b Recovering log #61
+2025/11/06-21:13:42.048 76b Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000061.log 
+2025/11/06-21:15:24.095 747 Level-0 table #66: started
+2025/11/06-21:15:24.103 747 Level-0 table #66: 1217222 bytes OK
+2025/11/06-21:15:24.105 747 Delete type=0 #61

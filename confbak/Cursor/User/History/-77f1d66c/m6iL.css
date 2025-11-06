@@ -1,0 +1,71 @@
+/* Caelestia Modern GTK3 Theme
+   Inspired by Hyprland Caelestia dotfiles
+   Modern, rounded, transparent, and cohesive design */
+
+/* GTK NAMED COLORS - Caelestia Inspired Palette */
+/*
+Primary text/foreground color - Soft white */
+@define-color theme_fg_color_caelestia #e4e4e7;
+/*
+Text color for entries, views and content */
+@define-color theme_text_color_caelestia #e4e4e7;
+/*
+Widget base background color - Dark slate */
+@define-color theme_bg_color_caelestia #1e1e2e;
+/*
+Text widgets base background - Darker slate */
+@define-color theme_base_color_caelestia #11111b;
+/*
+Accent color - Vibrant purple/blue */
+@define-color theme_view_hover_decoration_color_caelestia #cba6f7;
+/*
+Hovering selected widgets background */
+@define-color theme_hovering_selected_bg_color_caelestia #cba6f7;
+/*
+Selection background - Accent with transparency */
+@define-color theme_selected_bg_color_caelestia rgba(203, 166, 247, 0.3);
+/*
+Selection text color */
+@define-color theme_selected_fg_color_caelestia #e4e4e7;
+/*
+Active decoration color */
+@define-color theme_view_active_decoration_color_caelestia #cba6f7;
+/*
+Insensitive selection background */
+@define-color insensitive_selected_bg_color_caelestia rgba(203, 166, 247, 0.15);
+/*
+Insensitive widgets background */
+@define-color insensitive_bg_color_caelestia #2a2a3e;
+/*
+Insensitive text color */
+@define-color insensitive_fg_color_caelestia rgba(228, 228, 231, 0.4);
+/*
+Insensitive base color */
+@define-color insensitive_base_color_caelestia rgba(228, 228, 231, 0.2);
+/*
+Insensitive base foreground */
+@define-color insensitive_base_fg_color_caelestia #1a1a2e;
+/*
+Insensitive selected foreground */
+@define-color insensitive_selected_fg_color_caelestia rgba(228, 228, 231, 0.4);
+
+/* Additional Caelestia colors */
+@define-color accent_primary #cba6f7;
+@define-color accent_secondary #f38ba8;
+@define-color accent_tertiary #a6e3a1;
+@define-color surface_0 #11111b;
+@define-color surface_1 #1e1e2e;
+@define-color surface_2 #313244;
+@define-color surface_3 #45475a;
+@define-color text_primary #cdd6f4;
+@define-color text_secondary #a6adc8;
+@define-color text_muted #6c7086;
+
+/* Window decorations */
+@define-color window_bg_color_caelestia rgba(30, 30, 46, 0.95);
+@define-color window_fg_color_caelestia #e4e4e7;
+@define-color window_border_color_caelestia #cba6f7;
+
+/* Import base theme */
+@import url("gtk-widgets.css");
+@import url("gtk-widgets-assets.css");

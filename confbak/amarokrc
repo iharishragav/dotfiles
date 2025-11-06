@@ -1,0 +1,36 @@
+[Collection Browser]
+View Mode=NormalCollections
+
+[Collection Folders]
+2=kamal/Music
+
+[Context]
+org.kde.amarok.currenttrack_contentHeight=300
+
+[General]
+First Run=false
+
+[General Options]
+PlayFirstRunJingle=false
+
+[Playlist Search]
+MatchAlbum=true
+MatchArtist=true
+MatchTrack=true
+ShowOnlyMatches=false
+
+[Playlist Sorting]
+SortPath=
+
+[Podcast View]
+Merged View=false
+
+[Saved Playlists View]
+Merged View=false
+
+[StatSyncing]
+checkedFields=rating,firstplay,lastplay,playcount,label
+excludedLabels=
+providerEnabledStatuses=true
+providerIds=localCollection
+providerNames=Local Collection

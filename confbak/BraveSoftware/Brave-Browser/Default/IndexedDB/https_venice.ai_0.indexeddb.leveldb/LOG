@@ -1,0 +1,7 @@
+2025/11/06-08:58:16.731 766 Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_venice.ai_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/06-08:58:16.731 766 Recovering log #3
+2025/11/06-08:58:16.736 766 Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_venice.ai_0.indexeddb.leveldb/000003.log 
+2025/11/06-15:31:19.642 767 Level-0 table #5: started
+2025/11/06-15:31:19.655 767 Level-0 table #5: 388494 bytes OK
+2025/11/06-15:31:19.657 767 Delete type=0 #3
+2025/11/06-15:31:19.658 767 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

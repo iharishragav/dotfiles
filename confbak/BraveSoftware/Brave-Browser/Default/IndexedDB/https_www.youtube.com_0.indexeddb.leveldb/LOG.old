@@ -1,0 +1,15 @@
+2025/11/06-08:57:14.942 767 Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/06-08:57:14.942 767 Recovering log #57
+2025/11/06-08:57:14.946 767 Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000057.log 
+2025/11/06-11:14:42.640 767 Level-0 table #62: started
+2025/11/06-11:14:42.656 767 Level-0 table #62: 1052309 bytes OK
+2025/11/06-11:14:42.658 767 Delete type=0 #57
+2025/11/06-11:14:42.658 767 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2025/11/06-11:14:42.658 767 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x0f\x02\x1f\x03\x00\x80l@s\xa5yB\x00\x03\x00\x00\x00\x00\x00\x00*@' @ 28331 : 1
+2025/11/06-11:14:42.658 767 Compacting 1@1 + 1@2 files
+2025/11/06-11:14:42.663 767 Generated table #63@1: 745 keys, 126787 bytes
+2025/11/06-11:14:42.663 767 Compacted 1@1 + 1@2 files => 126787 bytes
+2025/11/06-11:14:42.664 767 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/11/06-11:14:42.664 767 Delete type=2 #62
+2025/11/06-11:14:42.664 767 Delete type=2 #59
+2025/11/06-11:14:42.664 767 Manual compaction at level-1 from '\x00\x0f\x02\x1f\x03\x00\x80l@s\xa5yB\x00\x03\x00\x00\x00\x00\x00\x00*@' @ 28331 : 1 .. (end); will stop at (end)

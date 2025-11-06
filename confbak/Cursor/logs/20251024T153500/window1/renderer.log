@@ -1,0 +1,130 @@
+2025-10-24 15:35:04.388 [warning] Missing property "rpcFileLoggerFolder" in oldValue. Filling with value from initValue. Please add a migration if necessary.
+2025-10-24 15:35:04.394 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-toolsai.datawrangler' wants API proposal 'debugFocus' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.395 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-copilot-data-analysis' wants API proposal 'chatVariableResolver' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.396 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.396 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.396 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.397 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-azuretools.vscode-azure-github-copilot' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.397 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'vscjava.vscode-java-pack' wants API proposal 'lmTools' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.397 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'chatParticipant' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:04.397 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'apidev.azure-api-center' wants API proposal 'languageModels' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-10-24 15:35:05.133 [info] Started local extension host with pid 23199.
+2025-10-24 15:35:05.192 [error] Error: The editor could not be opened because the file was not found.
+    at ABn.handleSetInputError (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8458:33088)
+    at async ABn.setInput (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8458:32097)
+    at async Fvn.doSetInput (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2797:28710)
+    at async Fvn.doOpenEditor (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2797:26451)
+    at async Fvn.openEditor (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2797:25376)
+    at async vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:2909:33111
+2025-10-24 15:35:06.109 [warning] No search provider registered for scheme: file, waiting
+2025-10-24 15:35:08.701 [info] [WorktreeCleanup] Registered cleanup task with interval: 6 hours, retention: 7 days
+2025-10-24 15:35:09.368 [info] [ShellExec] Created session 46bf7c24-d286-4461-aade-3d261dc3d38c on LocalProcess host
+2025-10-24 15:35:10.659 [info] [perf] Render performance baseline is 20ms
+2025-10-24 15:45:10.370 [error] [Extension Host] ConnectError: [aborted] read ECONNRESET
+	at o.from (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:750295)
+	at R (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2559310)
+	at Promise.reject (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2571402)
+	at ClientHttp2Stream.<anonymous> (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2569934)
+	at ClientHttp2Stream.emit (node:events:524:28)
+	at emitErrorNT (node:internal/streams/destroy:169:8)
+	at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-10-24 16:18:19.631 [error] [unavailable] getaddrinfo EAI_AGAIN api2.cursor.sh: ConnectError: [unavailable] getaddrinfo EAI_AGAIN api2.cursor.sh
+    at t (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7337:376081)
+    at async Object.getTeams (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:590:254091)
+    at async yEr.getTeams (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9330:35091)
+    at async yEr.refreshMembership (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9330:23024) [unavailable] getaddrinfo EAI_AGAIN api2.cursor.sh
+2025-10-24 16:18:19.661 [error] [Extension Host] ConnectError: [unavailable] getaddrinfo EAI_AGAIN api2.cursor.sh
+	at o.from (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:750295)
+	at R (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2559310)
+	at ClientHttp2Session.a (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2568242)
+	at ClientHttp2Session.emit (node:events:524:28)
+	at emitClose (node:internal/http2/core:1121:10)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-10-24 16:19:33.035 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:19:33.035 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:20:30.695 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:20:30.695 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:20:39.025 [warning] ToolCallEventService: Tracked tool call start - tool_7143f5b0-e4c5-4b46-815c-9473f4e55eb (write)
+2025-10-24 16:21:45.916 [warning] ToolCallEventService: Tracked tool call end - tool_7143f5b0-e4c5-4b46-815c-9473f4e55eb
+2025-10-24 16:22:00.942 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:22:00.942 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:23:59.080 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:23:59.081 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:24:38.135 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:24:38.135 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:24:42.703 [warning] ToolCallEventService: Tracked tool call start - tool_556eca45-b5a3-40a6-ab16-49a965548dc (write)
+2025-10-24 16:27:15.798 [warning] ToolCallEventService: Tracked tool call end - tool_556eca45-b5a3-40a6-ab16-49a965548dc
+2025-10-24 16:27:38.401 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:27:38.402 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:35:01.371 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:35:01.371 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:35:17.391 [error] [Extension Host] ConnectError: [aborted] read ECONNRESET
+	at o.from (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:750295)
+	at R (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2559310)
+	at Promise.reject (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2571402)
+	at ClientHttp2Stream.<anonymous> (/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/extensions/cursor-always-local/dist/main.js:2:2569934)
+	at ClientHttp2Stream.emit (node:events:524:28)
+	at emitErrorNT (node:internal/streams/destroy:169:8)
+	at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-10-24 16:35:17.719 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:35:17.719 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:35:22.928 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:35:22.928 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:35:33.438 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:35:33.438 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:35:39.709 [warning] ToolCallEventService: Tracked tool call start - tool_fdc6be71-8c7d-4d76-8436-b238e124050 (write)
+2025-10-24 16:39:23.687 [warning] ToolCallEventService: Tracked tool call end - tool_fdc6be71-8c7d-4d76-8436-b238e124050
+2025-10-24 16:39:43.920 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:39:43.920 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:40:55.175 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:40:55.175 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:41:04.660 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:41:04.660 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:41:10.501 [warning] ToolCallEventService: Tracked tool call start - tool_c6be36ec-2d71-4863-a938-3b59ba034bd (write)
+2025-10-24 16:42:38.104 [error] Model is disposed!: Error: Model is disposed!
+    at jN._assertNotDisposed (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:281:437)
+    at jN.getVersionId (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:283:3218)
+    at LRr._formatDiffHistoryImpl (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9452:15632)
+    at async LRr.formatDiffHistory (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9452:15013)
+    at async LRr.fireCppSuggestionDebouncedDiffHistory (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9449:2517)
+    at async LRr.fireOnCacheMiss (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:33980)
+    at async LRr.continueModelChangeListener (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9447:1172) Model is disposed!
+2025-10-24 16:42:38.138 [error] Format Diff History not registered in extension host: Error: Format Diff History not registered in extension host
+    at LRr._formatDiffHistoryImpl (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9452:15506)
+    at async LRr.formatDiffHistory (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9452:15013)
+    at async LRr.fireCppSuggestionDebouncedDiffHistory (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9449:2517)
+    at async LRr.fireOnCacheMiss (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:33980)
+    at async LRr.continueModelChangeListener (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9447:1172) Format Diff History not registered in extension host
+2025-10-24 16:43:49.642 [warning] ToolCallEventService: Tracked tool call end - tool_c6be36ec-2d71-4863-a938-3b59ba034bd
+2025-10-24 16:44:04.410 [error] [237] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at HDr._event (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new dTt (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:92:140920)
+    at L0._createConfiguration (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:16881)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:14653)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Rn (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:26184)
+    at vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:27368 [237] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+2025-10-24 16:44:06.292 [error] [1a2] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):: Error
+    at Guc.create (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:47:12844)
+    at rvc._event [as onDidChange] (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:1650)
+    at new Omc (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7246:14444)
+    at LRr.registerEditorListenersToEditor (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:28509)
+    at cEt.value (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:9445:27469)
+    at _e._deliver (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:2962)
+    at _e._deliverQueue (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:3053)
+    at _e.fire (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:49:3390)
+    at Xlr.addCodeEditor (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:7842:23482)
+    at new o_ (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:291:16732)
+    at new L0 (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:536:25967)
+    at S2r._createInstance (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:2025)
+    at S2r.createInstance (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:8194:1454)
+    at Rn (vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:26184)
+    at vscode-file://vscode-app/tmp/.mount_cursorHNM8Aa/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js:6697:27368 [1a2] potential listener LEAK detected, having 175 listeners already. MOST frequent listener (1):
+2025-10-24 16:44:11.946 [info] [composer.environmentInfo] workspaceFolders [{"uri":{"$mid":1,"fsPath":"/home/kamal/ObsidianVault/target/anytask","external":"file:///home/kamal/ObsidianVault/target/anytask","path":"/home/kamal/ObsidianVault/target/anytask","scheme":"file"},"name":"anytask","index":0}]
+2025-10-24 16:44:11.946 [info] [composer.environmentInfo] worktreePath undefined
+2025-10-24 16:52:17.826 [info] Started local extension host with pid 29037.

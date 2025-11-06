@@ -1,0 +1,23 @@
+2025/11/06-14:22:25.045 3369 Reusing MANIFEST /home/kamal/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2025/11/06-14:22:25.058 3369 Recovering log #20
+2025/11/06-14:22:25.059 3369 Reusing old log /home/kamal/.config/discord/Local Storage/leveldb/000020.log 
+2025/11/06-14:36:52.027 336a Level-0 table #24: started
+2025/11/06-14:36:52.056 336a Level-0 table #24: 2655259 bytes OK
+2025/11/06-14:36:52.057 336a Delete type=0 #20
+2025/11/06-14:55:31.663 336a Level-0 table #26: started
+2025/11/06-14:55:31.665 336a Level-0 table #26: 21170 bytes OK
+2025/11/06-14:55:31.667 336a Delete type=0 #23
+2025/11/06-15:26:28.202 336a Level-0 table #28: started
+2025/11/06-15:26:28.206 336a Level-0 table #28: 26852 bytes OK
+2025/11/06-15:26:28.207 336a Delete type=0 #25
+2025/11/06-15:26:28.208 336a Compacting 4@0 + 2@1 files
+2025/11/06-15:26:28.266 336a Generated table #29@0: 13 keys, 2636201 bytes
+2025/11/06-15:26:28.269 336a Generated table #30@0: 32 keys, 12641 bytes
+2025/11/06-15:26:28.269 336a Compacted 4@0 + 2@1 files => 2648842 bytes
+2025/11/06-15:26:28.270 336a compacted to: files[ 0 2 1 0 0 0 0 ]
+2025/11/06-15:26:28.270 336a Delete type=2 #28
+2025/11/06-15:26:28.270 336a Delete type=2 #21
+2025/11/06-15:26:28.270 336a Delete type=2 #18
+2025/11/06-15:26:28.270 336a Delete type=2 #26
+2025/11/06-15:26:28.270 336a Delete type=2 #24
+2025/11/06-15:26:28.270 336a Delete type=2 #19

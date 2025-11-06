@@ -1,0 +1,1 @@
+{"timestamp":1760688068438,"paths":["./index.theme","./COPYING","./gnome-shell/gnome-shell.css","./gnome-shell/pad-osd.css","./gnome-shell/extensions/workspaces-to-dock/workspaces-to-dock.css"]}

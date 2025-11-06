@@ -1,0 +1,6 @@
+2025/11/06-19:26:23.193 d5c Reusing MANIFEST /home/kamal/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2025/11/06-19:26:23.205 d5c Recovering log #27
+2025/11/06-19:26:23.206 d5c Reusing old log /home/kamal/.config/discord/Local Storage/leveldb/000027.log 
+2025/11/06-19:37:02.444 d5d Level-0 table #33: started
+2025/11/06-19:37:02.477 d5d Level-0 table #33: 2642409 bytes OK
+2025/11/06-19:37:02.478 d5d Delete type=0 #27

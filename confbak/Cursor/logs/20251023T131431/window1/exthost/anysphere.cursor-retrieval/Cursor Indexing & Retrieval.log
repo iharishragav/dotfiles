@@ -1,0 +1,89 @@
+2025-10-23 13:14:39.940 [error] Error getting repo info: Failed to execute git
+2025-10-23 13:14:39.940 [error] Error: Failed to execute git
+	at t.Git._exec (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:34408)
+	at async t.Git.exec (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:33531)
+	at async t.GitProvider.executeGitCommandStable (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1287776)
+	at async t.GitProvider.getRepoInfo (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1263728)
+2025-10-23 13:14:39.941 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-23 13:14:39.941 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-23 13:14:40.069 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:14:40.083 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:14:40.216 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:14:40.217 [error] NoWorkspaceUriError
+2025-10-23 13:14:40.231 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:14:46.387 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:14:46.388 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:14:46.429 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:14:46.446 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '.git/HEAD')
+2025-10-23 13:14:46.575 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:14:46.675 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:14:46.676 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:14:46.699 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:14:50.898 [error] Error getting git status: Failed to execute git
+2025-10-23 13:15:09.607 [error] Error getting git status: Failed to execute git
+2025-10-23 13:16:56.889 [error] Error getting git status: Failed to execute git
+2025-10-23 13:17:56.858 [error] Error getting git status: Failed to execute git
+2025-10-23 13:18:02.940 [error] Error getting git status: Failed to execute git
+2025-10-23 13:24:36.813 [error] Error getting user commits: Failed to execute git
+2025-10-23 13:28:40.440 [error] Error getting repo info: Failed to execute git
+2025-10-23 13:28:40.440 [error] Error: Failed to execute git
+	at t.Git._exec (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:34408)
+	at async t.Git.exec (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/git/dist/main.js:2:33531)
+	at async t.GitProvider.executeGitCommandStable (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1287776)
+	at async t.GitProvider.getRepoInfo (/tmp/.mount_cursorrP54NS/usr/share/cursor/resources/app/extensions/cursor-retrieval/dist/main.js:2:1263728)
+2025-10-23 13:28:40.440 [info] Creating Indexing Repo client:  https://repo42.cursor.sh
+2025-10-23 13:28:40.440 [info] Creating repo client with backend url: https://repo42.cursor.sh
+2025-10-23 13:28:40.453 [info] Making keys for a new index
+2025-10-23 13:28:40.455 [info] Using the default key from the server for a new index
+2025-10-23 13:28:40.455 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-23 13:28:40.818 [info] Using existing keys for an index
+2025-10-23 13:28:40.818 [info] InternalRepoInfo constructor with preferredEmbeddingModel 0
+2025-10-23 13:28:40.925 [info] Doing a startup handshake.
+2025-10-23 13:28:40.926 [warning] Failed to get symbolic ref: Failed to execute git
+2025-10-23 13:28:40.940 [warning] Failed to read .git/HEAD: A system error occurred (ENOENT: no such file or directory, open '/home/kamal/.local/share/themes/Caelestia-Modern/.git/HEAD')
+2025-10-23 13:28:41.012 [warning] Failed to get branches from remote: Failed to execute git
+2025-10-23 13:28:41.017 [warning] Failed to get default branch from git config: Failed to execute git
+2025-10-23 13:28:41.066 [info] Finished computing merkle tree in 68.76059899999927 ms.
+2025-10-23 13:28:41.084 [info] Doing the initial handshake with hash: 78603178fdf77e5f99bfd2b038c15837d22e815dbf5bcfdf83b376ab54cc0881
+2025-10-23 13:28:41.130 [info] Computed simhash vector of length: 256
+2025-10-23 13:28:41.130 [info] Path key hash: d1432b7b7cfb020b690195d2f0433663cb9c2d7c898f973f3bb3135c8a9c34ee
+2025-10-23 13:28:41.130 [info] Handshake start
+2025-10-23 13:28:41.132 [warning] Error reading high level folder description. Ignoring. Error: ENOENT: no such file or directory, open '/home/kamal/.config/Cursor/User/workspaceStorage/414fcff7d293308bd0056c1c9fba686b/anysphere.cursor-retrieval/high_level_folder_description.txt'
+2025-10-23 13:28:45.135 [warning] Retrying handshake with timeout 4000. Error:  [deadline_exceeded] the operation timed out
+2025-10-23 13:28:45.135 [info] Handshake start
+2025-10-23 13:28:45.614 [info] Handshake timing: 481.21225199999935, response: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3645413d-ecf3-42fb-afdd-924fa457c10d","status":"STATUS_EMPTY","copyTaskHandle":""}]}
+2025-10-23 13:28:45.614 [info] Handshake result: {"status":"STATUS_SUCCESS","codebases":[{"codebaseId":"3645413d-ecf3-42fb-afdd-924fa457c10d","status":"STATUS_EMPTY","copyTaskHandle":""}]}
+2025-10-23 13:28:45.614 [info] Starting fast remote sync.
+2025-10-23 13:28:45.615 [info] Total num embeddable files: 17
+2025-10-23 13:28:45.615 [info] Root hash: 78603178fdf77e5f99bfd2b038c15837d22e815dbf5bcfdf83b376ab54cc0881
+2025-10-23 13:28:45.615 [info] Starting repository upload from scratch.
+2025-10-23 13:28:45.616 [info] Uploading 17 files.
+2025-10-23 13:28:45.618 [info] Total number of files to embed: 17
+2025-10-23 13:28:45.618 [info] Not aborted
+2025-10-23 13:28:45.618 [info] Starting while loop.
+2025-10-23 13:28:45.622 [info] syncing batch of 2 files and 1203 bytes
+2025-10-23 13:28:47.054 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./settings.ini
+2025-10-23 13:28:47.054 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/gtkrc
+2025-10-23 13:28:47.056 [info] syncing batch of 4 files and 21599 bytes
+2025-10-23 13:28:47.937 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/buttons
+2025-10-23 13:28:47.937 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/entry
+2025-10-23 13:28:47.937 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/styles
+2025-10-23 13:28:47.938 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/notebook
+2025-10-23 13:28:47.940 [info] syncing batch of 8 files and 41306 bytes
+2025-10-23 13:28:49.228 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/toolbar
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/menu
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/progressbar
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/range
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/scrollbar
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/misc
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-2.0/widgets/default
+2025-10-23 13:28:49.229 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-3.0/gtk.css
+2025-10-23 13:28:49.240 [info] syncing batch of 3 files and 20925 bytes
+2025-10-23 13:28:50.214 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-3.0/gtk-widgets.css
+2025-10-23 13:28:50.214 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-3.0/gtk-widgets-assets.css
+2025-10-23 13:28:50.214 [info] Completed job successfully: 3645413d-ecf3-42fb-afdd-924fa457c10d ./gtk-4.0/gtk.css
+2025-10-23 13:28:50.577 [info] Finishing sync (hasUpdates: true, isErr: false)
+2025-10-23 13:28:51.118 [info] Finished indexing repository.
+2025-10-23 13:28:51.119 [info] Indexing job successfully done or aborted.
+2025-10-23 13:29:10.878 [info] multiCodebaseIndexingJob dispose
+2025-10-23 13:29:10.878 [info] Aborting indexing job.

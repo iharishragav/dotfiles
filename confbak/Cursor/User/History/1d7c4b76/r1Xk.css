@@ -1,0 +1,358 @@
+/* Caelestia Modern GTK3 Widgets
+   Modern, rounded, transparent styling */
+
+/* Global styles */
+* {
+    border-radius: 12px;
+    border-style: none;
+    outline-style: none;
+    box-shadow: none;
+}
+
+/* Window styling */
+window {
+    background-color: @window_bg_color_caelestia;
+    color: @window_fg_color_caelestia;
+    border: 1px solid @window_border_color_caelestia;
+    border-radius: 16px;
+}
+
+/* Background styling */
+.background {
+    background-color: @theme_bg_color_caelestia;
+    color: @theme_fg_color_caelestia;
+}
+
+/* Button styling */
+button {
+    background-color: @surface_2;
+    color: @text_primary;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    padding: 8px 16px;
+    transition: all 200ms ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: @surface_3;
+    border-color: @accent_primary;
+    box-shadow: 0 4px 8px rgba(203, 166, 247, 0.2);
+}
+
+button:active {
+    background-color: @accent_primary;
+    color: @surface_0;
+    box-shadow: 0 2px 4px rgba(203, 166, 247, 0.3);
+}
+
+button:focus {
+    border-color: @accent_primary;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.3);
+}
+
+/* Entry styling */
+entry {
+    background-color: @surface_1;
+    color: @text_primary;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    padding: 8px 12px;
+    transition: all 200ms ease;
+}
+
+entry:focus {
+    border-color: @accent_primary;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.3);
+    background-color: @surface_0;
+}
+
+entry:selected {
+    background-color: @theme_selected_bg_color_caelestia;
+    color: @theme_selected_fg_color_caelestia;
+}
+
+/* Notebook/Tab styling */
+notebook {
+    background-color: @surface_1;
+    border-radius: 12px;
+}
+
+notebook > header {
+    background-color: @surface_2;
+    border-radius: 12px 12px 0 0;
+}
+
+notebook > header > tabs > tab {
+    background-color: transparent;
+    color: @text_secondary;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 8px 16px;
+    transition: all 200ms ease;
+}
+
+notebook > header > tabs > tab:checked {
+    background-color: @accent_primary;
+    color: @surface_0;
+    box-shadow: 0 2px 4px rgba(203, 166, 247, 0.3);
+}
+
+notebook > header > tabs > tab:hover {
+    background-color: @surface_3;
+    color: @text_primary;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: @surface_1;
+    border-radius: 8px;
+}
+
+scrollbar slider {
+    background-color: @surface_3;
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent_primary;
+}
+
+scrollbar slider:active {
+    background-color: @accent_secondary;
+}
+
+/* Progress bar styling */
+progressbar {
+    background-color: @surface_2;
+    border-radius: 8px;
+}
+
+progressbar progress {
+    background-color: @accent_primary;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(203, 166, 247, 0.3);
+}
+
+/* Menu styling */
+menu {
+    background-color: @surface_1;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+menuitem {
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 2px;
+    transition: all 150ms ease;
+}
+
+menuitem:hover {
+    background-color: @accent_primary;
+    color: @surface_0;
+}
+
+menuitem:active {
+    background-color: @accent_secondary;
+}
+
+/* Toolbar styling */
+toolbar {
+    background-color: @surface_1;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+toolbar button {
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+/* Status bar styling */
+statusbar {
+    background-color: @surface_2;
+    color: @text_secondary;
+    border-radius: 0 0 12px 12px;
+    padding: 4px 8px;
+}
+
+/* Frame styling */
+frame {
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    background-color: @surface_1;
+}
+
+/* List styling */
+list {
+    background-color: @surface_1;
+    border-radius: 12px;
+}
+
+list row {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 2px;
+    transition: all 150ms ease;
+}
+
+list row:hover {
+    background-color: @surface_3;
+}
+
+list row:selected {
+    background-color: @theme_selected_bg_color_caelestia;
+    color: @theme_selected_fg_color_caelestia;
+}
+
+/* Tree view styling */
+treeview {
+    background-color: @surface_1;
+    color: @text_primary;
+    border-radius: 12px;
+}
+
+treeview:selected {
+    background-color: @theme_selected_bg_color_caelestia;
+    color: @theme_selected_fg_color_caelestia;
+}
+
+/* Combo box styling */
+combobox {
+    background-color: @surface_1;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+combobox:focus {
+    border-color: @accent_primary;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.3);
+}
+
+/* Check button and radio button styling */
+checkbutton, radiobutton {
+    background-color: transparent;
+    color: @text_primary;
+    border-radius: 8px;
+    padding: 4px;
+    transition: all 150ms ease;
+}
+
+checkbutton:hover, radiobutton:hover {
+    background-color: @surface_2;
+}
+
+checkbutton:checked, radiobutton:checked {
+    color: @accent_primary;
+}
+
+/* Scale/Slider styling */
+scale {
+    background-color: @surface_1;
+    border-radius: 8px;
+}
+
+scale slider {
+    background-color: @accent_primary;
+    border-radius: 8px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+scale slider:hover {
+    background-color: @accent_secondary;
+}
+
+/* Calendar styling */
+calendar {
+    background-color: @surface_1;
+    color: @text_primary;
+    border-radius: 12px;
+}
+
+calendar:selected {
+    background-color: @accent_primary;
+    color: @surface_0;
+}
+
+/* Spin button styling */
+spinbutton {
+    background-color: @surface_1;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    color: @text_primary;
+}
+
+spinbutton:focus {
+    border-color: @accent_primary;
+    box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.3);
+}
+
+/* Tooltip styling */
+tooltip {
+    background-color: @surface_0;
+    color: @text_primary;
+    border: 1px solid @surface_3;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Header bar styling */
+headerbar {
+    background-color: @surface_1;
+    color: @text_primary;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+headerbar button {
+    border-radius: 8px;
+    margin: 2px;
+}
+
+/* Title bar styling */
+.titlebar {
+    background-color: @surface_1;
+    color: @text_primary;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Popover styling */
+popover {
+    background-color: @surface_1;
+    border: 1px solid @surface_3;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Switch styling */
+switch {
+    background-color: @surface_3;
+    border-radius: 16px;
+    min-width: 40px;
+    min-height: 20px;
+}
+
+switch:checked {
+    background-color: @accent_primary;
+}
+
+switch slider {
+    background-color: @text_primary;
+    border-radius: 50%;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* Insensitive state styling */
+*:insensitive {
+    color: @insensitive_fg_color_caelestia;
+    background-color: @insensitive_bg_color_caelestia;
+    opacity: 0.6;
+}
