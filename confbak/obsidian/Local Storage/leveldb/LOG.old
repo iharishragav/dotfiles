@@ -1,3 +1,3 @@
-2025/11/06-19:27:21.084 eb3 Reusing MANIFEST /home/kamal/.config/obsidian/Local Storage/leveldb/MANIFEST-000001
-2025/11/06-19:27:21.096 eb3 Recovering log #3
-2025/11/06-19:27:21.097 eb3 Reusing old log /home/kamal/.config/obsidian/Local Storage/leveldb/000003.log 
+2025/11/07-16:37:23.510 3074 Reusing MANIFEST /home/kamal/.config/obsidian/Local Storage/leveldb/MANIFEST-000001
+2025/11/07-16:37:23.526 3074 Recovering log #3
+2025/11/07-16:37:23.527 3074 Reusing old log /home/kamal/.config/obsidian/Local Storage/leveldb/000003.log 

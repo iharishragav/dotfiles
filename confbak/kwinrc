@@ -5,13 +5,22 @@ Id_3=5bb06f59-906e-4d7e-a3d0-d229cbe54545
 Number=3
 Rows=1
 
+[Effect-blur]
+BlurStrength=4
+NoiseStrength=9
+
 [NightColor]
 Active=true
 NightTemperature=4400
 
 [Plugins]
+cubeEnabled=true
 desktopchangeosdEnabled=true
+hidecursorEnabled=true
+kinetic_fadingpopupsEnabled=true
+krohnkiteEnabled=false
 minimizeallEnabled=true
+slidebackEnabled=true
 translucencyEnabled=true
 videowallEnabled=true
 wobblywindowsEnabled=true

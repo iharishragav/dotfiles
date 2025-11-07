@@ -1,6 +1,6 @@
-2025/11/06-19:26:23.193 d5c Reusing MANIFEST /home/kamal/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2025/11/06-19:26:23.205 d5c Recovering log #27
-2025/11/06-19:26:23.206 d5c Reusing old log /home/kamal/.config/discord/Local Storage/leveldb/000027.log 
-2025/11/06-19:37:02.444 d5d Level-0 table #33: started
-2025/11/06-19:37:02.477 d5d Level-0 table #33: 2642409 bytes OK
-2025/11/06-19:37:02.478 d5d Delete type=0 #27
+2025/11/06-23:31:24.226 c0a Reusing MANIFEST /home/kamal/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2025/11/06-23:31:24.238 c0a Recovering log #34
+2025/11/06-23:31:24.238 c0a Reusing old log /home/kamal/.config/discord/Local Storage/leveldb/000034.log 
+2025/11/06-23:37:50.510 c0b Level-0 table #38: started
+2025/11/06-23:37:50.549 c0b Level-0 table #38: 2653577 bytes OK
+2025/11/06-23:37:50.551 c0b Delete type=0 #34

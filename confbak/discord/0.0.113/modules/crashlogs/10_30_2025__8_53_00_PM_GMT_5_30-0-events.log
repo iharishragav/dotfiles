@@ -113,3 +113,38 @@
 11/6/2025, 7:26:27 PM GMT+5:30 9: webContents.destroyed web1
 11/6/2025, 7:26:27 PM GMT+5:30 10: window.closed win1
 11/6/2025, 7:27:03 PM GMT+5:30 11: window.close win2
+11/6/2025, 11:04:00 PM GMT+5:30 0: 
+
+----------------------------------------------
+11/6/2025, 11:04:00 PM GMT+5:30 1: Discord starting: {"releaseChannel":"stable","version":"0.0.113"}, modulepath: /home/kamal/.config/discord/0.0.113/modules
+11/6/2025, 11:16:47 PM GMT+5:30 12: window.close win2
+11/6/2025, 11:31:24 PM GMT+5:30 0: 
+
+----------------------------------------------
+11/6/2025, 11:31:24 PM GMT+5:30 1: Discord starting: {"releaseChannel":"stable","version":"0.0.113"}, modulepath: /home/kamal/.config/discord/0.0.113/modules
+11/6/2025, 11:31:24 PM GMT+5:30 2: ✅ webContents.created web1 ""
+11/6/2025, 11:31:24 PM GMT+5:30 3: ✅ window.created win1 "discord"
+11/6/2025, 11:31:24 PM GMT+5:30 4: ✅ webContents.did-finish-load web1
+11/6/2025, 11:31:26 PM GMT+5:30 5: ✅ webContents.created web2 ""
+11/6/2025, 11:31:26 PM GMT+5:30 6: ✅ window.created win2 "Discord"
+11/6/2025, 11:31:29 PM GMT+5:30 7: ✅ webContents.did-finish-load web2
+11/6/2025, 11:31:31 PM GMT+5:30 8: window.close win1
+11/6/2025, 11:31:31 PM GMT+5:30 9: webContents.destroyed web1
+11/6/2025, 11:31:31 PM GMT+5:30 10: window.closed win1
+11/6/2025, 11:39:53 PM GMT+5:30 11: before-quit
+11/6/2025, 11:39:53 PM GMT+5:30 12: window.close win2
+11/6/2025, 11:39:53 PM GMT+5:30 13: ❌ child-process-gone {
+  type: 'Utility',
+  reason: 'killed',
+  exitCode: 15,
+  serviceName: 'audio.mojom.AudioService',
+  name: 'Audio Service'
+}
+11/6/2025, 11:39:53 PM GMT+5:30 14: ❌ child-process-gone {
+  type: 'Utility',
+  reason: 'killed',
+  exitCode: 15,
+  serviceName: 'network.mojom.NetworkService',
+  name: 'Network Service'
+}
+11/6/2025, 11:39:53 PM GMT+5:30 15: ❌ render-process-gone { reason: 'killed', exitCode: 15 }

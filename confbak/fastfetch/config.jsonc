@@ -5,11 +5,11 @@
     "separator": "  ",
     "color": "white",
     "constants": [
-      "\u001b[38;2;91;102;120m",    // {$1} slate/foreground
-      "\u001b[38;2;155;183;227m",  // {$2} sky blue
-      "\u001b[38;2;182;166;217m",  // {$3} lavender
-      "\u001b[38;2;230;175;192m"   // {$4} pastel pink
-    ]
+  "\u001b[38;2;91;102;120m",   // slate/foreground - keep or adjust to a grey shade, e.g. medium grey
+  "\u001b[38;2;180;180;180m",  // light grey replacing sky blue
+  "\u001b[38;2;150;150;150m",  // medium grey replacing lavender
+  "\u001b[38;2;120;120;120m"   // darker grey replacing pastel pink
+]
   },
   "modules": [
     "break",

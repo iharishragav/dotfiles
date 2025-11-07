@@ -1,3 +1,9 @@
-2025/11/06-19:40:23.128 746 Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/11/06-19:40:23.129 746 Recovering log #12
-2025/11/06-19:40:23.129 746 Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000012.log 
+2025/11/07-17:06:26.407 6fd Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/07-17:06:26.407 6fd Recovering log #20
+2025/11/07-17:06:26.408 6fd Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000020.log 
+2025/11/07-17:06:34.831 6fe Compacting 1@1 + 1@2 files
+2025/11/07-17:06:34.840 6fe Generated table #23@1: 110 keys, 241535 bytes
+2025/11/07-17:06:34.840 6fe Compacted 1@1 + 1@2 files => 241535 bytes
+2025/11/07-17:06:34.841 6fe compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/11/07-17:06:34.841 6fe Delete type=2 #21
+2025/11/07-17:06:34.841 6fe Delete type=2 #19

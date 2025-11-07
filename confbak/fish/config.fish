@@ -2,9 +2,6 @@ if status is-interactive
     # Starship custom prompt
     starship init fish | source
 
-    # Custom colours
-    cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
-
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
@@ -25,11 +22,36 @@ alias starshipconf='nano ~/.config/starship.toml'
 alias kittyconf=' nano ~/.config/kitty/kitty.conf'
 alias fishconf='nano ~/.config/fish/config.fish'
 alias meenconf='nano ~/.config/fish/config.fish'
-alias hyprconf='nano .config/hypr/hyprland.conf'
+alias hyprconf='nano ~/.config/hypr/hyprland.conf'
 alias Gs='git status'
 alias c='clear'
 alias l='lsd'
 alias IP='ip -c -br a'
+
+
+function burpchrome
+    set -l profile /tmp/burp-chrome-instance-1
+    mkdir -p $profile
+
+    nohup /home/kamal/.BurpSuite/burpbrowser/141.0.7390.65/chrome \
+        --user-data-dir=$profile \
+        --remote-debugging-port=9222 \
+        --proxy-server=localhost:8080 \
+        --no-first-run \
+        --ignore-certificate-errors \
+        >/dev/null 2>&1 &
+
+    # $last_pid holds the PID of the last backgrounded job in fish
+    disown
+    echo "burpchrome started, PID $last_pid, profile $profile"
+end
+
+
+function spiderfoot
+    source ~/spiderfoot-py312/bin/activate.fish
+    python3 ~/opt/spiderfoot-4.0/sf.py -l 127.0.0.1:5001
+end
+
 
 # ─── Memory Functions ───
 function freemem
