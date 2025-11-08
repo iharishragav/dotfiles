@@ -1,0 +1,49 @@
+# Font settings
+font_family      FiraCode Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        13.0
+
+# Window Borders and Edges
+window_border_width       2
+active_border_color       #b8e0d2
+inactive_border_color     #eac4d5
+borderless                yes
+background_opacity        0.93
+
+# Pastel Color Theme Inspired by Wallpaper
+background                #d6eadf
+foreground                #22223b
+selection_background      #b8e0d2
+selection_foreground      #22223b
+
+color0  #5B6678
+color1  #E6AFC0
+color2  #A8B4C5
+color3  #C9D1E8
+color4  #7AA0C8
+color5  #B6A6D9
+color6  #9BB7E3
+color7  #F1F3F6
+
+color8  #4C5668
+color9  #D895A9
+color10 #8FA0B5
+color11 #BFC9E0
+color12 #688EB6
+color13 #A091C8
+color14 #87A9D6
+color15 #FFFFFF
+
+# Cursor and tab bar
+cursor                #809bce
+active_tab_foreground #22223b
+active_tab_background #b8e0d2
+inactive_tab_foreground #b8e0d2
+inactive_tab_background #eac4d5
+
+# Theme and Misc
+enable_audio_bell no
+tab_bar_style    powerline
+tab_bar_edge     bottom
