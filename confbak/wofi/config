@@ -1,0 +1,5 @@
+[wofi]
+style=/home/kamal/.config/wofi/style.css
+show-icons=true
+width=400
+font=monospace 11
