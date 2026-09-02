@@ -1,6 +1,0 @@
-2025/10/30-09:32:39.697 b5f Creating DB /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_devfolio.co_0.indexeddb.leveldb since it was missing.
-2025/10/30-09:32:39.703 b5f Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_devfolio.co_0.indexeddb.leveldb/MANIFEST-000001
-2025/10/30-09:33:01.716 b61 Level-0 table #5: started
-2025/10/30-09:33:01.717 b61 Level-0 table #5: 1438 bytes OK
-2025/10/30-09:33:01.718 b61 Delete type=0 #3
-2025/10/30-09:33:01.718 b61 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

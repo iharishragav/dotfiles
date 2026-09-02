@@ -1,7 +1,0 @@
-2025/10/24-14:12:47.192 b5e Reusing MANIFEST /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_tryhackme.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/10/24-14:12:47.193 b5e Recovering log #6
-2025/10/24-14:12:47.193 b5e Reusing old log /home/kamal/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_tryhackme.com_0.indexeddb.leveldb/000006.log 
-2025/10/24-14:12:47.228 b5e Level-0 table #11: started
-2025/10/24-14:12:47.229 b5e Level-0 table #11: 487 bytes OK
-2025/10/24-14:12:47.230 b5e Delete type=0 #6
-2025/10/24-14:12:47.230 b5e Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

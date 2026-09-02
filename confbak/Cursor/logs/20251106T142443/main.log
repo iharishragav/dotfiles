@@ -1,4 +1,0 @@
-2025-11-06 14:24:44.627 [error] Invalid path provided: /home/kamal/spiderfoot-4.0, ENOENT: no such file or directory, stat '/home/kamal/spiderfoot-4.0'
-2025-11-06 14:24:44.735 [info] updateURL https://api2.cursor.sh/updates/api/update/linux-x64/cursor/1.7.54/8aa42934aae45760914e714576fb79b644a2dd4a0eb5759d5116b9fb967ac782/stable
-2025-11-06 14:24:44.735 [info] update#setState idle
-2025-11-06 14:24:51.193 [info] Extension host with pid 13747 exited with code: 0, signal: unknown.

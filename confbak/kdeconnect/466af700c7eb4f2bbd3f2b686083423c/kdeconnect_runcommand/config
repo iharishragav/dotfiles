@@ -1,2 +1,0 @@
-[General]
-commands="@ByteArray({\"3b0c369c_e4d5_4fc3_b9cd_f6931d4a629b\":{\"command\":\"loginctl lock-session\",\"name\":\"Lock Screen\"},\"76438bc6_86d2_4626_8230_891258d389b8\":{\"command\":\"loginctl unlock-session\",\"name\":\"Unlock Screen\"},\"aa45c592_8fec_411d_be68_8f5696bdd0ba\":{\"command\":\"sudo poweroff\",\"name\":\"shutdown\"}})"

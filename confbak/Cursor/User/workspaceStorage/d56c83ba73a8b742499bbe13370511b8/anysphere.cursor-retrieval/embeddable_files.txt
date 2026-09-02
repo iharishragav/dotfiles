@@ -1,5 +1,0 @@
-index.theme
-COPYING
-gnome-shell/extensions/workspaces-to-dock/workspaces-to-dock.css
-gnome-shell/pad-osd.css
-gnome-shell/gnome-shell.css

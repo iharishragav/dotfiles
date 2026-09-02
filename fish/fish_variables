@@ -1,0 +1,9 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ANDROID_HOME:/opt/android\x2dsdk
+SETUVAR --export ANDROID_SDK_ROOT:/opt/android\x2dsdk
+SETUVAR --export OPENAI_API_KEY:sk\x2dproj\x2dcdKseudNvfNANV1rEbDzS3cpXHbPGJF7vGKCn71ZnKQZlegjzuLkdRdttHwfDzT8t1K3DDuZTxT3BlbkFJTm32MHY\x2d49ItHj4S8RtYEsrvJ0pgZNEyt2JZj9Ph3frG9b178Jq476ZjT0gIYqixHRsVl9VFYA
+SETUVAR --export --path PATH:/home/kamal/\x2elocal/bin\x1e/home/kamal/\x2elocal/bin\x1e/usr/lib/jvm/default/bin\x1e/home/kamal/go/bin\x1e/opt/android\x2dsdk/cmdline\x2dtools/latest/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/usr/local/jdk\x2d21\x2e0\x2e5\x2b11/bin\x1e/opt/gradle/gradle\x2d9\x2e2\x2e1/bin\x1e/usr/lib/jvm/java\x2d21\x2dopenjdk/bin\x1e/opt/gradle\x2d9\x2e2\x2e1/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/opt/android\x2dsdk/tools\x1e/opt/android\x2dsdk/tools/bin\x1e/var/lib/flatpak/exports/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/android\x2dsdk/cmdline\x2dtools/latest/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk/tools\x1e/opt/android\x2dsdk/tools/bin
+SETUVAR --export PERPLEXITY_API_KEY:pplx\x2d8gyINZBmXFnYFExpdVOp4WsNYReRzIgredtjpnpSL4XMyQvc
+SETUVAR __fish_initialized:4300
+SETUVAR --export fish_user_paths:/home/kamal/\x2elocal/bin\x1e/usr/lib/jvm/default/bin\x1e/home/kamal/go/bin\x1e/opt/android\x2dsdk/cmdline\x2dtools/latest/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/usr/local/jdk\x2d21\x2e0\x2e5\x2b11/bin\x1e/opt/gradle/gradle\x2d9\x2e2\x2e1/bin\x1e/usr/lib/jvm/java\x2d21\x2dopenjdk/bin\x1e/opt/gradle\x2d9\x2e2\x2e1/bin

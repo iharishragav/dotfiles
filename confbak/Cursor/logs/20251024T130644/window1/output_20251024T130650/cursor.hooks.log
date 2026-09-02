@@ -1,9 +1,0 @@
-[2025-10-24T07:36:50.812Z] Initializing Cursor Hooks Service...
-[2025-10-24T07:36:50.812Z] User config path: /home/kamal/.cursor/hooks.json
-[2025-10-24T07:36:50.812Z] Project config path: /usr/share/themes/Breeze-Dark/.cursor/hooks.json
-[2025-10-24T07:36:50.812Z] Enterprise config path: /etc/cursor/hooks.json
-[2025-10-24T07:36:50.813Z] Reloading hooks configuration...
-[2025-10-24T07:36:50.819Z] No enterprise hooks configuration found
-[2025-10-24T07:36:50.827Z] No user hooks configuration found
-[2025-10-24T07:36:50.827Z] Project hooks disabled (experiment flag not enabled)
-[2025-10-24T07:36:50.827Z] Cursor Hooks Service initialized successfully
