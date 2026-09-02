@@ -119,8 +119,9 @@ QtObject {
 
     function applyColorScheme(scheme) {
         root.colorScheme = scheme;
-        schemeApply.command = ["bash",
-            Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/apply-color-scheme.sh",
+        schemeApply.command = ["bash", "-c",
+            "\"$1\" \"$2\"", "--",
+            Quickshell.shellDir + "/scripts/apply-color-scheme.sh",
             scheme];
         schemeApply.running = true;
     }

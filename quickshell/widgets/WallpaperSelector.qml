@@ -55,7 +55,7 @@ Item {
     Process {
         id: lister
         command: ["bash", "-c",
-            "THUMB='" + Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/wallpaper-thumbnail.sh'; " +
+            "THUMB='" + Quickshell.shellDir + "/scripts/wallpaper-thumbnail.sh'; " +
             "find '" + selectorRoot.wallpaperDir + "' -maxdepth 1 -type f " +
             "\\( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' " +
             "-o -iname '*.mp4' -o -iname '*.mov' -o -iname '*.webm' -o -iname '*.mkv' \\) " +
@@ -95,7 +95,7 @@ Item {
     onVisible_Changed: { if (visible_) refreshWallpaperList(); }
 
     function applyWallpaper(path) {
-        Quickshell.execDetached(["bash", Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/apply-wallpaper.sh", path]);
+        Quickshell.execDetached(["bash", Quickshell.shellDir + "/scripts/apply-wallpaper.sh", path]);
     }
 
     IpcHandler {

@@ -2,23 +2,24 @@
 set -Eeuo pipefail
 
 colors_json="${1:-$HOME/.cache/wal/colors.json}"
-palette_image="${2:-$(cat "$HOME/.cache/quickshell-rice/current-palette-image" 2>/dev/null || true)}"
+palette_image="${2:-$(cat "$HOME/.cache/quickshell-rice/current-palette-image" 2>/dev/null || cat "$HOME/.cache/wal/wal" 2>/dev/null || true)}"
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "$colors_json" ]] || { echo "missing colors.json: $colors_json" >&2; exit 1; }
 
 bash "$script_dir/write-hypr-theme.sh" "$colors_json"
 
-if [[ -f "$HOME/.config/foot/foot.ini" ]]; then
-  python3 "$script_dir/apply-foot-colors.py" "$colors_json" "$HOME/.config/foot/foot.ini"
+if [[ -d "$HOME/.config/kitty" || -f "$HOME/.config/kitty/kitty.conf" ]]; then
+  python3 "$script_dir/apply-kitty-colors.py" "$colors_json" "$HOME/.config/kitty/kitty.conf"
 fi
 
 if [[ -d "$HOME/.config/qutebrowser" ]]; then
   python3 "$script_dir/apply-qutebrowser-colors.py" "$colors_json" "$HOME/.config/qutebrowser"
-  if [[ -n "$palette_image" && -f "$palette_image" ]]; then
-    python3 "$script_dir/apply-qutebrowser-startpage.py" "$colors_json" "$palette_image" "$HOME/.config/qutebrowser"
-  fi
-  pkill -HUP -x qutebrowser 2>/dev/null || true
+  python3 "$script_dir/apply-qutebrowser-startpage.py" "$colors_json" "$palette_image" "$HOME/.config/qutebrowser"
+fi
+
+if [[ -d "$HOME/.config/fastfetch" || -f "$HOME/.config/fastfetch/config.jsonc" ]]; then
+  python3 "$script_dir/apply-fastfetch-colors.py" "$colors_json" "$HOME/.config/fastfetch"
 fi
 
 python3 - "$colors_json" "$HOME/.cache/wal/colors-zsh.sh" << 'PY_EOF'
@@ -37,4 +38,4 @@ with open(sys.argv[2], "w") as f:
         f.write('typeset -g %s="%d"\n' % (key, to256(color)))
 PY_EOF
 
-echo "colors propagated: Hyprland, foot, qutebrowser, zsh"
+echo "colors propagated: Hyprland, kitty, qutebrowser, zsh, fastfetch"

@@ -7,7 +7,7 @@ import ".." as Local
 
 // Visual palette editor. Shows the 16 colors, clicking one opens
 // H/S/L sliders. Changes propagate live through the Colors singleton.
-// "Apply" writes colors.json and re-triggers hyprctl/foot/zsh.
+// "Apply" writes colors.json and re-triggers hyprctl/kitty/zsh.
 // "Reset" reverts to what pywal originally generated.
 Item {
     id: root
@@ -130,7 +130,7 @@ print('Palette saved to', path)
         id: reapplyProc
         running: false
         command: ["bash", "-c",
-            Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/apply-wallpaper-colors-only.sh"]
+            Quickshell.shellDir + "/scripts/apply-wallpaper-colors-only.sh"]
     }
 
     IpcHandler {

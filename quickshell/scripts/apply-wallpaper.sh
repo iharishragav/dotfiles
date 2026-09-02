@@ -4,7 +4,7 @@ set -Eeuo pipefail
 # apply-wallpaper.sh <image-or-video> [transition-type] [transition-pos]
 # Video: extracts a still frame so pywal always runs on a valid image.
 # One path (apply-wallpaper-colors-only.sh) propagates the palette
-# to foot, Hyprland, qutebrowser, and zsh either way.
+# to kitty, Hyprland, qutebrowser, and zsh either way.
 #
 # [transition-type]/[transition-pos] are optional and used by the
 # BarMorph wallpaper picker to make the awww "grow" transition start
@@ -70,4 +70,4 @@ printf '%s\n' "$input"          > "$cache_dir/current-wallpaper"
 printf '%s\n' "$palette_image"  > "$cache_dir/current-palette-image"
 
 "$script_dir/apply-wallpaper-colors-only.sh" "$HOME/.cache/wal/colors.json" "$palette_image"
-echo "OK: wallpaper applied, colors propagated (foot/Hyprland/qutebrowser/zsh)."
+echo "OK: wallpaper applied, colors propagated (kitty/Hyprland/qutebrowser/zsh)."

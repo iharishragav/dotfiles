@@ -6,7 +6,7 @@
 #   - if it's a video: reapplies everything (mpvpaper + pywal + colors),
 #     since nothing else relaunches mpvpaper after a reboot;
 #   - if it's an image: does nothing — awww-daemon restores it on its
-#     own and colors are already persisted in colors-wal.lua/foot.ini/zsh.
+#     own and colors are already persisted in colors-wal.lua/kitty.ini/zsh.
 
 set -euo pipefail
 

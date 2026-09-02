@@ -34,10 +34,16 @@ if ! pgrep -f "wl-paste --type image --watch cliphist store" > /dev/null; then
 fi
 
 chmod +x "$SCRIPT_DIR/scripts/apply-wallpaper.sh" \
-         "$SCRIPT_DIR/scripts/apply-foot-colors.py" \
+         "$SCRIPT_DIR/scripts/apply-wallpaper-colors-only.sh" \
+         "$SCRIPT_DIR/scripts/apply-color-scheme.sh" \
+         "$SCRIPT_DIR/scripts/apply-colorscheme-preset.sh" \
+         "$SCRIPT_DIR/scripts/apply-kitty-colors.py" \
+         "$SCRIPT_DIR/scripts/apply-qutebrowser-colors.py" \
+         "$SCRIPT_DIR/scripts/apply-qutebrowser-startpage.py" \
+         "$SCRIPT_DIR/scripts/write-hypr-theme.sh" \
          "$SCRIPT_DIR/scripts/cliphist-restore.sh" \
          "$SCRIPT_DIR/scripts/cliphist-delete.sh" \
          "$SCRIPT_DIR/scripts/restore-wallpaper.sh" \
          "$SCRIPT_DIR/scripts/wallpaper-thumbnail.sh"
 
-exec qs -c vantage
+exec qs -c "$SCRIPT_DIR"

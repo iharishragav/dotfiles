@@ -60,5 +60,5 @@ print("colors.json written with preset:", preset)
 PY_EOF
 fi
 
-bash "$script_dir/apply-wallpaper-colors-only.sh"
+bash "$script_dir/apply-wallpaper-colors-only.sh" "$HOME/.cache/wal/colors.json"
 echo "Color scheme applied: $preset"

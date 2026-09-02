@@ -255,7 +255,7 @@ Item {
                                             onClicked: {
                                                 Local.AppState.closeMorph();
                                                 Quickshell.execDetached(["bash",
-                                                    Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/apply-colorscheme-preset.sh",
+                                                    Quickshell.shellDir + "/scripts/apply-colorscheme-preset.sh",
                                                     scheme.name]);
                                             }
                                         }
@@ -396,8 +396,41 @@ Item {
                     id: chRoot
                     anchors.fill: parent
                     property var items: []
+                    property int selIndex: 0
                     focus: true
-                    Keys.onEscapePressed: Local.AppState.closeMorph()
+
+                    Component.onCompleted: {
+                        forceActiveFocus();
+                        chLister.running = true;
+                    }
+
+                    function restoreItem(entry) {
+                        if (!entry) return;
+                        Quickshell.execDetached(["bash",
+                            Quickshell.shellDir + "/scripts/cliphist-restore.sh",
+                            entry]);
+                        Local.AppState.closeMorph();
+                    }
+
+                    Keys.onPressed: (event) => {
+                        if (event.key === Qt.Key_Down || event.key === Qt.Key_J) {
+                            selIndex = Math.min(selIndex + 1, Math.max(0, items.length - 1));
+                            chList.positionViewAtIndex(selIndex, ListView.Contain);
+                            event.accepted = true;
+                        } else if (event.key === Qt.Key_Up || event.key === Qt.Key_K) {
+                            selIndex = Math.max(0, selIndex - 1);
+                            chList.positionViewAtIndex(selIndex, ListView.Contain);
+                            event.accepted = true;
+                        } else if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                            if (items.length > 0 && selIndex >= 0 && selIndex < items.length) {
+                                restoreItem(items[selIndex]);
+                            }
+                            event.accepted = true;
+                        } else if (event.key === Qt.Key_Escape) {
+                            Local.AppState.closeMorph();
+                            event.accepted = true;
+                        }
+                    }
 
                     Process {
                         id: chLister
@@ -430,12 +463,14 @@ Item {
                             clip: true
                             spacing: 4
                             model: chRoot.items
+                            currentIndex: chRoot.selIndex
+                            onCurrentIndexChanged: positionViewAtIndex(currentIndex, ListView.Contain)
 
                             delegate: Rectangle {
                                 width: chList.width
                                 height: 30
                                 radius: height / 2
-                                color: chMouse.containsMouse
+                                color: (index === chRoot.selIndex || chMouse.containsMouse)
                                        ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g,
                                                  Local.Colors.accent.b, 0.25)
                                        : Qt.rgba(1, 1, 1, 0.05)
@@ -456,11 +491,11 @@ Item {
                                     id: chMouse
                                     anchors.fill: parent
                                     hoverEnabled: true
+                                    cursorShape: Qt.PointingHandCursor
+                                    onEntered: chRoot.selIndex = index
                                     onClicked: {
-                                        Quickshell.execDetached(["bash",
-                                            Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/cliphist-restore.sh",
-                                            modelData]);
-                                        Local.AppState.closeMorph();
+                                        chRoot.selIndex = index;
+                                        chRoot.restoreItem(modelData);
                                     }
                                 }
                             }
@@ -630,7 +665,10 @@ Item {
                     property var items: []
                     property int selIndex: 0
 
-                    Component.onCompleted: forceActiveFocus()
+                    Component.onCompleted: {
+                        forceActiveFocus();
+                        wpLister.running = true;
+                    }
 
                     Keys.onPressed: (event) => {
                         if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
@@ -658,19 +696,19 @@ Item {
                         Local.AppState.closeMorph();
                         Local.AppState.hideBarTemporarily(1500);
                         Quickshell.execDetached(["bash",
-                            Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/apply-wallpaper.sh",
+                            Quickshell.shellDir + "/scripts/apply-wallpaper.sh",
                             path, "grow", posX + "," + posY]);
                     }
 
                     Process {
                         id: wpLister
                         command: ["bash",
-                            Quickshell.env("HOME") + "/.config/quickshell/vantage/scripts/wallpaper-list-thumbnails.sh"]
+                            Quickshell.shellDir + "/scripts/wallpaper-list-thumbnails.sh"]
                         running: true
                         stdout: StdioCollector {
                             onStreamFinished: {
                                 wpRoot.items = this.text.split("\n")
-                                    .filter(l => l.length > 0)
+                                    .filter(l => l.trim().length > 0)
                                     .map(l => {
                                         const parts = l.split("\t");
                                         return { path: parts[0], thumb: parts[1] || parts[0] };

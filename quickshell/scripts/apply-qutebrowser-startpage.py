@@ -4,6 +4,7 @@
 #
 # >>> EDIT HERE: swap in your own shortcut list. Format: (title, url, icon).
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -21,7 +22,7 @@ TEMPLATE = '''<!doctype html><html><head><meta charset="utf-8"><title>// startpa
 :root{--fg:@@FG@@;--bg:@@BG@@;--ac:@@ACCENT@@;--ac2:@@ACCENT2@@;--mu:@@MUTED@@}
 body{margin:0;min-height:100vh;overflow:hidden;color:var(--fg);
   font-family:Inter,system-ui,sans-serif;position:relative;
-  background:#05050a url("file://@@WALL@@") center/cover fixed;
+  background:#05050a @@WALL_CSS@@;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:radial-gradient(ellipse at 50% 0%,var(--ac)22,transparent 55%),
@@ -85,19 +86,48 @@ def fill(template, mapping):
 
 
 def main():
-    if len(sys.argv) < 4:
-        raise SystemExit("usage: apply-qutebrowser-startpage.py <colors.json> <image> <output-dir>")
-
-    data = json.load(open(sys.argv[1]))
-    wall = sys.argv[2]
-    out_dir = Path(sys.argv[3])
+    colors_json_path = (
+        Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1]
+        else Path.home() / ".cache/wal/colors.json"
+    )
+    wall = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else ""
+    out_dir = (
+        Path(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3]
+        else Path.home() / ".config/qutebrowser"
+    )
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    if not colors_json_path.exists():
+        print(f"apply-qutebrowser-startpage: {colors_json_path} not found", file=sys.stderr)
+        sys.exit(1)
+
+    with open(colors_json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
     preset_file = Path.home() / ".cache/quickshell-rice/colorscheme-preset"
     preset = preset_file.read_text().strip() if preset_file.exists() else "auto"
     preset_wall = Path.home() / ".cache/quickshell-rice/startpage-wallpapers" / (preset.replace(" ", "-") + ".svg")
-    if preset != "auto" and preset_wall.exists():
-        wall = str(preset_wall)
+
+    if preset != "auto":
+        if not preset_wall.exists():
+            gen_script = Path(__file__).parent / "generate-startpage-wallpapers.py"
+            if gen_script.exists():
+                try:
+                    subprocess.run([sys.executable, str(gen_script)], check=False)
+                except Exception:
+                    pass
+        if preset_wall.exists():
+            wall = str(preset_wall)
+
+    if not wall or not Path(wall).exists():
+        cache_pal = Path.home() / ".cache/quickshell-rice/current-palette-image"
+        wal_file = Path.home() / ".cache/wal/wal"
+        if cache_pal.exists() and cache_pal.read_text().strip() and Path(cache_pal.read_text().strip()).exists():
+            wall = cache_pal.read_text().strip()
+        elif wal_file.exists() and wal_file.read_text().strip() and Path(wal_file.read_text().strip()).exists():
+            wall = wal_file.read_text().strip()
+
+    wall_css = f'url("file://{wall}") center/cover fixed' if (wall and Path(wall).exists()) else "none"
 
     colors = {
         "BG": data["special"]["background"],
@@ -105,7 +135,7 @@ def main():
         "ACCENT": data["colors"]["color4"],
         "ACCENT2": data["colors"]["color6"],
         "MUTED": data["colors"]["color8"],
-        "WALL": wall,
+        "WALL_CSS": wall_css,
     }
 
     cards = "".join(
@@ -117,6 +147,20 @@ def main():
 
     (out_dir / "startpage.html").write_text(html, encoding="utf-8")
     print("startpage written to", out_dir / "startpage.html")
+
+    # Reload open startpages in running qutebrowser instances if any
+    try:
+        res = subprocess.run(["pgrep", "-x", "qutebrowser"], capture_output=True, text=True)
+        if res.returncode == 0:
+            subprocess.run(
+                ["qutebrowser", ":reload"],
+                timeout=2,
+                check=False,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":

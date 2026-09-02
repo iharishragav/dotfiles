@@ -3,7 +3,7 @@
 #
 # Reruns pywal on the current wallpaper in dark or light mode without
 # swapping the wallpaper, then propagates the new colors to Hyprland,
-# foot, zsh, and qutebrowser.
+# kitty, zsh, and qutebrowser.
 #
 # "auto" picks dark or light based on the wallpaper's average luminance.
 
@@ -63,4 +63,4 @@ else
 fi
 
 echo "Palette regenerated, propagating..."
-bash "$SCRIPT_DIR/apply-wallpaper-colors-only.sh"
+bash "$SCRIPT_DIR/apply-wallpaper-colors-only.sh" "$HOME/.cache/wal/colors.json" "$IMG"

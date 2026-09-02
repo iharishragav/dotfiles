@@ -27,11 +27,11 @@ Variants {
         property int btnH: 60
 
         readonly property var actions: [
-            { label: "terminal",     sub: "foot",              icon: "\uf120", cmd: ["foot"] },
-            { label: "app launcher", sub: "applications",      icon: "\udb80\udc3b", cmd: ["qs", "-c", "vantage", "ipc", "call", "appLauncher", "toggle"] },
+            { label: "terminal",     sub: "kitty",              icon: "\uf120", cmd: ["kitty"] },
+            { label: "app launcher", sub: "applications",      icon: "\udb80\udc3b", cmd: ["qs", "ipc", "call", "appLauncher", "toggle"] },
             { label: "qutebrowser",  sub: "web browser",       icon: "\ue76b", cmd: ["qutebrowser"] },
-            { label: "neovim",       sub: "foot nvim",         icon: "\ue62b", cmd: ["foot", "nvim"] },
-            { label: "select wall",  sub: "wallpaper library", icon: "\udb83\ude09", cmd: ["qs", "-c", "vantage", "ipc", "call", "wallpaperSelector", "toggle"] }
+            { label: "neovim",       sub: "kitty nvim",         icon: "\ue62b", cmd: ["kitty", "nvim"] },
+            { label: "select wall",  sub: "wallpaper library", icon: "\udb83\ude09", cmd: ["qs", "ipc", "call", "wallpaperSelector", "toggle"] }
         ]
 
         implicitWidth: btnW + 160

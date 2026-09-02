@@ -1,5 +1,5 @@
 config.load_autoconfig(False)
-c.editor.command = ["foot", "nvim", "{}"]
+c.editor.command = ["kitty", "nvim", "{}"]
 # Allow JavaScript
 c.content.javascript.enabled = True
 
@@ -12,12 +12,13 @@ c.content.cookies.accept = "all"
 
 # Disable the ad/content blocker
 
-config.set('content.blocking.enabled', True)
-config.set('content.blocking.method', 'adblock')
-config.set('content.blocking.adblock.lists', [
-    'https://easylist.to/easylist/easylist.txt',
-    'https://easylist.to/easylist/easyprivacy.txt',
-])
+#config.set('content.blocking.enabled', True)
+#config.set('content.blocking.method', 'adblock')
+#config.set('content.blocking.adblock.lists', [
+#    'https://easylist.to/easylist/easylist.txt',
+#    'https://easylist.to/easylist/easyprivacy.txt',
+#])
+
 
 
 #Allow autoplay
@@ -47,3 +48,13 @@ with config.pattern("*://web.whatsapp.com/*"):
 
 c.qt.args = ["ignore-gpu-blocklist", "enable-gpu-rasterization", "enable-zero-copy", "enable-accelerated-video-decode"]
 
+c.url.searchengines = {
+    'DEFAULT': 'https://www.duckduckgo.com/search?q={}',
+    'g': 'https://www.google.com/search?q={}',
+}
+
+# Load rice colors
+try:
+    config.source('colors-wal.py')
+except Exception:
+    pass

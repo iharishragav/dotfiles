@@ -3,7 +3,6 @@
 # live outside of it (awww-daemon, the wl-paste watchers) — those are
 # independent and don't need restarting every time you edit a .qml.
 #
-#   ~/.config/quickshell/vantage/restart-rice.sh
 
 set -uo pipefail
 

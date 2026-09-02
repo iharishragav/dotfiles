@@ -81,15 +81,13 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
--- require("123colors-wal.lua")
---require("colors-wal.lua")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
         gaps_in  = 2,
         gaps_out = 2,
 
-        border_size = 1,
+        border_size = 1 ,
 
         col = {
             active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
@@ -132,7 +130,6 @@ hl.config({
         enabled = true,
     },
 })
-dofile(os.getenv("HOME") .. "/.config/hypr/colors-wal.lua")
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
@@ -161,6 +158,10 @@ hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "
 hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+
+-- Load rice colors and decorations
+package.loaded["colors-wal"] = nil
+pcall(require, "colors-wal")
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
@@ -256,13 +257,12 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+--hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
@@ -273,9 +273,10 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+
 hl.bind(mainMod .. " + TAB",  hl.dsp.focus({ workspace = "prev" }))
-hl.bind(mainMod .. " + ALT + right", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + ALT + left", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
 
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ workspace = "r+1" }))
 hl.bind(mainMod .. " + SHIFT + left",   hl.dsp.window.move({ workspace = "r-1" }))
@@ -291,9 +292,9 @@ end
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+
 hl.bind(mainMod .. " + A",         hl.dsp.workspace.toggle_special("hidden"))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "special:hidden" }))
-
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
@@ -367,20 +368,7 @@ hl.window_rule({
     float = true,
 })
 
-
-
---AUTO START
--------------
--------------
-hl.on("hyprland.start", function()
-hl.exec_cmd("qs -c vantage")
-end)
---
--- This is the appropriate startup hook for your current Hyprland Lua configuration.
---
--- You can now remove any duplicate:
---
---exec_once = { "qs -c vantage" }--
+hl.on("hyprland.start", function() hl.exec_cmd("~/.config/quickshell/launch.sh") end)
 
 -- BEGIN VANTAGE BLUR
 -- Added by Vantage's install.sh — safe to edit or remove.
@@ -397,12 +385,8 @@ hl.layer_rule({ match = { namespace = "quickshell-bar" }, blur = true, ignore_al
 -- END VANTAGE BLUR
 
 
---VANTEG EDIT--
-
---laucnher-
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("qs -c vantage ipc call appLauncher toggle"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("qs -c vantage ipc call clipboardHistory toggle"))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("qs -c vantage ipc call modeSwitcher toggle"))
-hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("qs -c vantage ipc call colorScheme toggle"))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("qs -c vantage ipc call paletteEditor toggle"))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(" qs -c vantage ipc call wallpaperSelector toggle "))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(" qs ipc call appLauncher toggle "))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(" qs ipc call wallpaperSelector toggle "))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(" qs ipc call clipboardHistory toggle "))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(" qs ipc call paletteEditor toggle"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("qs call modeSwitcher toggle"))
