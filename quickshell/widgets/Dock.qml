@@ -28,10 +28,9 @@ Variants {
 
         readonly property var actions: [
             { label: "terminal",     sub: "kitty",              icon: "\uf120", cmd: ["kitty"] },
-            { label: "app launcher", sub: "applications",      icon: "\udb80\udc3b", cmd: ["qs", "ipc", "call", "appLauncher", "toggle"] },
             { label: "qutebrowser",  sub: "web browser",       icon: "\ue76b", cmd: ["qutebrowser"] },
             { label: "neovim",       sub: "kitty nvim",         icon: "\ue62b", cmd: ["kitty", "nvim"] },
-            { label: "select wall",  sub: "wallpaper library", icon: "\udb83\ude09", cmd: ["qs", "ipc", "call", "wallpaperSelector", "toggle"] }
+            { label: "Burp",       sub: "Proxy",         icon: "\udb84\uddea", cmd: ["burpsuite"] },
         ]
 
         implicitWidth: btnW + 160

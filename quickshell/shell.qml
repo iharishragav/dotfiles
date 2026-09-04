@@ -1,5 +1,5 @@
 import Quickshell
-import "." as Local
+import "./widgets" as Local
 
 ShellRoot {
     Local.Bar {}
@@ -7,13 +7,14 @@ ShellRoot {
     Local.WallpaperSelector {}
     Local.ClipboardHistory {}
     Local.AppLauncher {}
-    Local.ModeSwitcher {}
     Local.ColorSchemeSwitcher {}
     Local.PaletteEditor {}
-    Local.BigClock {}
     Local.AudioVisualizer {}
     Local.Dock {}
-    Local.SystemMonitor {}
     Local.HoloRings {}
     Local.NotificationCenter {}
+    Local.Recorder {}
+    // Local.ModeSwitcher {}
+    // Local.SystemMonitor {}
+    // Local.BigClock {}
 }

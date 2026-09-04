@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick
-import ".." as Local
+import "../core" as Core
 
 // CPU/memory/battery glass card, top-right of the desktop.
 Variants {
@@ -18,7 +18,7 @@ Variants {
         WlrLayershell.layer: WlrLayer.Bottom
         WlrLayershell.namespace: "quickshell-sysinfo"
         exclusionMode: ExclusionMode.Ignore
-        visible: Local.AppState.showDesktopWidgets
+        visible: Core.AppState.showDesktopWidgets
 
         implicitWidth: 300
         implicitHeight: panel.implicitHeight + 40
@@ -71,9 +71,9 @@ Variants {
             anchors.fill: panel
             anchors.margins: -18
             radius: 18
-            color: Qt.rgba(Local.Colors.background.r, Local.Colors.background.g, Local.Colors.background.b, 0.5)
+            color: Qt.rgba(Core.Colors.background.r, Core.Colors.background.g, Core.Colors.background.b, 0.5)
             border.width: 1
-            border.color: Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.55)
+            border.color: Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.55)
 
             Rectangle {
                 anchors { top: parent.top; left: parent.left; right: parent.right }
@@ -90,7 +90,7 @@ Variants {
                 anchors { left: parent.left; right: parent.right }
                 anchors.margins: 2
                 height: 1
-                color: Local.Colors.accent
+                color: Core.Colors.accent
                 opacity: 0.5
                 SequentialAnimation on y {
                     loops: Animation.Infinite
@@ -111,7 +111,7 @@ Variants {
                 Rectangle {
                     width: 8; height: 8; radius: 4
                     anchors.verticalCenter: parent.verticalCenter
-                    color: Local.Colors.accent
+                    color: Core.Colors.accent
                     SequentialAnimation on opacity {
                         loops: Animation.Infinite
                         NumberAnimation { to: 0.2; duration: 900 }
@@ -120,8 +120,8 @@ Variants {
                 }
                 Text {
                     text: "SYS://MONITOR"
-                    color: Local.Colors.accent
-                    font { pixelSize: 13; bold: true; letterSpacing: 3; family: Local.Colors.fontFamily }
+                    color: Core.Colors.accent
+                    font { pixelSize: 13; bold: true; letterSpacing: 3; family: Core.Colors.fontFamily }
                 }
             }
 
@@ -139,15 +139,15 @@ Variants {
                         width: parent.width
                         Text {
                             text: modelData.name
-                            color: Local.Colors.foreground
-                            font { pixelSize: 11; letterSpacing: 2; family: Local.Colors.fontFamily }
+                            color: Core.Colors.foreground
+                            font { pixelSize: 11; letterSpacing: 2; family: Core.Colors.fontFamily }
                             width: parent.width - percent.width
                         }
                         Text {
                             id: percent
                             text: Math.round(modelData.value * 100) + "%"
-                            color: Local.Colors.accent2
-                            font { pixelSize: 11; family: Local.Colors.fontFamily }
+                            color: Core.Colors.accent2
+                            font { pixelSize: 11; family: Core.Colors.fontFamily }
                         }
                     }
                     Rectangle {
@@ -158,8 +158,8 @@ Variants {
                             height: parent.height; radius: 3
                             gradient: Gradient {
                                 orientation: Gradient.Horizontal
-                                GradientStop { position: 0.0; color: Local.Colors.accent }
-                                GradientStop { position: 1.0; color: Local.Colors.accent2 }
+                                GradientStop { position: 0.0; color: Core.Colors.accent }
+                                GradientStop { position: 1.0; color: Core.Colors.accent2 }
                             }
                             Behavior on width { NumberAnimation { duration: 500; easing.type: Easing.OutCubic } }
                         }

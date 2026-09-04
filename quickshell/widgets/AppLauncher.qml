@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Io
-import ".." as Local
+import "../core" as Core
 
 // Thin IPC entry point — the actual launcher UI lives inside
 // BarMorph.qml (the bar grows into the launcher panel). This file
@@ -10,8 +10,8 @@ import ".." as Local
 Item {
     IpcHandler {
         target: "appLauncher"
-        function toggle(): void { Local.AppState.requestMorph("launcher"); }
-        function open(): void { Local.AppState.requestMorph("launcher"); }
-        function close(): void { Local.AppState.closeMorph(); }
+        function toggle(): void { Core.AppState.requestMorph("launcher"); }
+        function open(): void { Core.AppState.requestMorph("launcher"); }
+        function close(): void { Core.AppState.closeMorph(); }
     }
 }

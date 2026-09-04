@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 // Visual palette editor. Shows the 16 colors, clicking one opens
 // H/S/L sliders. Changes propagate live through the Colors singleton.
@@ -60,7 +60,7 @@ Item {
 
     function initPalette() {
         const pal = [];
-        for (let i = 0; i < 16; ++i) pal.push(hexToHsl(Local.Colors.palette[i]));
+        for (let i = 0; i < 16; ++i) pal.push(hexToHsl(Core.Colors.palette[i]));
         editedPalette = pal;
         originalPalette = JSON.parse(JSON.stringify(pal));
         selectedColorIndex = 0;
@@ -80,7 +80,7 @@ Item {
         editedPalette = newPal;
         // write to walPalette (the mutable raw property), not the
         // computed "palette" getter
-        Local.Colors.walPalette = editedPaletteAsHex();
+        Core.Colors.walPalette = editedPaletteAsHex();
     }
 
     function applyPalette() {
@@ -90,7 +90,7 @@ Item {
 
     function resetPalette() {
         editedPalette = JSON.parse(JSON.stringify(originalPalette));
-        Local.Colors.walPalette = originalPalette.map(c => hslToHex(c.h, c.s, c.l));
+        Core.Colors.walPalette = originalPalette.map(c => hslToHex(c.h, c.s, c.l));
     }
 
     onVisible_Changed: { if (visible_) initPalette(); }
@@ -168,10 +168,10 @@ print('Palette saved to', path)
                 anchors.centerIn: parent
                 width: 520
                 height: mainCol.implicitHeight + 32
-                color: Local.Colors.background
-                border.color: Local.Colors.accent
-                border.width: Local.Colors.borderWidth
-                radius: Local.Colors.radius
+                color: Core.Colors.background
+                border.color: Core.Colors.accent
+                border.width: Core.Colors.borderWidth
+                radius: Core.Colors.radius
 
                 MouseArea { anchors.fill: parent; onClicked: (m) => m.accepted = true }
 
@@ -187,8 +187,8 @@ print('Palette saved to', path)
                         Layout.fillWidth: true
                         Text {
                             text: "PALETTE EDITOR"
-                            color: Local.Colors.foreground
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 14
                             font.bold: true
                             font.letterSpacing: 2
@@ -196,13 +196,13 @@ print('Palette saved to', path)
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "Esc closes"
-                            color: Local.Colors.muted
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.muted
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 10
                         }
                     }
 
-                    Rectangle { Layout.fillWidth: true; height: 1; color: Local.Colors.muted }
+                    Rectangle { Layout.fillWidth: true; height: 1; color: Core.Colors.muted }
 
                     RowLayout {
                         Layout.fillWidth: true
@@ -214,13 +214,13 @@ print('Palette saved to', path)
                             Rectangle {
                                 Layout.fillWidth: true
                                 height: 48
-                                radius: Local.Colors.radius
+                                radius: Core.Colors.radius
 
                                 color: root.editedPalette.length > index
                                        ? root.hslToHex(root.editedPalette[index].h,
                                                         root.editedPalette[index].s,
                                                         root.editedPalette[index].l)
-                                       : Local.Colors.palette[index] || "#000000"
+                                       : Core.Colors.palette[index] || "#000000"
 
                                 border.color: index === root.selectedColorIndex ? "#ffffff" : "transparent"
                                 border.width: 3
@@ -229,7 +229,7 @@ print('Palette saved to', path)
                                     anchors.centerIn: parent
                                     text: index
                                     color: "white"
-                                    font.family: Local.Colors.fontFamily
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 9
                                     style: Text.Outline
                                     styleColor: "#000000"
@@ -244,9 +244,9 @@ print('Palette saved to', path)
                         Layout.fillWidth: true
                         height: editorCol.implicitHeight + 20
                         color: "#111111"
-                        border.color: Local.Colors.muted
+                        border.color: Core.Colors.muted
                         border.width: 1
-                        radius: Local.Colors.radius
+                        radius: Core.Colors.radius
                         visible: root.editedPalette.length > 0
 
                         ColumnLayout {
@@ -261,14 +261,14 @@ print('Palette saved to', path)
 
                                 Rectangle {
                                     width: 48; height: 48
-                                    radius: Local.Colors.radius
+                                    radius: Core.Colors.radius
                                     color: root.editedPalette.length > root.selectedColorIndex
                                            ? root.hslToHex(
                                                root.editedPalette[root.selectedColorIndex].h,
                                                root.editedPalette[root.selectedColorIndex].s,
                                                root.editedPalette[root.selectedColorIndex].l)
                                            : "#000000"
-                                    border.color: Local.Colors.muted
+                                    border.color: Core.Colors.muted
                                     border.width: 1
                                 }
 
@@ -276,8 +276,8 @@ print('Palette saved to', path)
                                     spacing: 2
                                     Text {
                                         text: "color" + root.selectedColorIndex
-                                        color: Local.Colors.accent
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.accent
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 12
                                         font.bold: true
                                     }
@@ -288,8 +288,8 @@ print('Palette saved to', path)
                                                   root.editedPalette[root.selectedColorIndex].s,
                                                   root.editedPalette[root.selectedColorIndex].l)
                                               : ""
-                                        color: Local.Colors.muted
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.muted
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 11
                                     }
                                 }
@@ -308,8 +308,8 @@ print('Palette saved to', path)
 
                                     Text {
                                         text: modelData.label
-                                        color: Local.Colors.accent
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.accent
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 12
                                         font.bold: true
                                         Layout.preferredWidth: 14
@@ -320,9 +320,9 @@ print('Palette saved to', path)
                                         Layout.fillWidth: true
                                         height: 16
                                         color: "#222222"
-                                        border.color: Local.Colors.muted
+                                        border.color: Core.Colors.muted
                                         border.width: 1
-                                        radius: Local.Colors.radius
+                                        radius: Core.Colors.radius
 
                                         readonly property real currentVal:
                                             root.editedPalette.length > root.selectedColorIndex
@@ -332,9 +332,9 @@ print('Palette saved to', path)
                                         Rectangle {
                                             width: parent.currentVal * parent.width
                                             height: parent.height
-                                            color: Local.Colors.accent
+                                            color: Core.Colors.accent
                                             opacity: 0.7
-                                            radius: Local.Colors.radius
+                                            radius: Core.Colors.radius
                                         }
 
                                         Rectangle {
@@ -342,7 +342,7 @@ print('Palette saved to', path)
                                             width: 4
                                             height: parent.height
                                             color: "#ffffff"
-                                            radius: Local.Colors.radius
+                                            radius: Core.Colors.radius
                                         }
 
                                         MouseArea {
@@ -363,8 +363,8 @@ print('Palette saved to', path)
                                         text: root.editedPalette.length > root.selectedColorIndex
                                               ? Math.round(root.editedPalette[root.selectedColorIndex][modelData.channel] * 359).toString()
                                               : "0"
-                                        color: Local.Colors.foreground
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.foreground
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 11
                                         Layout.preferredWidth: 30
                                         horizontalAlignment: Text.AlignRight
@@ -382,15 +382,15 @@ print('Palette saved to', path)
                             Layout.fillWidth: true
                             height: 34
                             color: "transparent"
-                            border.color: Local.Colors.muted
+                            border.color: Core.Colors.muted
                             border.width: 1
-                            radius: Local.Colors.radius
+                            radius: Core.Colors.radius
 
                             Text {
                                 anchors.centerIn: parent
                                 text: "RESET"
-                                color: Local.Colors.muted
-                                font.family: Local.Colors.fontFamily
+                                color: Core.Colors.muted
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 12
                             }
 
@@ -400,14 +400,14 @@ print('Palette saved to', path)
                         Rectangle {
                             Layout.fillWidth: true
                             height: 34
-                            color: Local.Colors.accent
-                            radius: Local.Colors.radius
+                            color: Core.Colors.accent
+                            radius: Core.Colors.radius
 
                             Text {
                                 anchors.centerIn: parent
                                 text: "APPLY"
-                                color: Local.Colors.background
-                                font.family: Local.Colors.fontFamily
+                                color: Core.Colors.background
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 12
                                 font.bold: true
                             }

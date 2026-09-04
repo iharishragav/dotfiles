@@ -66,7 +66,7 @@ Variants {
         }
 
         anchors { top: true }
-        implicitWidth: Math.min(880, screenWidth * 0.58)
+        implicitWidth: Math.min(880, screenWidth * 0.345)
         implicitHeight: Local.Colors.barHeight + 16
         color: "transparent"
         visible: Local.AppState.showBar
@@ -234,11 +234,11 @@ Variants {
 
                         Repeater {
                             model: [
-                                { glyph: "\uf078", morph: "quicksettings" },
-                                { glyph: "\uf108", morph: "wallpaper" },
-                                { glyph: "\uf53f", morph: "colorscheme" },
-                                { glyph: "\uf028", morph: "volume" },
-                                { glyph: "\uf293", morph: "bluetooth" },
+                                // { glyph: "\uf078", morph: "quicksettings" },
+                                // { glyph: "\uf108", morph: "wallpaper" },
+                                // { glyph: "\udb81\ude27", morph: "colorscheme" },
+                                // { glyph: "\uf028", morph: "volume" },
+                                // { glyph: "\uf293", morph: "bluetooth" },
                                 { glyph: "\uf0f3", morph: "notifications" },
                                 { glyph: "\uf011", morph: "power" }
                             ]

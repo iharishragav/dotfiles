@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 // Popup for the rice's visual mode.
 //   normal  — everything visible (bar + desktop widgets)
@@ -22,14 +22,14 @@ Item {
     ]
 
     function currentModeIndex() {
-        for (let i = 0; i < modes.length; ++i) if (modes[i].id === Local.AppState.mode) return i;
+        for (let i = 0; i < modes.length; ++i) if (modes[i].id === Core.AppState.mode) return i;
         return 0;
     }
 
     onVisible_Changed: { if (visible_) selectedIndex = currentModeIndex(); }
 
     function applyMode(index) {
-        Local.AppState.mode = modes[index].id;
+        Core.AppState.mode = modes[index].id;
         root.visible_ = false;
     }
 
@@ -69,10 +69,10 @@ Item {
                 width: 320
                 height: column.implicitHeight + 32
 
-                color: Local.Colors.background
-                border.color: Local.Colors.accent
-                border.width: Local.Colors.borderWidth
-                radius: Local.Colors.radius
+                color: Core.Colors.background
+                border.color: Core.Colors.accent
+                border.width: Core.Colors.borderWidth
+                radius: Core.Colors.radius
 
                 MouseArea { anchors.fill: parent; onClicked: (mouse) => mouse.accepted = true }
 
@@ -86,14 +86,14 @@ Item {
 
                     Text {
                         text: "VISUAL MODE"
-                        color: Local.Colors.foreground
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 14
                         font.bold: true
                         font.letterSpacing: 2
                     }
 
-                    Rectangle { Layout.fillWidth: true; height: 1; color: Local.Colors.muted }
+                    Rectangle { Layout.fillWidth: true; height: 1; color: Core.Colors.muted }
 
                     Repeater {
                         model: root.modes
@@ -102,13 +102,13 @@ Item {
                             id: modeCell
                             Layout.fillWidth: true
                             height: 54
-                            radius: Local.Colors.radius
+                            radius: Core.Colors.radius
 
                             property bool isSelected: index === root.selectedIndex
-                            property bool isActive: modelData.id === Local.AppState.mode
+                            property bool isActive: modelData.id === Core.AppState.mode
 
-                            color: isSelected ? Local.Colors.accent : "transparent"
-                            border.color: isActive && !isSelected ? Local.Colors.accent : "transparent"
+                            color: isSelected ? Core.Colors.accent : "transparent"
+                            border.color: isActive && !isSelected ? Core.Colors.accent : "transparent"
                             border.width: 1
 
                             RowLayout {
@@ -119,8 +119,8 @@ Item {
 
                                 Text {
                                     text: modelData.icon
-                                    color: modeCell.isSelected ? Local.Colors.background : Local.Colors.accent
-                                    font.family: Local.Colors.fontFamily
+                                    color: modeCell.isSelected ? Core.Colors.background : Core.Colors.accent
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 22
                                     font.bold: true
                                 }
@@ -131,16 +131,16 @@ Item {
 
                                     Text {
                                         text: modelData.label
-                                        color: modeCell.isSelected ? Local.Colors.background : Local.Colors.foreground
-                                        font.family: Local.Colors.fontFamily
+                                        color: modeCell.isSelected ? Core.Colors.background : Core.Colors.foreground
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 13
                                         font.bold: true
                                     }
 
                                     Text {
                                         text: modelData.desc
-                                        color: modeCell.isSelected ? Local.Colors.background : Local.Colors.muted
-                                        font.family: Local.Colors.fontFamily
+                                        color: modeCell.isSelected ? Core.Colors.background : Core.Colors.muted
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 10
                                     }
                                 }
@@ -148,8 +148,8 @@ Item {
                                 Text {
                                     visible: modeCell.isActive
                                     text: "●"
-                                    color: modeCell.isSelected ? Local.Colors.background : Local.Colors.accent
-                                    font.family: Local.Colors.fontFamily
+                                    color: modeCell.isSelected ? Core.Colors.background : Core.Colors.accent
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 10
                                 }
                             }
@@ -166,8 +166,8 @@ Item {
                     Text {
                         Layout.alignment: Qt.AlignHCenter
                         text: "↑↓ / k·j navigate   Enter confirm   Esc cancel"
-                        color: Local.Colors.muted
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.muted
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 10
                     }
                 }

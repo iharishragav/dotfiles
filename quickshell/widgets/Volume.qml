@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Services.Pipewire
 import QtQuick
-import ".." as Local
+import "../core" as Core
 
 // Minimal volume readout: icon + percentage. Scroll to adjust, click
 // to mute. Uses the native Pipewire service instead of polling an
@@ -40,8 +40,8 @@ Item {
 
         Text {
             text: root.muted ? "MUT" : "VOL"
-            color: root.muted ? Local.Colors.muted : Local.Colors.foreground
-            font.family: Local.Colors.fontFamily
+            color: root.muted ? Core.Colors.muted : Core.Colors.foreground
+            font.family: Core.Colors.fontFamily
             font.pixelSize: 11
             anchors.verticalCenter: parent.verticalCenter
         }
@@ -49,8 +49,8 @@ Item {
         Text {
             visible: root.ready
             text: root.muted ? "--" : Math.round(root.volume * 100) + "%"
-            color: root.muted ? Local.Colors.muted : Local.Colors.foreground
-            font.family: Local.Colors.fontFamily
+            color: root.muted ? Core.Colors.muted : Core.Colors.foreground
+            font.family: Core.Colors.fontFamily
             font.pixelSize: 12
             anchors.verticalCenter: parent.verticalCenter
         }

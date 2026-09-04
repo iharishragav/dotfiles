@@ -29,12 +29,14 @@ hl.monitor({
 ---------------------
 
 local terminal    = "kitty"
-local fileManager = "dolphin"
+local fileManager = "thunar"
 local menu        = "hyprlauncher"
 local browser     = "qutebrowser"
 local music_dir = "$HOME/Music/deeper"
 local notes = "obsidian"
 local code = "vscodium"
+local monitor = "kitty --start-as=fullscreen -e btop"
+
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
@@ -75,20 +77,20 @@ hl.config({
         gaps_in  = 2,
         gaps_out = 2,
 
-        border_size = 1,
+        border_size = 2,
 
         col = {
             active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
           inactive_border = "rgba(595959aa)",
         },
 
-        resize_on_border = false,
+        resize_on_border = true,
         allow_tearing = false,
         layout = "dwindle",
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 5,
         rounding_power = 2,
 
         active_opacity   = 1.0,
@@ -236,6 +238,10 @@ local mainMod = "SUPER"
 local keybinds = require("keybinds")
 -- keybinds.setup(mainMod)
 
+-- SLEEP RULE
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("CTRL + ALT + DELETE", hl.dsp.exec_cmd("systemctl poweroff"))
+hl.bind("ALT + F4", hl.dsp.exec_cmd("systemctl suspend"))
 
 -- Applications
 
@@ -245,22 +251,44 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + ALT + O", hl.dsp.exec_cmd(code))
+hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd(monitor))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(" qs ipc call appLauncher toggle "))
-hl.bind("SUPER + ALT + M", hl.dsp.exec_cmd("elisa --directory $HOME/Music/deeper"))
+hl.bind("SUPER + ALT + M", hl.dsp.exec_cmd("elisa"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(" qs ipc call wallpaperSelector toggle "))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(" qs ipc call clipboardHistory toggle "))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(" qs ipc call paletteEditor toggle"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("qs ipc call modeSwitcher toggle"))
 
+--screen shot and record
+
+-- Start full-screen recording
+hl.bind("CTRL + R",
+    hl.dsp.exec_cmd([[sh -c 'mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w screen -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"']]))
+
+-- Start partial-screen recording
+hl.bind("CTRL + SHIFT + R",
+    hl.dsp.exec_cmd([[sh -c 'mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w region -region "$(slurp)" -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"']]))
 
 
+-- Stop recording
+hl.bind("CTRL + SHIFT + X",
+    hl.dsp.exec_cmd([[pkill -SIGINT -f 'gpu-screen-recorder']]))
 
--- Window management
+-- Partial-screen recording: select an area with the mouse
+hl.bind("CTRL + R",
+    hl.dsp.exec_cmd([[sh -c 'if pgrep -x gpu-screen-recorder >/dev/null; then pkill -SIGINT -x gpu-screen-recorder; else mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w region -region "$(slurp)" -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"; fi']]))
+
+
+hl.bind(mainMod .. "+ CTRL+ S",
+    hl.dsp.exec_cmd([[mkdir -p "$HOME/Pictures/Screenshots/tmp" && grim -g "$(slurp)" "$HOME/Pictures/Screenshots/tmp/$(date +'%Y-%m-%d_%H-%M-%S').png"]]))
+hl.bind(mainMod .. "+ ALT+ S",
+    hl.dsp.exec_cmd([[mkdir -p "$HOME/Pictures/Screenshots/tmp" && grim "$HOME/Pictures/Screenshots/tmp/$(date +'%Y-%m-%d_%H-%M-%S').png"]]))
+
+    -- Window management
 
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -277,14 +305,20 @@ hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.move({ direction = "d" }))
 hl.bind("SUPER + ALT +F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
-
+--resize border
+--hl.bind(mainMod .. " + Z", "Right", hl.dsp.resizeactive({ res = "20 0" }))
+--hl.bind(mainMod .. " + Z", "Left",  hl.dsp.resizeactive({ res = "-20 0" }))
+--hl.bind(mainMod .. " + Z", "Up",    hl.dsp.resizeactive({ res = "0 -20" }))
+--hl.bind(mainMod .. " + Z", "Down",  hl.dsp.resizeactive({ res = "0 20" }))
 
 
 -- Workspaces
 
 hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "prev" }))
 hl.bind(mainMod .. " + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "empty" }))
 
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ workspace = "r+1" }))
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ workspace = "r-1" }))
@@ -307,6 +341,8 @@ for i = 1, 10 do
 
     hl.bind(mainMod .. " + A",         hl.dsp.workspace.toggle_special("hidden"))
     hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "special:hidden" }))
+
+    --exesting workpace
 
 
     -- Mouse
@@ -429,22 +465,15 @@ for i = 1, 10 do
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+hl.on("hyprland.start", function()
+hl.exec_cmd("ags run ~/.config/ags/config.js")
+end)
 
 -------------------------------
 ---- AUTOSTART / STARTUP ------
 -------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
--- Autostart necessary processes (like notification daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
---
--- hl.on("hyprland.start", function ()
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
-
 
 hl.on("hyprland.start", function()
 hl.exec_cmd("~/.config/quickshell/launch.sh")
@@ -455,9 +484,7 @@ end)
 ---- VANTAGE BLUR -------------
 --------------------------------
 
--- BEGIN VANTAGE BLUR
--- Added by Vantage's install.sh — safe to edit or remove.
-
+-- BEGIN BLUR
 hl.config({
     decoration = {
         blur = {
@@ -489,4 +516,7 @@ hl.layer_rule({
     ignore_alpha = 0.08
 })
 
--- END VANTAGE BLUR
+-- END  BLUR
+
+
+

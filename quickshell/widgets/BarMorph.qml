@@ -5,7 +5,7 @@ import Quickshell.Services.Pipewire
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import ".." as Local
+import "../core" as Core
 
 // Panel that grows out of a tiny point where the bar pill was,
 // rather than just popping open on top of it. Sequence:
@@ -31,10 +31,12 @@ Item {
         switch (name) {
             case "power":       return { w: 300, h: 100 };
             case "wallpaper":   return { w: Math.min(screenWidth * 0.5, 720), h: 118 };
-            case "volume":      return { w: 300, h: 96 };
+            // case "volume":      return { w: 300, h: 96 };
             case "colorscheme": return { w: Math.min(screenWidth * 0.52, 760), h: 132 };
-            case "launcher":    return { w: 600, h: 380 };
+            case "launcher":    return { w: 900, h: 380 };
             case "clipboard":   return { w: 560, h: 380 };
+            case "recorder":   return { w: 300, h: 100 };
+            // case "wifi":   return { w: 300, h: 80 };
             default:            return { w: 280, h: 90 };
         }
     }
@@ -47,33 +49,34 @@ Item {
             property var modelData
             screen: modelData
 
-            readonly property bool onThisScreen: Local.AppState.morphScreenName === (modelData ? modelData.name : "")
-            readonly property bool active: Local.AppState.barMorph !== "" && onThisScreen
-            readonly property var target: root.targetSize(Local.AppState.barMorph, modelData ? modelData.width : 1920)
+            readonly property bool onThisScreen: Core.AppState.morphScreenName === (modelData ? modelData.name : "")
+            readonly property bool active: Core.AppState.barMorph !== "" && onThisScreen
+            readonly property var target: root.targetSize(Core.AppState.barMorph, modelData ? modelData.width : 1920)
 
             anchors { top: true; bottom: true; left: true; right: true }
             color: "transparent"
             WlrLayershell.layer: WlrLayer.Overlay
             WlrLayershell.namespace: "quickshell-bar"
             exclusionMode: ExclusionMode.Ignore
-            WlrLayershell.keyboardFocus: (win.active && (Local.AppState.barMorph === "launcher"
-                                          || Local.AppState.barMorph === "clipboard"
-                                          || Local.AppState.barMorph === "wallpaper"))
+            WlrLayershell.keyboardFocus: (win.active && (Core.AppState.barMorph === "launcher"
+                                          || Core.AppState.barMorph === "clipboard"
+                                          || Core.AppState.barMorph === "recorder"
+                                          || Core.AppState.barMorph === "wallpaper"))
                                          ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
             visible: win.active || closeAnim.running
 
-            property real panelX: Local.AppState.morphOriginX
-            property real panelY: Local.AppState.morphOriginY
-            property real panelW: Local.AppState.morphOriginWidth
-            property real panelH: Local.AppState.morphOriginHeight
+            property real panelX: Core.AppState.morphOriginX
+            property real panelY: Core.AppState.morphOriginY
+            property real panelW: Core.AppState.morphOriginWidth
+            property real panelH: Core.AppState.morphOriginHeight
             property string displayedMorph: ""
             onActiveChanged: {
                 if (active) {
-                    displayedMorph = Local.AppState.barMorph;
-                    panelX = Local.AppState.morphOriginX;
-                    panelY = Local.AppState.morphOriginY;
-                    panelW = Local.AppState.morphOriginWidth;
-                    panelH = Local.AppState.morphOriginHeight;
+                    displayedMorph = Core.AppState.barMorph;
+                    panelX = Core.AppState.morphOriginX;
+                    panelY = Core.AppState.morphOriginY;
+                    panelW = Core.AppState.morphOriginWidth;
+                    panelH = Core.AppState.morphOriginHeight;
                     closeAnim.stop();
                     growAnim.stop();
                     growAnim.start();
@@ -87,7 +90,7 @@ Item {
                 id: growAnim
                 NumberAnimation {
                     target: win; property: "panelX"
-                    to: Local.AppState.morphOriginX - (win.target.w - Local.AppState.morphOriginWidth) / 2
+                    to: Core.AppState.morphOriginX - (win.target.w - Core.AppState.morphOriginWidth) / 2
                     duration: 320; easing.type: Easing.OutQuint
                 }
                 NumberAnimation { target: win; property: "panelW"; to: win.target.w; duration: 320; easing.type: Easing.OutQuint }
@@ -97,17 +100,17 @@ Item {
             SequentialAnimation {
                 id: closeAnim
                 ParallelAnimation {
-                    NumberAnimation { target: win; property: "panelX"; to: Local.AppState.morphOriginX; duration: 620; easing.type: Easing.InOutCubic }
-                    NumberAnimation { target: win; property: "panelW"; to: Local.AppState.morphOriginWidth; duration: 620; easing.type: Easing.InOutCubic }
-                    NumberAnimation { target: win; property: "panelH"; to: Local.AppState.morphOriginHeight; duration: 620; easing.type: Easing.InOutCubic }
+                    NumberAnimation { target: win; property: "panelX"; to: Core.AppState.morphOriginX; duration: 620; easing.type: Easing.InOutCubic }
+                    NumberAnimation { target: win; property: "panelW"; to: Core.AppState.morphOriginWidth; duration: 620; easing.type: Easing.InOutCubic }
+                    NumberAnimation { target: win; property: "panelH"; to: Core.AppState.morphOriginHeight; duration: 620; easing.type: Easing.InOutCubic }
                 }
-                ScriptAction { script: Local.AppState.morphClosed(Local.AppState.morphScreenName) }
+                ScriptAction { script: Core.AppState.morphClosed(Core.AppState.morphScreenName) }
             }
 
             MouseArea {
                 anchors.fill: parent
                 enabled: win.active
-                onClicked: Local.AppState.closeMorph()
+                onClicked: Core.AppState.closeMorph()
             }
 
             Rectangle {
@@ -119,9 +122,9 @@ Item {
                 radius: Math.min(height / 2, 20)
                 clip: true
 
-                color: Qt.rgba(Local.Colors.background.r, Local.Colors.background.g,
-                               Local.Colors.background.b, 0.22)
-                border.color: Local.Colors.accent
+                color: Qt.rgba(Core.Colors.background.r, Core.Colors.background.g,
+                               Core.Colors.background.b, 0.22)
+                border.color: Core.Colors.accent
                 border.width: 1
 
                 MouseArea {
@@ -130,7 +133,7 @@ Item {
                 }
 
                 readonly property real growFrac: {
-                    const originW = Local.AppState.morphOriginWidth;
+                    const originW = Core.AppState.morphOriginWidth;
                     const span = win.target.w - originW;
                     if (span <= 0) return 1;
                     return Math.max(0, Math.min(1, (win.panelW - originW) / span));
@@ -147,10 +150,12 @@ Item {
                             case "power":     return powerContent;
                             case "wallpaper": return wallpaperContent;
                             case "volume":    return volumeContent;
-                            case "colorscheme": return colorschemeContent;
+                            // case "colorscheme": return colorschemeContent;
                             case "launcher":    return launcherContent;
                             case "clipboard":   return clipboardContent;
-                            case "notifications": return notificationContent;
+                            case "recorder": return recorderContent;
+                            // case "notifications": return notificationContent;
+                            // case "wifi": return wifiContent;
                             default: return stubContent;
                         }
                     }
@@ -176,8 +181,8 @@ Item {
 
                     Text {
                         text: "Color scheme"
-                        color: Local.Colors.foreground
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 12
                         font.bold: true
                     }
@@ -208,7 +213,7 @@ Item {
                                         clip: true
                                         color: "transparent"
                                         border.width: csMouse.containsMouse ? 2 : 1
-                                        border.color: csMouse.containsMouse ? Local.Colors.accent : Local.Colors.muted
+                                        border.color: csMouse.containsMouse ? Core.Colors.accent : Core.Colors.muted
                                         Behavior on border.color { ColorAnimation { duration: 120 } }
 
                                         Row {
@@ -217,10 +222,10 @@ Item {
                                             anchors.margins: 2
                                             readonly property var stripes: scheme.colors.length > 0
                                                 ? scheme.colors
-                                                : [Local.Colors.palette[0], Local.Colors.palette[1],
-                                                   Local.Colors.palette[2], Local.Colors.palette[3],
-                                                   Local.Colors.palette[4], Local.Colors.palette[5],
-                                                   Local.Colors.palette[6], Local.Colors.palette[7]]
+                                                : [Core.Colors.palette[0], Core.Colors.palette[1],
+                                                   Core.Colors.palette[2], Core.Colors.palette[3],
+                                                   Core.Colors.palette[4], Core.Colors.palette[5],
+                                                   Core.Colors.palette[6], Core.Colors.palette[7]]
                                             Repeater {
                                                 model: stripeRow.stripes
                                                 Rectangle {
@@ -243,7 +248,7 @@ Item {
                                                 anchors.centerIn: parent
                                                 text: "wallpaper"
                                                 color: "#ffffff"
-                                                font.family: Local.Colors.fontFamily
+                                                font.family: Core.Colors.fontFamily
                                                 font.pixelSize: 9
                                             }
                                         }
@@ -253,9 +258,9 @@ Item {
                                             anchors.fill: parent
                                             hoverEnabled: true
                                             onClicked: {
-                                                Local.AppState.closeMorph();
+                                                Core.AppState.closeMorph();
                                                 Quickshell.execDetached(["bash",
-                                                    Quickshell.shellDir + "/scripts/apply-colorscheme-preset.sh",
+                                                    Quickshell.env("HOME") + "/.config/quickshell/scripts/apply-colorscheme-preset.sh",
                                                     scheme.name]);
                                             }
                                         }
@@ -264,8 +269,8 @@ Item {
                                     Text {
                                         anchors.horizontalCenter: parent.horizontalCenter
                                         text: scheme.name
-                                        color: Local.Colors.muted
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.muted
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 9
                                     }
                                 }
@@ -302,7 +307,7 @@ Item {
                             height: 34
                             radius: height / 2
                             color: Qt.rgba(1, 1, 1, 0.08)
-                            border.color: Local.Colors.accent
+                            border.color: Core.Colors.accent
                             border.width: 1
 
                             TextInput {
@@ -311,8 +316,8 @@ Item {
                                 anchors.leftMargin: 16
                                 anchors.rightMargin: 16
                                 verticalAlignment: TextInput.AlignVCenter
-                                color: Local.Colors.foreground
-                                font.family: Local.Colors.fontFamily
+                                color: Core.Colors.foreground
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 13
                                 clip: true
                                 onTextChanged: laRoot.query = text
@@ -323,14 +328,14 @@ Item {
                                         const raw = laRoot.query.trim();
                                         if (raw.startsWith(">")) {
                                             Quickshell.execDetached(["sh", "-c", raw.slice(1).trim()]);
-                                            Local.AppState.closeMorph();
+                                            Core.AppState.closeMorph();
                                         } else if (laRoot.apps.length > 0) {
                                             laRoot.apps[laRoot.selIndex].execute();
-                                            Local.AppState.closeMorph();
+                                            Core.AppState.closeMorph();
                                         }
                                         event.accepted = true;
                                     } else if (event.key === Qt.Key_Escape) {
-                                        Local.AppState.closeMorph();
+                                        Core.AppState.closeMorph();
                                         event.accepted = true;
                                     }
                                 }
@@ -351,8 +356,8 @@ Item {
                                 height: 34
                                 radius: height / 2
                                 color: index === laRoot.selIndex
-                                       ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g,
-                                                 Local.Colors.accent.b, 0.30)
+                                       ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g,
+                                                 Core.Colors.accent.b, 0.30)
                                        : "transparent"
                                 Behavior on color { ColorAnimation { duration: 100 } }
 
@@ -369,8 +374,8 @@ Item {
                                     Text {
                                         anchors.verticalCenter: parent.verticalCenter
                                         text: modelData.name
-                                        color: Local.Colors.foreground
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.foreground
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 13
                                     }
                                 }
@@ -381,7 +386,7 @@ Item {
                                     onEntered: laRoot.selIndex = index
                                     onClicked: {
                                         modelData.execute();
-                                        Local.AppState.closeMorph();
+                                        Core.AppState.closeMorph();
                                     }
                                 }
                             }
@@ -396,41 +401,8 @@ Item {
                     id: chRoot
                     anchors.fill: parent
                     property var items: []
-                    property int selIndex: 0
                     focus: true
-
-                    Component.onCompleted: {
-                        forceActiveFocus();
-                        chLister.running = true;
-                    }
-
-                    function restoreItem(entry) {
-                        if (!entry) return;
-                        Quickshell.execDetached(["bash",
-                            Quickshell.shellDir + "/scripts/cliphist-restore.sh",
-                            entry]);
-                        Local.AppState.closeMorph();
-                    }
-
-                    Keys.onPressed: (event) => {
-                        if (event.key === Qt.Key_Down || event.key === Qt.Key_J) {
-                            selIndex = Math.min(selIndex + 1, Math.max(0, items.length - 1));
-                            chList.positionViewAtIndex(selIndex, ListView.Contain);
-                            event.accepted = true;
-                        } else if (event.key === Qt.Key_Up || event.key === Qt.Key_K) {
-                            selIndex = Math.max(0, selIndex - 1);
-                            chList.positionViewAtIndex(selIndex, ListView.Contain);
-                            event.accepted = true;
-                        } else if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                            if (items.length > 0 && selIndex >= 0 && selIndex < items.length) {
-                                restoreItem(items[selIndex]);
-                            }
-                            event.accepted = true;
-                        } else if (event.key === Qt.Key_Escape) {
-                            Local.AppState.closeMorph();
-                            event.accepted = true;
-                        }
-                    }
+                    Keys.onEscapePressed: Core.AppState.closeMorph()
 
                     Process {
                         id: chLister
@@ -450,8 +422,8 @@ Item {
 
                         Text {
                             text: "Clipboard"
-                            color: Local.Colors.foreground
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 12
                             font.bold: true
                         }
@@ -463,16 +435,14 @@ Item {
                             clip: true
                             spacing: 4
                             model: chRoot.items
-                            currentIndex: chRoot.selIndex
-                            onCurrentIndexChanged: positionViewAtIndex(currentIndex, ListView.Contain)
 
                             delegate: Rectangle {
                                 width: chList.width
                                 height: 30
                                 radius: height / 2
-                                color: (index === chRoot.selIndex || chMouse.containsMouse)
-                                       ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g,
-                                                 Local.Colors.accent.b, 0.25)
+                                color: chMouse.containsMouse
+                                       ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g,
+                                                 Core.Colors.accent.b, 0.25)
                                        : Qt.rgba(1, 1, 1, 0.05)
                                 Behavior on color { ColorAnimation { duration: 100 } }
 
@@ -482,8 +452,8 @@ Item {
                                     width: parent.width - 28
                                     elide: Text.ElideRight
                                     text: modelData.split("\t").slice(1).join(" ")
-                                    color: Local.Colors.foreground
-                                    font.family: Local.Colors.fontFamily
+                                    color: Core.Colors.foreground
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 11
                                 }
 
@@ -491,11 +461,11 @@ Item {
                                     id: chMouse
                                     anchors.fill: parent
                                     hoverEnabled: true
-                                    cursorShape: Qt.PointingHandCursor
-                                    onEntered: chRoot.selIndex = index
                                     onClicked: {
-                                        chRoot.selIndex = index;
-                                        chRoot.restoreItem(modelData);
+                                        Quickshell.execDetached(["bash",
+                                            Quickshell.env("HOME") + "/.config/quickshell/scripts/cliphist-restore.sh",
+                                            modelData]);
+                                        Core.AppState.closeMorph();
                                     }
                                 }
                             }
@@ -503,6 +473,7 @@ Item {
                     }
                 }
             }
+            
 
             Component {
                 id: powerContent
@@ -546,14 +517,14 @@ Item {
                                     text: modelData.glyph
                                     font.family: "Symbols Nerd Font"
                                     font.pixelSize: 18
-                                    color: Local.Colors.foreground
+                                    color: Core.Colors.foreground
                                 }
                                 Text {
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     text: powerBtn.armed ? "confirm?" : modelData.label
-                                    font.family: Local.Colors.fontFamily
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 10
-                                    color: powerBtn.armed ? "#ff8888" : Local.Colors.muted
+                                    color: powerBtn.armed ? "#ff8888" : Core.Colors.muted
                                 }
                             }
 
@@ -569,7 +540,7 @@ Item {
                                         disarmTimer.restart();
                                         return;
                                     }
-                                    Local.AppState.closeMorph();
+                                    Core.AppState.closeMorph();
                                     let cmd = "true";
                                     if (modelData.action === "lock") cmd = "hyprlock";
                                     else if (modelData.action === "sleep") cmd = "systemctl suspend";
@@ -582,78 +553,208 @@ Item {
                     }
                 }
             }
+     Component {
+    id: recorderContent
 
-            Component {
-                id: volumeContent
-                ColumnLayout {
-                    id: volCol
-                    anchors.fill: parent
-                    spacing: 10
+    Item {
+        id: recorderRoot
+        anchors.fill: parent
 
-                    readonly property var sink: Pipewire.defaultAudioSink
-                    readonly property bool ready: !!(sink && sink.ready && sink.audio)
-                    readonly property real vol: ready ? sink.audio.volume : 0
+        property bool recording: false
+        property int elapsedSeconds: 0
 
-                    PwObjectTracker { objects: volCol.sink ? [volCol.sink] : [] }
+        Timer {
+            id: recorderTimer
+            interval: 1000
+            repeat: true
+            running: recorderRoot.recording
 
-                    RowLayout {
-                        Layout.fillWidth: true
-                        spacing: 8
+            onTriggered: {
+                recorderRoot.elapsedSeconds++;
+            }
+        }
 
-                        Text {
-                            text: (volCol.ready && volCol.sink.audio.muted) ? "\uf026" : "\uf028"
-                            font.family: "Symbols Nerd Font"
-                            font.pixelSize: 16
-                            color: Local.Colors.foreground
+        Column {
+            anchors.fill: parent
+            spacing: 8
 
-                            MouseArea {
-                                anchors.fill: parent
-                                anchors.margins: -6
-                                onClicked: { if (volCol.ready) volCol.sink.audio.muted = !volCol.sink.audio.muted; }
-                            }
-                        }
-
-                        Text {
-                            text: volCol.ready ? Math.round(volCol.vol * 100) + "%" : "--"
-                            font.family: Local.Colors.fontFamily
-                            font.pixelSize: 12
-                            color: Local.Colors.foreground
-                        }
-
-                        Item { Layout.fillWidth: true }
-                    }
-
-                    Rectangle {
-                        id: track
-                        Layout.fillWidth: true
-                        height: 8
-                        radius: 4
-                        color: Qt.rgba(0, 0, 0, 0.35)
-
-                        Rectangle {
-                            anchors.left: parent.left
-                            anchors.top: parent.top
-                            anchors.bottom: parent.bottom
-                            width: parent.width * Math.max(0, Math.min(1, volCol.vol))
-                            radius: 4
-                            color: Local.Colors.accent
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            function applyFromX(mx) {
-                                if (!volCol.ready) return;
-                                const frac = Math.max(0, Math.min(1, mx / track.width));
-                                volCol.sink.audio.muted = false;
-                                volCol.sink.audio.volume = frac;
-                            }
-                            onPressed: (mouse) => applyFromX(mouse.x)
-                            onPositionChanged: (mouse) => { if (pressed) applyFromX(mouse.x); }
-                        }
-                    }
-                }
+            Text {
+                text: "Recorder"
+                color: Core.Colors.foreground
+                font.family: Core.Colors.fontFamily
+                font.pixelSize: 12
+                font.bold: true
             }
 
+            Rectangle {
+                width: parent.width
+                height: 44
+                radius: 10
+
+                color: recorderMouse.containsMouse
+                       ? Qt.rgba(
+                             Core.Colors.accent.r,
+                             Core.Colors.accent.g,
+                             Core.Colors.accent.b,
+                             0.25
+                         )
+                       : Qt.rgba(1, 1, 1, 0.05)
+
+                border.width: 1
+                border.color: recorderRoot.recording
+                              ? "#ff5555"
+                              : Core.Colors.accent
+
+                Behavior on color {
+                    ColorAnimation { duration: 100 }
+                }
+
+                Row {
+                    anchors.centerIn: parent
+                    spacing: 10
+
+                    Text {
+                        text: recorderRoot.recording ? "\uf04d" : "\uf03d"
+                        color: recorderRoot.recording
+                               ? "#ff5555"
+                               : Core.Colors.foreground
+                        font.family: "Symbols Nerd Font"
+                        font.pixelSize: 16
+                    }
+
+                    Text {
+                        text: recorderRoot.recording
+                              ? Qt.formatTime(
+                                    new Date(
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        recorderRoot.elapsedSeconds
+                                    ),
+                                    recorderRoot.elapsedSeconds >= 3600
+                                        ? "hh:mm:ss"
+                                        : "mm:ss"
+                                )
+                              : "Record"
+
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
+                        font.pixelSize: 11
+                    }
+                }
+
+                MouseArea {
+                    id: recorderMouse
+                    anchors.fill: parent
+                    hoverEnabled: true
+
+                    onClicked: {
+                        if (recorderRoot.recording) {
+
+                            Quickshell.execDetached([
+                                "bash",
+                                "-c",
+                                "pkill -SIGINT -x gpu-screen-recorder"
+                            ]);
+
+                            recorderRoot.recording = false;
+                            recorderRoot.elapsedSeconds = 0;
+
+                        } else {
+
+                            Quickshell.execDetached([
+                                "bash",
+                                "-c",
+                                "mkdir -p \"$HOME/Videos/Recordings\" && " +
+                                "gpu-screen-recorder " +
+                                "-w screen " +
+                                "-f 60 " +
+                                "-o \"$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4\""
+                            ]);
+
+                            recorderRoot.recording = true;
+                            recorderRoot.elapsedSeconds = 0;
+                        }
+                    }
+                 }
+            }
+        }
+    }
+}
+
+            // Component {
+                // id: volumeContent
+                // ColumnLayout {
+                    // id: volCol
+                    // anchors.fill: parent
+                    // spacing: 10
+// 
+                    // readonly property var sink: Pipewire.defaultAudioSink
+                    // readonly property bool ready: !!(sink && sink.ready && sink.audio)
+                    // readonly property real vol: ready ? sink.audio.volume : 0
+// 
+                    // PwObjectTracker { objects: volCol.sink ? [volCol.sink] : [] }
+// 
+                    // RowLayout {
+                        // Layout.fillWidth: true
+                        // spacing: 8
+// 
+                        // Text {
+                            // text: (volCol.ready && volCol.sink.audio.muted) ? "\uf026" : "\uf028"
+                            // font.family: "Symbols Nerd Font"
+                            // font.pixelSize: 16
+                            // color: Core.Colors.foreground
+// 
+                            // MouseArea {
+                                // anchors.fill: parent
+                                // anchors.margins: -6
+                                // onClicked: { if (volCol.ready) volCol.sink.audio.muted = !volCol.sink.audio.muted; }
+                            // }
+                        // }
+// 
+                        // Text {
+                            // text: volCol.ready ? Math.round(volCol.vol * 100) + "%" : "--"
+                            // font.family: Core.Colors.fontFamily
+                            // font.pixelSize: 12
+                            // color: Core.Colors.foreground
+                        // }
+// 
+                        // Item { Layout.fillWidth: true }
+                    // }
+// 
+                    // Rectangle {
+                        // id: track
+                        // Layout.fillWidth: true
+                        // height: 8
+                        // radius: 4
+                        // color: Qt.rgba(0, 0, 0, 0.35)
+// 
+                        // Rectangle {
+                            // anchors.left: parent.left
+                            // anchors.top: parent.top
+                            // anchors.bottom: parent.bottom
+                            // width: parent.width * Math.max(0, Math.min(1, volCol.vol))
+                            // radius: 4
+                            // color: Core.Colors.accent
+                        // }
+// 
+                        // MouseArea {
+                            // anchors.fill: parent
+                            // function applyFromX(mx) {
+                                // if (!volCol.ready) return;
+                                // const frac = Math.max(0, Math.min(1, mx / track.width));
+                                // volCol.sink.audio.muted = false;
+                                // volCol.sink.audio.volume = frac;
+                            // }
+                            // onPressed: (mouse) => applyFromX(mouse.x)
+                            // onPositionChanged: (mouse) => { if (pressed) applyFromX(mouse.x); }
+                        // }
+                    // }
+                // }
+            // }
+// 
             Component {
                 id: wallpaperContent
                 Column {
@@ -665,10 +766,7 @@ Item {
                     property var items: []
                     property int selIndex: 0
 
-                    Component.onCompleted: {
-                        forceActiveFocus();
-                        wpLister.running = true;
-                    }
+                    Component.onCompleted: forceActiveFocus()
 
                     Keys.onPressed: (event) => {
                         if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
@@ -683,32 +781,32 @@ Item {
                             if (items.length > 0) wpRoot.applyWallpaper(items[selIndex].path);
                             event.accepted = true;
                         } else if (event.key === Qt.Key_Escape) {
-                            Local.AppState.closeMorph();
+                            Core.AppState.closeMorph();
                             event.accepted = true;
                         }
                     }
 
                     function applyWallpaper(path) {
-                        const posX = Math.round(Local.AppState.morphOriginX
-                                                 + Local.AppState.morphOriginWidth / 2);
-                        const posY = Math.round(Local.AppState.morphScreenHeight
-                                                 - Local.AppState.morphOriginY);
-                        Local.AppState.closeMorph();
-                        Local.AppState.hideBarTemporarily(1500);
+                        const posX = Math.round(Core.AppState.morphOriginX
+                                                 + Core.AppState.morphOriginWidth / 2);
+                        const posY = Math.round(Core.AppState.morphScreenHeight
+                                                 - Core.AppState.morphOriginY);
+                        Core.AppState.closeMorph();
+                        Core.AppState.hideBarTemporarily(1500);
                         Quickshell.execDetached(["bash",
-                            Quickshell.shellDir + "/scripts/apply-wallpaper.sh",
+                            Quickshell.env("HOME") + "/.config/quickshell/scripts/apply-wallpaper.sh",
                             path, "grow", posX + "," + posY]);
                     }
 
                     Process {
                         id: wpLister
                         command: ["bash",
-                            Quickshell.shellDir + "/scripts/wallpaper-list-thumbnails.sh"]
+                            Quickshell.env("HOME") + "/.config/quickshell/scripts/wallpaper-list-thumbnails.sh"]
                         running: true
                         stdout: StdioCollector {
                             onStreamFinished: {
                                 wpRoot.items = this.text.split("\n")
-                                    .filter(l => l.trim().length > 0)
+                                    .filter(l => l.length > 0)
                                     .map(l => {
                                         const parts = l.split("\t");
                                         return { path: parts[0], thumb: parts[1] || parts[0] };
@@ -719,8 +817,8 @@ Item {
 
                     Text {
                         text: "Wallpapers"
-                        color: Local.Colors.foreground
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 12
                         font.bold: true
                     }
@@ -746,7 +844,7 @@ Item {
                                   radius: 26
                                   color: "transparent"
                                   border.width: index === wpRoot.selIndex ? 2 : 1
-                                  border.color: index === wpRoot.selIndex ? Local.Colors.accent : Local.Colors.muted
+                                  border.color: index === wpRoot.selIndex ? Core.Colors.accent : Core.Colors.muted
 
                                   Image {
                                         id: thumb
@@ -782,20 +880,176 @@ Item {
                   }
                 }
 
-            Component {
-                id: notificationContent
-                Column {
-                    anchors.fill: parent; spacing: 6
-                    Row { Text { text: "NOTIFICATIONS"; color: Local.Colors.foreground; font.bold: true; font.family: Local.Colors.fontFamily } }
-                    ListView { width: parent.width; height: parent.height - 24; clip: true; model: Local.AppState.notifications
-                        delegate: Rectangle { width: parent.width; height: 38; radius: 10; color: Qt.rgba(Local.Colors.background.r,Local.Colors.background.g,Local.Colors.background.b,.6); border.width: 1; border.color: Local.Colors.accent
-                            Text { anchors.fill: parent; anchors.margins: 8; verticalAlignment: Text.AlignVCenter; text: modelData.summary + (modelData.body ? " — " + modelData.body : ""); color: Local.Colors.foreground; elide: Text.ElideRight; font.family: Local.Colors.fontFamily }
-                            MouseArea { anchors.fill: parent; onClicked: Local.AppState.dismissNotification(modelData.id) }
-                        }
-                    }
-                }
-            }
-
+            // Component {
+                // id: notificationContent
+                // Column {
+                    // anchors.fill: parent; spacing: 6
+                    // Row { Text { text: "NOTIFICATIONS"; color: Core.Colors.foreground; font.bold: true; font.family: Core.Colors.fontFamily } }
+                    // ListView { width: parent.width; height: parent.height - 24; clip: true; model: Core.AppState.notifications
+                        // delegate: Rectangle { width: parent.width; height: 38; radius: 10; color: Qt.rgba(Core.Colors.background.r,Core.Colors.background.g,Core.Colors.background.b,.6); border.width: 1; border.color: Core.Colors.accent
+                            // Text { anchors.fill: parent; anchors.margins: 8; verticalAlignment: Text.AlignVCenter; text: modelData.summary + (modelData.body ? " — " + modelData.body : ""); color: Core.Colors.foreground; elide: Text.ElideRight; font.family: Core.Colors.fontFamily }
+                            // MouseArea { anchors.fill: parent; onClicked: Core.AppState.dismissNotification(modelData.id) }
+                        // }
+                    // }
+                // }
+            // }
+// 
+            // Component {
+    // id: wifiContent
+// 
+    // Item {
+        // anchors.fill: parent
+// 
+        // ── Small top-right controls ──────────────────────
+        // Row {
+            // id: topControls
+            // anchors.top: parent.top
+            // anchors.right: parent.right
+            // spacing: 4
+            // height: 22
+// 
+            // Repeater {
+                // model: [
+                    // { glyph: "\uf021", action: "refresh" },
+                    // { glyph: "\uf07b", action: "saved" },
+                    // { glyph: "\uf141", action: "more" }
+                // ]
+// 
+                // delegate: Rectangle {
+                    // width: 22
+                    // height: 22
+                    // radius: 10
+// 
+                    // color: controlMouse.containsMouse
+                        //    ? Qt.rgba(1, 1, 1, 0.12)
+                        //    : "transparent"
+// 
+                    // Behavior on color {
+                        // ColorAnimation { duration: 120 }
+                    // }
+// 
+                    // Text {
+                        // anchors.centerIn: parent
+                        // text: modelData.glyph
+                        // font.family: "Symbols Nerd Font"
+                        // font.pixelSize: 12
+                        // color: Core.Colors.muted
+                    // }
+// 
+                    // MouseArea {
+                        // id: controlMouse
+                        // anchors.fill: parent
+                        // hoverEnabled: true
+// 
+                        // onClicked: {
+                            // Actions will be wired later.
+                            // if (modelData.action === "refresh") {
+                                // Refresh
+                            // } else if (modelData.action === "saved") {
+                                // Saved networks
+                            // } else if (modelData.action === "more") {
+                                // More networks
+                            // }
+                        // }
+                    // }
+                // }
+            // }
+        // }
+// 
+        // ── Existing power buttons ────────────────────────
+        // RowLayout {
+            // anchors.left: parent.left
+            // anchors.right: parent.right
+            // anchors.top: parent.top
+            // anchors.bottom: parent.bottom
+            // anchors.topMargin: 26
+            // spacing: 8
+// 
+            // Repeater {
+                // model: [
+                    // { glyph: "\uf023", label: "Lock",     action: "lock",     destructive: false },
+                    // { glyph: "\uf186", label: "Sleep",    action: "sleep",    destructive: false },
+                    // { glyph: "\uf2f1", label: "Reboot",   action: "reboot",   destructive: true },
+                    // { glyph: "\uf011", label: "Shutdown", action: "shutdown", destructive: true }
+                // ]
+// 
+                // delegate: Rectangle {
+                    // id: powerBtn
+                    // Layout.fillWidth: true
+                    // Layout.fillHeight: true
+                    // radius: 10
+                    // property bool armed: false
+// 
+                    // color: armed ? Qt.rgba(0.8, 0.2, 0.2, 0.35)
+                        //  : hoverArea.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
+// 
+                    // border.width: armed ? 1 : 0
+                    // border.color: "#ff5555"
+// 
+                    // Behavior on color {
+                        // ColorAnimation { duration: 120 }
+                    // }
+// 
+                    // Timer {
+                        // id: disarmTimer
+                        // interval: 2500
+                        // onTriggered: powerBtn.armed = false
+                    // }
+// 
+                    // Column {
+                        // anchors.centerIn: parent
+                        // spacing: 4
+// 
+                        // Text {
+                            // anchors.horizontalCenter: parent.horizontalCenter
+                            // text: modelData.glyph
+                            // font.family: "Symbols Nerd Font"
+                            // font.pixelSize: 18
+                            // color: Core.Colors.foreground
+                        // }
+// 
+                        // Text {
+                            // anchors.horizontalCenter: parent.horizontalCenter
+                            // text: powerBtn.armed ? "confirm?" : modelData.label
+                            // font.family: Core.Colors.fontFamily
+                            // font.pixelSize: 10
+                            // color: powerBtn.armed ? "#ff8888" : Core.Colors.muted
+                        // }
+                    // }
+// 
+                    // MouseArea {
+                        // id: hoverArea
+                        // anchors.fill: parent
+                        // hoverEnabled: true
+// 
+                        // onClicked: {
+                            // if (modelData.destructive && !powerBtn.armed) {
+                                // powerBtn.armed = true
+                                // disarmTimer.restart()
+                                // return
+                            // }
+// 
+                            // Core.AppState.closeMorph()
+// 
+                            // let cmd = "true"
+// 
+                            // if (modelData.action === "lock")
+                                // cmd = "hyprlock"
+                            // else if (modelData.action === "sleep")
+                                // cmd = "systemctl suspend"
+                            // else if (modelData.action === "reboot")
+                                // cmd = "systemctl reboot"
+                            // else if (modelData.action === "shutdown")
+                                // cmd = "systemctl poweroff"
+// 
+                            // Quickshell.execDetached(["bash", "-c", cmd])
+                        // }
+                    // }
+                // }
+            // }
+        // }
+    // }
+// }
             Component {
                 id: stubContent
                 Item {
@@ -808,14 +1062,14 @@ Item {
                             text: "\uf013"
                             font.family: "Symbols Nerd Font"
                             font.pixelSize: 18
-                            color: Local.Colors.muted
+                            color: Core.Colors.muted
                         }
                         Text {
                             anchors.horizontalCenter: parent.horizontalCenter
                             text: "under construction"
-                            font.family: Local.Colors.fontFamily
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 11
-                            color: Local.Colors.muted
+                            color: Core.Colors.muted
                         }
                     }
                 }

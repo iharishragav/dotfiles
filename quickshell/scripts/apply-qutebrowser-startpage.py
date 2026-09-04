@@ -3,19 +3,23 @@
 # Usage: apply-qutebrowser-startpage.py <colors.json> <palette-image> <qutebrowser-config-dir>
 #
 # >>> EDIT HERE: swap in your own shortcut list. Format: (title, url, icon).
+
 import json
+import random
 import subprocess
 import sys
 from pathlib import Path
 
+
 SHORTCUTS = [
-    ("github", "https://github.com", "\uf09b"),
+    ("github", "https://github.com/kamalesh-sudo", "\uf09b"),
     ("youtube", "https://youtube.com", "\uf16a"),
-    ("claude", "https://claude.ai", "\uf0eb"),
+    ("chat", "https://chatgpt.com", "\uf0eb"),
     ("arch wiki", "https://wiki.archlinux.org", "\uf303"),
     ("reddit", "https://reddit.com", "\uf281"),
-    ("proton mail", "https://mail.proton.me", "\uf0e0"),
+    ("mail", "https://gmail.com", "\uf0e0"),
 ]
+
 
 TEMPLATE = '''<!doctype html><html><head><meta charset="utf-8"><title>// startpage</title><style>
 *{box-sizing:border-box}
@@ -85,72 +89,179 @@ def fill(template, mapping):
     return template
 
 
+def generate_startpage_wallpapers(base_color, background_color):
+    wallpaper_dir = (
+        Path.home() / ".cache/quickshell-rice/startpage-wallpapers"
+    )
+    wallpaper_dir.mkdir(parents=True, exist_ok=True)
+
+    designs = [
+        f'''<defs>
+<radialGradient id="g1" cx="20%" cy="20%" r="75%">
+<stop offset="0%" stop-color="{base_color}" stop-opacity="0.9"/>
+<stop offset="100%" stop-color="{base_color}" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="{background_color}"/>
+<rect width="1920" height="1080" fill="url(#g1)"/>''',
+
+        f'''<defs>
+<linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="{base_color}" stop-opacity="0.8"/>
+<stop offset="50%" stop-color="{base_color}" stop-opacity="0.2"/>
+<stop offset="100%" stop-color="{base_color}" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="{background_color}"/>
+<rect width="1920" height="1080" fill="url(#g2)"/>''',
+
+        f'''<defs>
+<radialGradient id="g3" cx="80%" cy="25%" r="70%">
+<stop offset="0%" stop-color="{base_color}" stop-opacity="0.85"/>
+<stop offset="100%" stop-color="{base_color}" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="{background_color}"/>
+<rect width="1920" height="1080" fill="url(#g3)"/>''',
+
+        f'''<defs>
+<radialGradient id="g4" cx="50%" cy="100%" r="80%">
+<stop offset="0%" stop-color="{base_color}" stop-opacity="0.8"/>
+<stop offset="100%" stop-color="{base_color}" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="{background_color}"/>
+<rect width="1920" height="1080" fill="url(#g4)"/>''',
+
+        f'''<defs>
+<radialGradient id="g5" cx="50%" cy="50%" r="75%">
+<stop offset="0%" stop-color="{base_color}" stop-opacity="0.65"/>
+<stop offset="55%" stop-color="{base_color}" stop-opacity="0.2"/>
+<stop offset="100%" stop-color="{base_color}" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1920" height="1080" fill="{background_color}"/>
+<rect width="1920" height="1080" fill="url(#g5)"/>''',
+    ]
+
+    for index, design in enumerate(designs, start=1):
+        svg = f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1920"
+     height="1080"
+     viewBox="0 0 1920 1080">
+{design}
+</svg>
+'''
+        (wallpaper_dir / f"design-{index}.svg").write_text(
+            svg,
+            encoding="utf-8"
+        )
+
+    return wallpaper_dir
+
+
 def main():
     colors_json_path = (
-        Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1]
+        Path(sys.argv[1])
+        if len(sys.argv) > 1 and sys.argv[1]
         else Path.home() / ".cache/wal/colors.json"
     )
-    wall = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] else ""
+
+    wall = (
+        sys.argv[2]
+        if len(sys.argv) > 2 and sys.argv[2]
+        else ""
+    )
+
     out_dir = (
-        Path(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3]
+        Path(sys.argv[3])
+        if len(sys.argv) > 3 and sys.argv[3]
         else Path.home() / ".config/qutebrowser"
     )
+
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not colors_json_path.exists():
-        print(f"apply-qutebrowser-startpage: {colors_json_path} not found", file=sys.stderr)
+        print(
+            f"apply-qutebrowser-startpage: "
+            f"{colors_json_path} not found",
+            file=sys.stderr
+        )
         sys.exit(1)
 
     with open(colors_json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    preset_file = Path.home() / ".cache/quickshell-rice/colorscheme-preset"
-    preset = preset_file.read_text().strip() if preset_file.exists() else "auto"
-    preset_wall = Path.home() / ".cache/quickshell-rice/startpage-wallpapers" / (preset.replace(" ", "-") + ".svg")
+    bg = data["special"]["background"]
+    fg = data["special"]["foreground"]
+    accent = data["colors"]["color4"]
+    accent2 = data["colors"]["color6"]
+    muted = data["colors"]["color8"]
 
-    if preset != "auto":
-        if not preset_wall.exists():
-            gen_script = Path(__file__).parent / "generate-startpage-wallpapers.py"
-            if gen_script.exists():
-                try:
-                    subprocess.run([sys.executable, str(gen_script)], check=False)
-                except Exception:
-                    pass
-        if preset_wall.exists():
-            wall = str(preset_wall)
+    # Generate five wallpapers from the current pywal colors.
+    wallpaper_dir = generate_startpage_wallpapers(
+        accent,
+        bg
+    )
 
-    if not wall or not Path(wall).exists():
-        cache_pal = Path.home() / ".cache/quickshell-rice/current-palette-image"
-        wal_file = Path.home() / ".cache/wal/wal"
-        if cache_pal.exists() and cache_pal.read_text().strip() and Path(cache_pal.read_text().strip()).exists():
-            wall = cache_pal.read_text().strip()
-        elif wal_file.exists() and wal_file.read_text().strip() and Path(wal_file.read_text().strip()).exists():
-            wall = wal_file.read_text().strip()
+    # Randomly select one generated wallpaper.
+    wallpaper_choices = sorted(
+        wallpaper_dir.glob("design-*.svg")
+    )
 
-    wall_css = f'url("file://{wall}") center/cover fixed' if (wall and Path(wall).exists()) else "none"
+    if wallpaper_choices:
+        wall = str(random.choice(wallpaper_choices))
+
+    wall_css = (
+        f'url("file://{wall}") center/cover fixed'
+        if wall and Path(wall).exists()
+        else "none"
+    )
 
     colors = {
-        "BG": data["special"]["background"],
-        "FG": data["special"]["foreground"],
-        "ACCENT": data["colors"]["color4"],
-        "ACCENT2": data["colors"]["color6"],
-        "MUTED": data["colors"]["color8"],
+        "BG": bg,
+        "FG": fg,
+        "ACCENT": accent,
+        "ACCENT2": accent2,
+        "MUTED": muted,
         "WALL_CSS": wall_css,
     }
 
     cards = "".join(
         '<a class="card" style="animation-delay:{d}s" href="{u}">'
-        '<b>{ic}</b><span>{n}</span></a>'.format(d=round(i * 0.06, 2), u=u, ic=ic, n=n)
+        '<b>{ic}</b><span>{n}</span></a>'.format(
+            d=round(i * 0.06, 2),
+            u=u,
+            ic=ic,
+            n=n
+        )
         for i, (n, u, ic) in enumerate(SHORTCUTS)
     )
-    html = fill(TEMPLATE, dict(colors, CARDS=cards))
 
-    (out_dir / "startpage.html").write_text(html, encoding="utf-8")
-    print("startpage written to", out_dir / "startpage.html")
+    html = fill(
+        TEMPLATE,
+        dict(colors, CARDS=cards)
+    )
 
-    # Reload open startpages in running qutebrowser instances if any
+    (out_dir / "startpage.html").write_text(
+        html,
+        encoding="utf-8"
+    )
+
+    print(
+        "startpage written to",
+        out_dir / "startpage.html"
+    )
+
+    # Reload open startpages in running qutebrowser instances if any.
     try:
-        res = subprocess.run(["pgrep", "-x", "qutebrowser"], capture_output=True, text=True)
+        res = subprocess.run(
+            ["pgrep", "-x", "qutebrowser"],
+            capture_output=True,
+            text=True
+        )
+
         if res.returncode == 0:
             subprocess.run(
                 ["qutebrowser", ":reload"],

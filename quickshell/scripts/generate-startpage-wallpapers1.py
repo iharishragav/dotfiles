@@ -2,7 +2,7 @@
 from pathlib import Path
 import random
 
-p = Path.home() / ".cache/quickshell-rice/startpage-wallpapers"
+p = Path.home() / ".cache/quickshell-rice/startpage-wallpaperss"
 p.mkdir(parents=True, exist_ok=True)
 
 data = {

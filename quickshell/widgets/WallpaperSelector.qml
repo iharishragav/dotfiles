@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 // Full-screen wallpaper grid + big preview, vim keybinds. Separate
 // from the compact picker inside BarMorph — this one is meant for a
@@ -100,8 +100,8 @@ Item {
 
     IpcHandler {
         target: "wallpaperSelector"
-        function toggle(): void { Local.AppState.requestMorph("wallpaper"); }
-        function open(): void { Local.AppState.requestMorph("wallpaper"); }
+        function toggle(): void { Core.AppState.requestMorph("wallpaper"); }
+        function open(): void { Core.AppState.requestMorph("wallpaper"); }
         function close(): void { selectorRoot.visible_ = false; }
     }
 
@@ -139,7 +139,7 @@ Item {
             Rectangle {
                 anchors.fill: parent
                 color: "#000000"
-                opacity: Local.Colors.overlayOpacity
+                opacity: Core.Colors.overlayOpacity
 
                 MouseArea {
                     anchors.fill: parent
@@ -153,10 +153,10 @@ Item {
                 width: Math.min(parent.width * 0.88, 1100)
                 height: Math.min(parent.height * 0.82, 680)
 
-                color: Local.Colors.background
-                border.color: Local.Colors.accent
-                border.width: Local.Colors.borderWidth
-                radius: Local.Colors.radius
+                color: Core.Colors.background
+                border.color: Core.Colors.accent
+                border.width: Core.Colors.borderWidth
+                radius: Core.Colors.radius
 
                 MouseArea { anchors.fill: parent; onClicked: (m) => m.accepted = true }
 
@@ -170,8 +170,8 @@ Item {
 
                         Text {
                             text: "WALLPAPER"
-                            color: Local.Colors.accent
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.accent
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 13
                             font.bold: true
                             font.letterSpacing: 3
@@ -182,13 +182,13 @@ Item {
                         Text {
                             visible: selectorRoot.wallpapers.length > 0
                             text: (selectorRoot.selectedIndex + 1) + " / " + selectorRoot.wallpapers.length
-                            color: Local.Colors.muted
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.muted
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 12
                         }
                     }
 
-                    Rectangle { Layout.fillWidth: true; height: 1; color: Local.Colors.accent; opacity: 0.4 }
+                    Rectangle { Layout.fillWidth: true; height: 1; color: Core.Colors.accent; opacity: 0.4 }
 
                     RowLayout {
                         Layout.fillWidth: true
@@ -228,9 +228,9 @@ Item {
                                     clip: true
 
                                     border.color: delegateRoot.isSelected
-                                                  ? Local.Colors.accent
-                                                  : (delegateRoot.isHovered ? Local.Colors.muted : "transparent")
-                                    border.width: delegateRoot.isSelected ? Local.Colors.borderWidth : 1
+                                                  ? Core.Colors.accent
+                                                  : (delegateRoot.isHovered ? Core.Colors.muted : "transparent")
+                                    border.width: delegateRoot.isSelected ? Core.Colors.borderWidth : 1
 
                                     Image {
                                         anchors.fill: parent
@@ -244,7 +244,7 @@ Item {
                                         opacity: delegateRoot.isSelected ? 1.0
                                                  : (delegateRoot.isHovered ? 0.85 : 0.55)
 
-                                        Behavior on opacity { NumberAnimation { duration: Local.Colors.animDuration } }
+                                        Behavior on opacity { NumberAnimation { duration: Core.Colors.animDuration } }
                                     }
 
                                     Rectangle {
@@ -261,8 +261,8 @@ Item {
                                             id: badgeText
                                             anchors.centerIn: parent
                                             text: "VIDEO"
-                                            color: Local.Colors.accent
-                                            font.family: Local.Colors.fontFamily
+                                            color: Core.Colors.accent
+                                            font.family: Core.Colors.fontFamily
                                             font.pixelSize: 8
                                             font.bold: true
                                             font.letterSpacing: 1
@@ -276,7 +276,7 @@ Item {
                                         anchors.margins: 4
                                         text: index + 1
                                         color: "#ffffff"
-                                        font.family: Local.Colors.fontFamily
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 9
                                         style: Text.Outline
                                         styleColor: "#000000"
@@ -296,7 +296,7 @@ Item {
                             }
                         }
 
-                        Rectangle { Layout.fillHeight: true; width: 1; color: Local.Colors.accent; opacity: 0.3 }
+                        Rectangle { Layout.fillHeight: true; width: 1; color: Core.Colors.accent; opacity: 0.3 }
 
                         ColumnLayout {
                             Layout.fillWidth: true
@@ -307,9 +307,9 @@ Item {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
                                 color: "#0a0a0a"
-                                border.color: Local.Colors.muted
+                                border.color: Core.Colors.muted
                                 border.width: 1
-                                radius: Local.Colors.radius
+                                radius: Core.Colors.radius
 
                                 Image {
                                     anchors.fill: parent
@@ -337,8 +337,8 @@ Item {
                                         id: previewBadge
                                         anchors.centerIn: parent
                                         text: "VIDEO WALLPAPER"
-                                        color: Local.Colors.accent
-                                        font.family: Local.Colors.fontFamily
+                                        color: Core.Colors.accent
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 9
                                         font.bold: true
                                         font.letterSpacing: 1
@@ -349,8 +349,8 @@ Item {
                                     visible: win.selectedPath.length === 0
                                     anchors.centerIn: parent
                                     text: "no wallpaper"
-                                    color: Local.Colors.muted
-                                    font.family: Local.Colors.fontFamily
+                                    color: Core.Colors.muted
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 12
                                 }
                             }
@@ -358,8 +358,8 @@ Item {
                             Text {
                                 Layout.fillWidth: true
                                 text: win.selectedName || ""
-                                color: Local.Colors.foreground
-                                font.family: Local.Colors.fontFamily
+                                color: Core.Colors.foreground
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 13
                                 font.bold: true
                                 elide: Text.ElideRight
@@ -368,14 +368,14 @@ Item {
                             Rectangle {
                                 Layout.fillWidth: true
                                 height: 36
-                                color: Local.Colors.accent
-                                radius: Local.Colors.radius
+                                color: Core.Colors.accent
+                                radius: Core.Colors.radius
 
                                 Text {
                                     anchors.centerIn: parent
                                     text: "APPLY  [ Enter ]"
-                                    color: Local.Colors.background
-                                    font.family: Local.Colors.fontFamily
+                                    color: Core.Colors.background
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 12
                                     font.bold: true
                                     font.letterSpacing: 1
@@ -396,8 +396,8 @@ Item {
 
                     Text {
                         text: "hjkl / arrows navigate   Enter apply   gg top   G bottom   q close"
-                        color: Local.Colors.muted
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.muted
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 10
                         Layout.alignment: Qt.AlignHCenter
                     }

@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Services.Networking
 import QtQuick
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 Item {
     id: wifiRoot
@@ -109,8 +109,8 @@ Item {
 
             Text {
                 text: "Wi-Fi"
-                color: Local.Colors.foreground
-                font.family: Local.Colors.fontFamily
+                color: Core.Colors.foreground
+                font.family: Core.Colors.fontFamily
                 font.pixelSize: 12
                 font.bold: true
                 Layout.verticalAlignment: Qt.AlignVCenter
@@ -125,7 +125,7 @@ Item {
                 radius: 11
                 color: refreshMouse.containsMouse ? Qt.rgba(1, 1, 1, 0.15) : Qt.rgba(1, 1, 1, 0.06)
                 border.width: 1
-                border.color: refreshMouse.containsMouse ? Local.Colors.accent : Qt.rgba(1, 1, 1, 0.1)
+                border.color: refreshMouse.containsMouse ? Core.Colors.accent : Qt.rgba(1, 1, 1, 0.1)
 
                 Behavior on color { ColorAnimation { duration: 120 } }
 
@@ -134,7 +134,7 @@ Item {
                     text: "\uf021" // Refresh glyph
                     font.family: "Symbols Nerd Font"
                     font.pixelSize: 11
-                    color: Local.Colors.foreground
+                    color: Core.Colors.foreground
                 }
 
                 MouseArea {
@@ -155,10 +155,10 @@ Item {
                 height: 22
                 radius: 11
                 color: showOnlySaved
-                       ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.35)
+                       ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.35)
                        : (savedMouse.containsMouse ? Qt.rgba(1, 1, 1, 0.15) : Qt.rgba(1, 1, 1, 0.06))
                 border.width: 1
-                border.color: showOnlySaved ? Local.Colors.accent : (savedMouse.containsMouse ? Local.Colors.accent : Qt.rgba(1, 1, 1, 0.1))
+                border.color: showOnlySaved ? Core.Colors.accent : (savedMouse.containsMouse ? Core.Colors.accent : Qt.rgba(1, 1, 1, 0.1))
 
                 Behavior on color { ColorAnimation { duration: 120 } }
 
@@ -167,7 +167,7 @@ Item {
                     text: "\uf0c7" // Saved/Bookmark glyph
                     font.family: "Symbols Nerd Font"
                     font.pixelSize: 11
-                    color: Local.Colors.foreground
+                    color: Core.Colors.foreground
                 }
 
                 MouseArea {
@@ -184,10 +184,10 @@ Item {
                 height: 22
                 radius: 11
                 color: showMore
-                       ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.35)
+                       ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.35)
                        : (moreMouse.containsMouse ? Qt.rgba(1, 1, 1, 0.15) : Qt.rgba(1, 1, 1, 0.06))
                 border.width: 1
-                border.color: showMore ? Local.Colors.accent : (moreMouse.containsMouse ? Local.Colors.accent : Qt.rgba(1, 1, 1, 0.1))
+                border.color: showMore ? Core.Colors.accent : (moreMouse.containsMouse ? Core.Colors.accent : Qt.rgba(1, 1, 1, 0.1))
 
                 Behavior on color { ColorAnimation { duration: 120 } }
 
@@ -196,7 +196,7 @@ Item {
                     text: "\uf141" // Ellipsis glyph
                     font.family: "Symbols Nerd Font"
                     font.pixelSize: 11
-                    color: Local.Colors.foreground
+                    color: Core.Colors.foreground
                 }
 
                 MouseArea {
@@ -217,8 +217,8 @@ Item {
 
             Text {
                 text: targetNetwork ? ("Connect to " + (targetNetwork.ssid || targetNetwork.name || "Network")) : ""
-                color: Local.Colors.foreground
-                font.family: Local.Colors.fontFamily
+                color: Core.Colors.foreground
+                font.family: Core.Colors.fontFamily
                 font.pixelSize: 11
             }
 
@@ -227,7 +227,7 @@ Item {
                 height: 30
                 radius: 15
                 color: Qt.rgba(1, 1, 1, 0.08)
-                border.color: Local.Colors.accent
+                border.color: Core.Colors.accent
                 border.width: 1
 
                 TextInput {
@@ -237,8 +237,8 @@ Item {
                     anchors.rightMargin: 12
                     verticalAlignment: TextInput.AlignVCenter
                     echoMode: TextInput.Password
-                    color: Local.Colors.foreground
-                    font.family: Local.Colors.fontFamily
+                    color: Core.Colors.foreground
+                    font.family: Core.Colors.fontFamily
                     font.pixelSize: 11
                     clip: true
                     text: pskPassword
@@ -265,8 +265,8 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Cancel"
-                        color: Local.Colors.muted
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.muted
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 10
                     }
 
@@ -282,14 +282,14 @@ Item {
                     width: 65
                     height: 24
                     radius: 12
-                    color: connectBtnMouse.containsMouse ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.5)
-                                                         : Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.3)
+                    color: connectBtnMouse.containsMouse ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.5)
+                                                         : Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.3)
 
                     Text {
                         anchors.centerIn: parent
                         text: "Connect"
-                        color: Local.Colors.foreground
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 10
                         font.bold: true
                     }
@@ -346,10 +346,10 @@ Item {
                         radius: 10
 
                         color: connMouse.containsMouse
-                               ? Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.40)
-                               : Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.25)
+                               ? Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.40)
+                               : Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.25)
                         border.width: 1
-                        border.color: Local.Colors.accent
+                        border.color: Core.Colors.accent
 
                         Behavior on color { ColorAnimation { duration: 120 } }
 
@@ -363,17 +363,17 @@ Item {
                                 text: net ? getWifiIcon(net.signalStrength, true) : "\uf1eb"
                                 font.family: "Symbols Nerd Font"
                                 font.pixelSize: 18
-                                color: Local.Colors.accent
+                                color: Core.Colors.accent
                             }
 
                             Text {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 width: parent.width
                                 text: net ? (net.ssid || net.name || "Connected") : ""
-                                font.family: Local.Colors.fontFamily
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 10
                                 font.bold: true
-                                color: Local.Colors.foreground
+                                color: Core.Colors.foreground
                                 horizontalAlignment: Text.AlignHCenter
                                 elide: Text.ElideRight
                             }
@@ -395,7 +395,7 @@ Item {
                     Layout.fillHeight: true
                     Layout.topMargin: 8
                     Layout.bottomMargin: 8
-                    color: Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.4)
+                    color: Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.4)
                 }
 
                 // Remaining networks
@@ -424,16 +424,16 @@ Item {
                                 text: net ? getWifiIcon(net.signalStrength, false) : "\uf1eb"
                                 font.family: "Symbols Nerd Font"
                                 font.pixelSize: 18
-                                color: net && net.known ? Local.Colors.accent : Local.Colors.foreground
+                                color: net && net.known ? Core.Colors.accent : Core.Colors.foreground
                             }
 
                             Text {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 width: parent.width
                                 text: net ? (net.ssid || net.name || "Wi-Fi") : ""
-                                font.family: Local.Colors.fontFamily
+                                font.family: Core.Colors.fontFamily
                                 font.pixelSize: 10
-                                color: Local.Colors.muted
+                                color: Core.Colors.muted
                                 horizontalAlignment: Text.AlignHCenter
                                 elide: Text.ElideRight
                             }

@@ -1,8 +1,7 @@
 import Quickshell
 import Quickshell.Wayland
 import QtQuick
-import ".." as Local
-
+import "../core" as Core
 // Purely decorative rotating rings widget for the top-left corner.
 Variants {
     model: Quickshell.screens
@@ -17,7 +16,7 @@ Variants {
         WlrLayershell.layer: WlrLayer.Bottom
         WlrLayershell.namespace: "quickshell-holorings"
         exclusionMode: ExclusionMode.Ignore
-        visible: Local.AppState.showDesktopWidgets
+        visible: Core.AppState.showDesktopWidgets
 
         implicitWidth: 220
         implicitHeight: 220
@@ -31,12 +30,12 @@ Variants {
                 radius: width / 2
                 color: "transparent"
                 border.width: 1
-                border.color: Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g,
-                                      Local.Colors.accent.b, 0.55 - index * 0.12)
+                border.color: Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g,
+                                      Core.Colors.accent.b, 0.55 - index * 0.12)
 
                 Rectangle {
                     width: 7; height: 7; radius: 3.5
-                    color: index % 2 === 0 ? Local.Colors.accent : Local.Colors.accent2
+                    color: index % 2 === 0 ? Core.Colors.accent : Core.Colors.accent2
                     anchors.horizontalCenter: parent.horizontalCenter
                     y: -3
                 }
@@ -54,9 +53,9 @@ Variants {
             id: core
             anchors.centerIn: parent
             width: 26; height: 26; radius: 13
-            color: Qt.rgba(Local.Colors.accent.r, Local.Colors.accent.g, Local.Colors.accent.b, 0.30)
+            color: Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.30)
             border.width: 1
-            border.color: Local.Colors.accent
+            border.color: Core.Colors.accent
 
             SequentialAnimation on scale {
                 loops: Animation.Infinite
@@ -67,9 +66,9 @@ Variants {
 
         Text {
             anchors { top: core.bottom; horizontalCenter: parent.horizontalCenter; topMargin: 66 }
-            text: "// NEURAL LINK ACTIVE"
-            color: Local.Colors.accent2
-            font { pixelSize: 9; letterSpacing: 3; family: Local.Colors.fontFamily }
+            text: "// BE COCKY...!"
+            color: Core.Colors.accent2
+            font { pixelSize: 9; letterSpacing: 3; family: Core.Colors.fontFamily }
             SequentialAnimation on opacity {
                 loops: Animation.Infinite
                 NumberAnimation { to: 0.3; duration: 1600 }

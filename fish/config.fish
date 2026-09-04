@@ -1,3 +1,12 @@
+if test -z  "$WAYLAND_DISPLAY"; and test (tty) = /dev/tty1
+	exec uwsm start hyprland.desktop
+end
+
+
+
+
+
+
 if status is-interactive
     # Starship custom prompt
     command -v starship &> /dev/null && starship init fish | source
@@ -27,11 +36,13 @@ if status is-interactive
     abbr gbd 'git branch -d'
     abbr gco 'git checkout'
     abbr gsh 'git show' 
-    abbr ll 'ls -l'
-    abbr la 'ls -a'
-    abbr lla 'ls -la'
-    
-    alias fishconf="nvim ~/.config/fish/config.fish"
+    abbr ll 'lsd -l'
+    abbr la 'lsd -a'
+    abbr lla 'lsd -la'
+    alias fishconf="nvim $HOME/.config/fish"
+    alias kittyconf="nvim $HOME/.config/kitty"
+    alias qsconf="nvim $HOME/.config/quickshell"
+
 
 
     # Custom fish config

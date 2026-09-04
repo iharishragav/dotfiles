@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 // auto/dark/light popup — re-runs pywal against the current wallpaper
 // with the -l flag and repropagates colors everywhere.
@@ -20,14 +20,14 @@ Item {
     ]
 
     function currentSchemeIndex() {
-        for (let i = 0; i < schemes.length; ++i) if (schemes[i].id === Local.AppState.colorScheme) return i;
+        for (let i = 0; i < schemes.length; ++i) if (schemes[i].id === Core.AppState.colorScheme) return i;
         return 0;
     }
 
     onVisible_Changed: { if (visible_) selectedIndex = currentSchemeIndex(); }
 
     function applyScheme(index) {
-        Local.AppState.applyColorScheme(schemes[index].id);
+        Core.AppState.applyColorScheme(schemes[index].id);
         root.visible_ = false;
     }
 
@@ -67,10 +67,10 @@ Item {
                 width: 320
                 height: column.implicitHeight + 32
 
-                color: Local.Colors.background
-                border.color: Local.Colors.accent
-                border.width: Local.Colors.borderWidth
-                radius: Local.Colors.radius
+                color: Core.Colors.background
+                border.color: Core.Colors.accent
+                border.width: Core.Colors.borderWidth
+                radius: Core.Colors.radius
 
                 MouseArea { anchors.fill: parent; onClicked: (m) => m.accepted = true }
 
@@ -86,8 +86,8 @@ Item {
                         Layout.fillWidth: true
                         Text {
                             text: "COLOR SCHEME"
-                            color: Local.Colors.foreground
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 14
                             font.bold: true
                             font.letterSpacing: 2
@@ -95,13 +95,13 @@ Item {
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "Esc cancels"
-                            color: Local.Colors.muted
-                            font.family: Local.Colors.fontFamily
+                            color: Core.Colors.muted
+                            font.family: Core.Colors.fontFamily
                             font.pixelSize: 10
                         }
                     }
 
-                    Rectangle { Layout.fillWidth: true; height: 1; color: Local.Colors.muted }
+                    Rectangle { Layout.fillWidth: true; height: 1; color: Core.Colors.muted }
 
                     Repeater {
                         model: root.schemes
@@ -110,13 +110,13 @@ Item {
                             id: cell
                             Layout.fillWidth: true
                             height: 54
-                            radius: Local.Colors.radius
+                            radius: Core.Colors.radius
 
                             property bool isSelected: index === root.selectedIndex
-                            property bool isActive: modelData.id === Local.AppState.colorScheme
+                            property bool isActive: modelData.id === Core.AppState.colorScheme
 
-                            color: isSelected ? Local.Colors.accent : "transparent"
-                            border.color: isActive && !isSelected ? Local.Colors.accent : "transparent"
+                            color: isSelected ? Core.Colors.accent : "transparent"
+                            border.color: isActive && !isSelected ? Core.Colors.accent : "transparent"
                             border.width: 1
 
                             RowLayout {
@@ -127,8 +127,8 @@ Item {
 
                                 Text {
                                     text: modelData.icon
-                                    color: cell.isSelected ? Local.Colors.background : Local.Colors.accent
-                                    font.family: Local.Colors.fontFamily
+                                    color: cell.isSelected ? Core.Colors.background : Core.Colors.accent
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 22
                                     font.bold: true
                                 }
@@ -139,16 +139,16 @@ Item {
 
                                     Text {
                                         text: modelData.label
-                                        color: cell.isSelected ? Local.Colors.background : Local.Colors.foreground
-                                        font.family: Local.Colors.fontFamily
+                                        color: cell.isSelected ? Core.Colors.background : Core.Colors.foreground
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 13
                                         font.bold: true
                                     }
 
                                     Text {
                                         text: modelData.desc
-                                        color: cell.isSelected ? Local.Colors.background : Local.Colors.muted
-                                        font.family: Local.Colors.fontFamily
+                                        color: cell.isSelected ? Core.Colors.background : Core.Colors.muted
+                                        font.family: Core.Colors.fontFamily
                                         font.pixelSize: 10
                                     }
                                 }
@@ -156,8 +156,8 @@ Item {
                                 Text {
                                     visible: cell.isActive
                                     text: "●"
-                                    color: cell.isSelected ? Local.Colors.background : Local.Colors.accent
-                                    font.family: Local.Colors.fontFamily
+                                    color: cell.isSelected ? Core.Colors.background : Core.Colors.accent
+                                    font.family: Core.Colors.fontFamily
                                     font.pixelSize: 10
                                 }
                             }
@@ -174,8 +174,8 @@ Item {
                     Text {
                         Layout.alignment: Qt.AlignHCenter
                         text: "↑↓ / k·j navigate   Enter confirm   1·2·3 shortcut"
-                        color: Local.Colors.muted
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.muted
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 10
                     }
                 }

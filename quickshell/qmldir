@@ -5,6 +5,7 @@ BarMorph 1.0 widgets/BarMorph.qml
 WallpaperSelector 1.0 widgets/WallpaperSelector.qml
 Battery 1.0 widgets/Battery.qml
 Volume 1.0 widgets/Volume.qml
+recorder 1.0 widgets/recorder.qml
 ClipboardHistory 1.0 widgets/ClipboardHistory.qml
 AppLauncher 1.0 widgets/AppLauncher.qml
 ModeSwitcher 1.0 widgets/ModeSwitcher.qml

@@ -1,0 +1,53 @@
+# Sourcing a flat .conf file, NOT a .lua file
+# GENERAL
+general {
+    hide_cursor = true
+    ignore_empty_input = true
+    text_trim = true
+}
+
+# BACKGROUND
+background {
+    monitor = 
+    # This reads the wallpaper path dynamically from your quickshell cache file
+    path = ~/.cache/quickshell-rice/current
+    blur_passes = 2
+    contrast = 0.8916
+    brightness = 0.7172
+    vibrancy = 0.1696
+    vibrancy_darkness = 0
+}
+
+# TIME HR
+label {
+    monitor =
+    text = cmd[update:1000] echo -e "$(date +"%H")"
+    font_size = 400
+    font_family = JetBrains Mono Nerd Font Mono ExtraBold
+    position = -155,-100
+    halign = center
+    valign = top
+}
+
+# TIME MIN
+label {
+    monitor =
+    text = cmd[update:1000] echo -e "$(date +"%M")"
+    font_size = 100    
+    font_family = JetBrains Mono Nerd Font Mono ExtraBold
+    position = 225, -217
+    halign = center
+    valign = top
+}
+
+# DATE
+label {
+    monitor =
+    text = cmd[update:1000] echo -e "$(date +"%d %b %A")"
+    font_size = 14
+    font_family = JetBrains Mono Nerd Font Mono ExtraBold
+    position = 225, 170
+    halign = center
+    valign = center
+}
+

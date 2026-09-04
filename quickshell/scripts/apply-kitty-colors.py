@@ -86,7 +86,7 @@ def update_kitty_conf(kitty_conf: Path):
 
     content = kitty_conf.read_text(encoding="utf-8")
 
-    # Clean up any leftover foot/ini artifacts if previously corrupted
+    # Clean up any leftover kitty/ini artifacts if previously corrupted
     content = re.sub(r"\[colors(-dark)?\].*?(?=\n\[|\Z)", "", content, flags=re.DOTALL)
 
     # Ensure include colors-wal.conf is present

@@ -4,7 +4,7 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
-import ".." as Local
+import "../core" as Core
 
 // Bottom-right desktop clock, translucent card + a progress bar
 // under it that fills up with the current minute's seconds.
@@ -27,7 +27,7 @@ Variants {
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
         exclusionMode: ExclusionMode.Ignore
         mask: Region {}
-        visible: Local.AppState.showDesktopWidgets
+        visible: Core.AppState.showDesktopWidgets
 
         property string hoursMinutes: ""
         property string seconds: ""
@@ -51,9 +51,9 @@ Variants {
             implicitWidth: col.implicitWidth + 48
             implicitHeight: col.implicitHeight + 32
             radius: 18
-            color: Qt.rgba(Local.Colors.background.r, Local.Colors.background.g,
-                           Local.Colors.background.b, 0.55)
-            border.color: Local.Colors.accent
+            color: Qt.rgba(Core.Colors.background.r, Core.Colors.background.g,
+                           Core.Colors.background.b, 0.55)
+            border.color: Core.Colors.accent
             border.width: 1
 
             Column {
@@ -68,8 +68,8 @@ Variants {
                     Text {
                         id: timeText
                         text: win.hoursMinutes
-                        color: Local.Colors.foreground
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.foreground
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 56
                         font.weight: Font.Light
                     }
@@ -77,8 +77,8 @@ Variants {
                     Text {
                         anchors.baseline: timeText.baseline
                         text: win.seconds
-                        color: Local.Colors.accent
-                        font.family: Local.Colors.fontFamily
+                        color: Core.Colors.accent
+                        font.family: Core.Colors.fontFamily
                         font.pixelSize: 24
                         font.weight: Font.Light
                     }
@@ -87,8 +87,8 @@ Variants {
                 Text {
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: win.dateStr
-                    color: Local.Colors.muted
-                    font.family: Local.Colors.fontFamily
+                    color: Core.Colors.muted
+                    font.family: Core.Colors.fontFamily
                     font.pixelSize: 14
                 }
 
@@ -97,17 +97,17 @@ Variants {
                     width: col.implicitWidth
                     height: 3
                     radius: 2
-                    color: Qt.rgba(Local.Colors.muted.r, Local.Colors.muted.g, Local.Colors.muted.b, 0.3)
+                    color: Qt.rgba(Core.Colors.muted.r, Core.Colors.muted.g, Core.Colors.muted.b, 0.3)
 
                     Rectangle {
                         anchors.left: parent.left
                         height: parent.height
                         radius: 2
                         width: parent.width * (parseInt(win.seconds, 10) / 59)
-                        color: Local.Colors.accent
+                        color: Core.Colors.accent
 
                         Behavior on width {
-                            enabled: Local.Colors.animationsEnabled
+                            enabled: Core.Colors.animationsEnabled
                             NumberAnimation { duration: 300 }
                         }
                     }

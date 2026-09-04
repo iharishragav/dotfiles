@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
-import ".." as Local
+import "../core" as Core
 
 // Minimal battery readout: just "N%" plus a bolt icon when charging.
 // Reads straight from /sys/class/power_supply, no upower/acpi dependency.
@@ -28,8 +28,8 @@ Item {
         Text {
             visible: root.charging
             text: "⚡"
-            color: Local.Colors.accent
-            font.family: Local.Colors.fontFamily
+            color: Core.Colors.accent
+            font.family: Core.Colors.fontFamily
             font.pixelSize: 12
             anchors.verticalCenter: parent.verticalCenter
         }
@@ -37,8 +37,8 @@ Item {
         Text {
             visible: root.available
             text: root.percentage + "%"
-            color: Local.Colors.foreground
-            font.family: Local.Colors.fontFamily
+            color: Core.Colors.foreground
+            font.family: Core.Colors.fontFamily
             font.pixelSize: 12
             anchors.verticalCenter: parent.verticalCenter
         }

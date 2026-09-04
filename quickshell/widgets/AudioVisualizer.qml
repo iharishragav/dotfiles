@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
-import ".." as Local
+import "../core" as Core
 
 // cava-driven bar visualizer along the bottom edge. Stops well
 // short of BigClock's position so the two never overlap even at
@@ -32,7 +32,7 @@ Variants {
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
         exclusionMode: ExclusionMode.Ignore
         mask: Region {}
-        visible: Local.AppState.showDesktopWidgets
+        visible: Core.AppState.showDesktopWidgets
 
         property var bars: {
             const a = [];
@@ -84,12 +84,12 @@ Variants {
                         radius: width / 2
 
                         gradient: Gradient {
-                            GradientStop { position: 0.0; color: Local.Colors.accent2 }
-                            GradientStop { position: 1.0; color: Local.Colors.accent }
+                            GradientStop { position: 0.0; color: Core.Colors.accent2 }
+                            GradientStop { position: 1.0; color: Core.Colors.accent }
                         }
 
                         Behavior on height {
-                            enabled: Local.Colors.animationsEnabled
+                            enabled: Core.Colors.animationsEnabled
                             NumberAnimation { duration: 60 }
                         }
                     }
@@ -100,7 +100,7 @@ Variants {
                         width: parent.width
                         height: Math.min(24, parent.barH * 0.25)
                         radius: width / 2
-                        color: Local.Colors.accent
+                        color: Core.Colors.accent
                         opacity: 0.18
                     }
                 }

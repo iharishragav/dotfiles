@@ -71,3 +71,7 @@ printf '%s\n' "$palette_image"  > "$cache_dir/current-palette-image"
 
 "$script_dir/apply-wallpaper-colors-only.sh" "$HOME/.cache/wal/colors.json" "$palette_image"
 echo "OK: wallpaper applied, colors propagated (kitty/Hyprland/qutebrowser/zsh)."
+
+STATE_FILE="$HOME/.cache/quickshell-rice/current-wallpaper"
+IMG="$(sed -n '1p' "$STATE_FILE")"
+cp "$IMG" ~/.cache/quickshell-rice/current
