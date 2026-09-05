@@ -1,49 +1,29 @@
 #!/usr/bin/env bash
-# Boots the whole shell as a background daemon.
-#
-# Meant to be called from exec-once in hyprland.lua — stays running
-# for the rest of the session.
-#
-#   qs -c rice ipc call wallpaperSelector toggle
+set -Eeuo pipefail
 
-set -euo pipefail
+cd -- "$HOME"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-if ! pgrep -x awww-daemon > /dev/null; then
-	awww-daemon &
+if command -v awww-daemon >/dev/null 2>&1 && ! pgrep -x awww-daemon >/dev/null 2>&1; then
+    awww-daemon >/dev/null 2>&1 &
 fi
 
-for i in {1..20}; do
-	if awww query >/dev/null 2>&1; then
-		break
-	fi
-	sleep 0.25
-done
-
-"$SCRIPT_DIR/scripts/restore-wallpaper.sh" &
-
-# awww-daemon only restores static images on its own; if the last
-# wallpaper was a video, nothing relaunches mpvpaper after a reboot
-
-if ! pgrep -f "wl-paste --type text --watch cliphist store" > /dev/null; then
-	wl-paste --type text --watch cliphist store &
-fi
-if ! pgrep -f "wl-paste --type image --watch cliphist store" > /dev/null; then
-	wl-paste --type image --watch cliphist store &
+if command -v awww >/dev/null 2>&1; then
+    for _ in {1..20}; do
+        timeout 0.5s awww query >/dev/null 2>&1 && break
+        sleep 0.25
+    done
 fi
 
-chmod +x "$SCRIPT_DIR/scripts/apply-wallpaper.sh" \
-         "$SCRIPT_DIR/scripts/apply-wallpaper-colors-only.sh" \
-         "$SCRIPT_DIR/scripts/apply-color-scheme.sh" \
-         "$SCRIPT_DIR/scripts/apply-colorscheme-preset.sh" \
-         "$SCRIPT_DIR/scripts/apply-kitty-colors.py" \
-         "$SCRIPT_DIR/scripts/apply-qutebrowser-colors.py" \
-         "$SCRIPT_DIR/scripts/apply-qutebrowser-startpage.py" \
-         "$SCRIPT_DIR/scripts/write-hypr-theme.sh" \
-         "$SCRIPT_DIR/scripts/cliphist-restore.sh" \
-         "$SCRIPT_DIR/scripts/cliphist-delete.sh" \
-         "$SCRIPT_DIR/scripts/restore-wallpaper.sh" \
-         "$SCRIPT_DIR/scripts/wallpaper-thumbnail.sh"
+if [[ -x "$SCRIPT_DIR/scripts/restore-wallpaper.sh" ]]; then
+    "$SCRIPT_DIR/scripts/restore-wallpaper.sh" &
+fi
 
-exec qs -c "$SCRIPT_DIR"
+if command -v wl-paste >/dev/null 2>&1 && command -v cliphist >/dev/null 2>&1; then
+    pgrep -f '[w]l-paste --type text --watch cliphist store' >/dev/null 2>&1 || \
+        wl-paste --type text --watch cliphist store >/dev/null 2>&1 &
+    pgrep -f '[w]l-paste --type image --watch cliphist store' >/dev/null 2>&1 || \
+        wl-paste --type image --watch cliphist store >/dev/null 2>&1 &
+fi
+
+exec qs -p "$SCRIPT_DIR"

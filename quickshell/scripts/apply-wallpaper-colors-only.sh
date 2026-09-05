@@ -7,6 +7,9 @@ script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "$colors_json" ]] || { echo "missing colors.json: $colors_json" >&2; exit 1; }
 
+# Keep terminal prompt output on the same pywal source as the other apps.
+python3 "$script_dir/apply-terminal-theme.py"
+
 bash "$script_dir/write-hypr-theme.sh" "$colors_json"
 
 if [[ -d "$HOME/.config/kitty" || -f "$HOME/.config/kitty/kitty.conf" ]]; then

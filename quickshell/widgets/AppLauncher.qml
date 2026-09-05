@@ -15,3 +15,4 @@ Item {
         function close(): void { Core.AppState.closeMorph(); }
     }
 }
+

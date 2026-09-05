@@ -267,7 +267,9 @@ Variants {
                                     id: hoverArea
                                     anchors.fill: parent
                                     hoverEnabled: true
-                                    onClicked: win.triggerMorph(modelData.morph)
+                                    onClicked: modelData.morph === "notifications"
+                                        ? Quickshell.execDetached(["qs", "-p", Quickshell.shellDir, "ipc", "call", "notifications", "toggle"])
+                                        : win.triggerMorph(modelData.morph)
                                 }
                             }
                         }

@@ -31,7 +31,6 @@ Item {
         switch (name) {
             case "power":       return { w: 300, h: 100 };
             case "wallpaper":   return { w: Math.min(screenWidth * 0.5, 720), h: 118 };
-            // case "volume":      return { w: 300, h: 96 };
             case "colorscheme": return { w: Math.min(screenWidth * 0.52, 760), h: 132 };
             case "launcher":    return { w: 900, h: 380 };
             case "clipboard":   return { w: 560, h: 380 };
@@ -58,7 +57,8 @@ Item {
             WlrLayershell.layer: WlrLayer.Overlay
             WlrLayershell.namespace: "quickshell-bar"
             exclusionMode: ExclusionMode.Ignore
-            WlrLayershell.keyboardFocus: (win.active && (Core.AppState.barMorph === "launcher"
+            WlrLayershell.keyboardFocus: (win.active && (Core.AppState.barMorph === "power"
+                                          || Core.AppState.barMorph === "launcher"
                                           || Core.AppState.barMorph === "clipboard"
                                           || Core.AppState.barMorph === "recorder"
                                           || Core.AppState.barMorph === "wallpaper"))
@@ -483,10 +483,10 @@ Item {
 
                     Repeater {
                         model: [
-                            { glyph: "\uf023", label: "Lock",     action: "lock",     destructive: false },
-                            { glyph: "\uf186", label: "Sleep",    action: "sleep",    destructive: false },
-                            { glyph: "\uf2f1", label: "Reboot",   action: "reboot",   destructive: true },
-                            { glyph: "\uf011", label: "Shutdown", action: "shutdown", destructive: true }
+                            { glyph: "\uf023", label: "Lock",     action: "lock" },
+                            { glyph: "\uf186", label: "Sleep",    action: "sleep" },
+                            { glyph: "\uf2f1", label: "Reboot",   action: "reboot" },
+                            { glyph: "\uf011", label: "Shutdown", action: "shutdown" }
                         ]
 
                         delegate: Rectangle {
@@ -494,20 +494,10 @@ Item {
                             Layout.fillWidth: true
                             Layout.fillHeight: true
                             radius: 10
-                            property bool armed: false
-
-                            color: armed ? Qt.rgba(0.8, 0.2, 0.2, 0.35)
-                                 : hoverArea.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
-                            border.width: armed ? 1 : 0
-                            border.color: "#ff5555"
+                            color: hoverArea.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
+                            border.width: 0
 
                             Behavior on color { ColorAnimation { duration: 120 } }
-
-                            Timer {
-                                id: disarmTimer
-                                interval: 2500
-                                onTriggered: powerBtn.armed = false
-                            }
 
                             Column {
                                 anchors.centerIn: parent
@@ -521,10 +511,10 @@ Item {
                                 }
                                 Text {
                                     anchors.horizontalCenter: parent.horizontalCenter
-                                    text: powerBtn.armed ? "confirm?" : modelData.label
+                                    text: modelData.label
                                     font.family: Core.Colors.fontFamily
                                     font.pixelSize: 10
-                                    color: powerBtn.armed ? "#ff8888" : Core.Colors.muted
+                                    color: Core.Colors.muted
                                 }
                             }
 
@@ -533,13 +523,6 @@ Item {
                                 anchors.fill: parent
                                 hoverEnabled: true
                                 onClicked: {
-                                    // destructive actions need a second click within
-                                    // 2.5s to confirm, so a misclick can't nuke the session
-                                    if (modelData.destructive && !powerBtn.armed) {
-                                        powerBtn.armed = true;
-                                        disarmTimer.restart();
-                                        return;
-                                    }
                                     Core.AppState.closeMorph();
                                     let cmd = "true";
                                     if (modelData.action === "lock") cmd = "hyprlock";
@@ -551,6 +534,8 @@ Item {
                             }
                         }
                     }
+                    focus: true
+                    Keys.onEscapePressed: Core.AppState.closeMorph()
                 }
             }
      Component {

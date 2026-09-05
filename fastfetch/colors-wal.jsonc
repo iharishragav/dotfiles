@@ -1,0 +1,12 @@
+// Generated from ~/.cache/wal/colors.json
+{
+    "display": {
+        "color": "#e6e6e7",
+        "constants": [
+            "\u001b[38;2;132;130;124m",
+            "\u001b[38;2;176;175;176m",
+            "\u001b[38;2;209;209;209m",
+            "\u001b[38;2;193;192;191m"
+        ]
+    }
+}
