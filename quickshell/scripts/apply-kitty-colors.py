@@ -7,15 +7,12 @@ ensures existing kitty.conf includes it, and signals all running kitty
 instances to reload immediately.
 """
 
-import json
 import re
 import subprocess
 import sys
 from pathlib import Path
-
-
-def hex6(color: str) -> str:
-    return color.lstrip("#")
+from paths import KITTY_CONFIG, WAL_COLORS
+from color_utils import hex6, load_colors
 
 
 def build_kitty_colors(colors: dict, special: dict) -> str:
@@ -62,7 +59,7 @@ def build_kitty_colors(colors: dict, special: dict) -> str:
 
 
 def resolve_paths():
-    colors_json = Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1] else Path.home() / ".cache/wal/colors.json"
+    colors_json = Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1] else WAL_COLORS
 
     if len(sys.argv) > 2 and sys.argv[2]:
         p = Path(sys.argv[2])
@@ -73,7 +70,7 @@ def resolve_paths():
         else:
             kitty_conf = p
     else:
-        kitty_conf = Path.home() / ".config/kitty/kitty.conf"
+        kitty_conf = KITTY_CONFIG
 
     return colors_json, kitty_conf
 
@@ -117,8 +114,7 @@ def main():
         print(f"Error: {colors_json} not found", file=sys.stderr)
         sys.exit(1)
 
-    with open(colors_json, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_colors(colors_json)
 
     colors_content = build_kitty_colors(data["colors"], data["special"])
 

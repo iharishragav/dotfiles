@@ -6,20 +6,21 @@ Generates <output_dir>/colors-wal.py with pywal palette and startpage settings,
 wires it into config.py if present, and reloads any running qutebrowser instance.
 """
 
-import json
 import subprocess
 import sys
 from pathlib import Path
+from color_utils import load_colors
+from paths import QUTEBROWSER_CONFIG, WAL_COLORS
 
 
 def main():
     colors_json_path = (
         Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1]
-        else Path.home() / ".cache/wal/colors.json"
+        else WAL_COLORS
     )
     output_dir = (
         Path(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2]
-        else Path.home() / ".config/qutebrowser"
+        else QUTEBROWSER_CONFIG
     )
 
     if not colors_json_path.exists():
@@ -28,8 +29,7 @@ def main():
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    with open(colors_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_colors(colors_json_path)
 
     bg = data["special"]["background"]
     fg = data["special"]["foreground"]

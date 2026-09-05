@@ -14,5 +14,16 @@ Item {
         function open(): void { Core.AppState.requestMorph("launcher"); }
         function close(): void { Core.AppState.closeMorph(); }
     }
-}
 
+    IpcHandler {
+        target: "notifications"
+        function notify(summary: string, body: string, urgency: string): void {
+            Core.AppState.addNotification(summary, body, urgency)
+            Core.AppState.requestMorph("notifications")
+        }
+        function clear(): void { Core.AppState.clearNotifications(); }
+        function toggle(): void { Core.AppState.requestMorph("notifications"); }
+        function open(): void { Core.AppState.requestMorph("notifications"); }
+        function close(): void { Core.AppState.closeMorph(); }
+    }
+}

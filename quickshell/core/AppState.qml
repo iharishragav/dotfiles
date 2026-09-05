@@ -6,7 +6,9 @@ QtObject {
     id: root
     property bool showBar: true
     property bool showDesktopWidgets: true
-    property string activePanel: ""
+    // Compatibility name for callers that still use the old panel property.
+    // The morph mode is the single shared surface state.
+    property alias activePanel: root.barMorph
     property var notifications: []
     property int notificationSerial: 0
     property bool notificationDrawerVisible: false
@@ -39,6 +41,15 @@ QtObject {
     }
     function closeMorph() { barMorph = "" }
     function requestMorph(name) { morphRequested(name) }
+    function runPowerAction(action) {
+        let command = ["true"]
+        if (action === "lock") command = ["hyprlock"]
+        else if (action === "sleep") command = ["systemctl", "suspend"]
+        else if (action === "reboot") command = ["systemctl", "reboot"]
+        else if (action === "shutdown") command = ["systemctl", "poweroff"]
+        closeMorph()
+        Quickshell.execDetached(command)
+    }
     function hideBarTemporarily(ms) {
         barHideTimer.interval = ms
         barTemporarilyHidden = true

@@ -72,7 +72,7 @@ Variants {
         visible: Local.AppState.showBar
 
         WlrLayershell.layer: WlrLayer.Top
-        WlrLayershell.namespace: "quickshell-bar"
+        WlrLayershell.namespace: Local.MenuStyle.namespace
         exclusionMode: ExclusionMode.Auto
 
         Rectangle {
@@ -113,10 +113,20 @@ Variants {
                         readonly property int cellHeight: 22
                         readonly property int cellSpacing: 2
                         readonly property int unit: cellWidth + cellSpacing
-                        width: 9 * unit - cellSpacing
+                        readonly property var workspaceList:
+                            (Hyprland.workspaces.values || [])
+                                .filter(w => w.id > 0)
+                                .sort((a, b) => a.id - b.id)
+                        width: workspaceList.length > 0
+                               ? workspaceList.length * unit - cellSpacing
+                               : 0
                         height: cellHeight
 
-                        readonly property int activeIndex: (Hyprland.focusedWorkspace?.id ?? 1) - 1
+                        readonly property int activeIndex: {
+                            const focusedId = Hyprland.focusedWorkspace?.id ?? 0;
+                            const index = workspaceList.findIndex(w => w.id === focusedId);
+                            return index >= 0 ? index : 0;
+                        }
 
                         property int previousIndex: 0
                         Component.onCompleted: previousIndex = activeIndex
@@ -167,27 +177,27 @@ Variants {
                             spacing: workspaces.cellSpacing
 
                             Repeater {
-                                model: 9
+                                model: workspaces.workspaceList
                                 Item {
                                     width: workspaces.cellWidth
                                     height: workspaces.cellHeight
 
-                                    property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
+                                    readonly property int workspaceNumber: modelData.id
                                     readonly property bool isActive: index === workspaces.activeIndex
 
                                     Text {
                                         anchors.centerIn: parent
-                                        text: index + 1
+                                        text: workspaceNumber
                                         font.family: Local.Colors.fontFamily
                                         font.pixelSize: 12
                                         font.bold: isActive
                                         color: isActive ? "#101018" : Local.Colors.foreground
-                                        opacity: isActive ? 1.0 : (ws ? 0.85 : 0.35)
+                                        opacity: isActive ? 1.0 : (modelData ? 0.85 : 0.35)
                                     }
 
                                     MouseArea {
                                         anchors.fill: parent
-                                        onClicked: Hyprland.dispatch("workspace " + (index + 1))
+                                        onClicked: Hyprland.dispatch("workspace " + workspaceNumber)
                                     }
                                 }
                             }
@@ -239,6 +249,7 @@ Variants {
                                 // { glyph: "\udb81\ude27", morph: "colorscheme" },
                                 // { glyph: "\uf028", morph: "volume" },
                                 // { glyph: "\uf293", morph: "bluetooth" },
+                                { glyph: "\uf1eb", morph: "wifi" },
                                 { glyph: "\uf0f3", morph: "notifications" },
                                 { glyph: "\uf011", morph: "power" }
                             ]
@@ -267,9 +278,7 @@ Variants {
                                     id: hoverArea
                                     anchors.fill: parent
                                     hoverEnabled: true
-                                    onClicked: modelData.morph === "notifications"
-                                        ? Quickshell.execDetached(["qs", "-p", Quickshell.shellDir, "ipc", "call", "notifications", "toggle"])
-                                        : win.triggerMorph(modelData.morph)
+                                    onClicked: win.triggerMorph(modelData.morph)
                                 }
                             }
                         }

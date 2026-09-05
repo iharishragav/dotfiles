@@ -9,6 +9,9 @@ end
 
 if status is-interactive
     # Starship custom prompt
+    if test -f $HOME/.config/starship-wal.toml
+        set -gx STARSHIP_CONFIG $HOME/.config/starship-wal.toml
+    end
     command -v starship &> /dev/null && starship init fish | source
 
     # Direnv + Zoxide
@@ -49,4 +52,3 @@ if status is-interactive
     set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
     source $cConf/user-config.fish 2> /dev/null
 end
-

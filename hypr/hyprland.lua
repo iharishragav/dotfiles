@@ -261,10 +261,6 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("qs -p /home/kamal/.config/quickshell
 
 --screen shot and record
 
--- Start full-screen recording
-hl.bind("CTRL + R",
-    hl.dsp.exec_cmd([[sh -c 'mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w screen -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"']]))
-
 -- Start partial-screen recording
 hl.bind("CTRL + SHIFT + R",
     hl.dsp.exec_cmd([[sh -c 'mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w region -region "$(slurp)" -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"']]))
@@ -315,26 +311,43 @@ hl.bind(mainMod .." + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action
 -- Workspaces
 
 hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "prev" }))
-hl.bind(mainMod .. " + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
+--hl.bind(mainMod .. " + ALT + right", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind(mainMod .. " + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
+--hl.bind(mainMod .. " + ALT + left", hl.dsp.focus({ workspace = "r-1" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "empty" }))
 
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ workspace = "r+1" }))
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ workspace = "r-1" }))
 
-for i = 1, 5 do
+ for i = 1, 5 do
     local key = i % 10
 
     hl.bind(mainMod .. " + " .. key,
-            hl.dsp.focus({ workspace = i }))
+        hl.dsp.focus({ workspace = i }))
 
     hl.bind(mainMod .. " + SHIFT + " .. key,
-            hl.dsp.window.move({ workspace = i }))
+        hl.dsp.window.move({ workspace = i }))
+end
+
+hl.bind(mainMod .. " + ALT + right", function()
+    local ws = hl.get_active_workspace().id
+
+    if ws < 5 then
+        hl.dispatch(hl.dsp.focus({ workspace = "r+1" }))
+    else
+        hl.dispatch(hl.dsp.focus({ workspace = 1 }))
     end
+end)
 
+hl.bind(mainMod .. " + ALT + left", function()
+    local ws = hl.get_active_workspace().id
 
-    -- Special workspaces
+    if ws > 1 then
+        hl.dispatch(hl.dsp.focus({ workspace = "r-1" }))
+    else
+        hl.dispatch(hl.dsp.focus({ workspace = 5 }))
+    end
+end)   -- Special workspaces
 
     hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
     hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))

@@ -11,18 +11,8 @@ import json
 import re
 import sys
 from pathlib import Path
-
-
-def hex_to_rgb(hex_str: str):
-    h = hex_str.lstrip("#")
-    if len(h) == 3:
-        h = "".join(c * 2 for c in h)
-    return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
-
-
-def ansi_rgb(hex_str: str) -> str:
-    r, g, b = hex_to_rgb(hex_str)
-    return f"\x1b[38;2;{r};{g};{b}m"
+from color_utils import ansi_rgb, load_colors
+from paths import FASTFETCH_CONFIG, WAL_COLORS
 
 
 def strip_jsonc(content: str) -> str:
@@ -77,7 +67,7 @@ def strip_jsonc(content: str) -> str:
 def resolve_paths():
     colors_json = (
         Path(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1]
-        else Path.home() / ".cache/wal/colors.json"
+        else WAL_COLORS
     )
 
     if len(sys.argv) > 2 and sys.argv[2]:
@@ -89,7 +79,7 @@ def resolve_paths():
         else:
             config_file = p
     else:
-        config_file = Path.home() / ".config/fastfetch/config.jsonc"
+        config_file = FASTFETCH_CONFIG
 
     return colors_json, config_file
 
@@ -199,8 +189,7 @@ def main():
         print(f"Error: {colors_json} not found", file=sys.stderr)
         sys.exit(1)
 
-    with open(colors_json, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_colors(colors_json)
 
     colors = data.get("colors", {})
     special = data.get("special", {})

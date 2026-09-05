@@ -27,6 +27,11 @@ import "../core" as Core
 Item {
     id: root
 
+    function notificationSize() {
+        const count = Math.min(3, Math.max(1, Core.AppState.notifications.length));
+        return { w: 480, h: 72 + count * 58 };
+    }
+
     function targetSize(name, screenWidth) {
         switch (name) {
             case "power":       return { w: 300, h: 100 };
@@ -34,7 +39,8 @@ Item {
             case "colorscheme": return { w: Math.min(screenWidth * 0.52, 760), h: 132 };
             case "launcher":    return { w: 900, h: 380 };
             case "clipboard":   return { w: 560, h: 380 };
-            case "recorder":   return { w: 300, h: 100 };
+            case "wifi":        return root.notificationSize();
+            case "notifications": return root.notificationSize();
             // case "wifi":   return { w: 300, h: 80 };
             default:            return { w: 280, h: 90 };
         }
@@ -55,12 +61,13 @@ Item {
             anchors { top: true; bottom: true; left: true; right: true }
             color: "transparent"
             WlrLayershell.layer: WlrLayer.Overlay
-            WlrLayershell.namespace: "quickshell-bar"
+            WlrLayershell.namespace: Core.MenuStyle.namespace
             exclusionMode: ExclusionMode.Ignore
             WlrLayershell.keyboardFocus: (win.active && (Core.AppState.barMorph === "power"
                                           || Core.AppState.barMorph === "launcher"
                                           || Core.AppState.barMorph === "clipboard"
-                                          || Core.AppState.barMorph === "recorder"
+                                          || Core.AppState.barMorph === "notifications"
+                                          || Core.AppState.barMorph === "wifi"
                                           || Core.AppState.barMorph === "wallpaper"))
                                          ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
             visible: win.active || closeAnim.running
@@ -153,8 +160,8 @@ Item {
                             // case "colorscheme": return colorschemeContent;
                             case "launcher":    return launcherContent;
                             case "clipboard":   return clipboardContent;
-                            case "recorder": return recorderContent;
-                            // case "notifications": return notificationContent;
+                            case "notifications": return notificationContent;
+                            case "wifi":        return wifiContent;
                             // case "wifi": return wifiContent;
                             default: return stubContent;
                         }
@@ -522,15 +529,7 @@ Item {
                                 id: hoverArea
                                 anchors.fill: parent
                                 hoverEnabled: true
-                                onClicked: {
-                                    Core.AppState.closeMorph();
-                                    let cmd = "true";
-                                    if (modelData.action === "lock") cmd = "hyprlock";
-                                    else if (modelData.action === "sleep") cmd = "systemctl suspend";
-                                    else if (modelData.action === "reboot") cmd = "systemctl reboot";
-                                    else if (modelData.action === "shutdown") cmd = "systemctl poweroff";
-                                    Quickshell.execDetached(["bash", "-c", cmd]);
-                                }
+                                onClicked: Core.AppState.runPowerAction(modelData.action)
                             }
                         }
                     }
@@ -538,137 +537,6 @@ Item {
                     Keys.onEscapePressed: Core.AppState.closeMorph()
                 }
             }
-     Component {
-    id: recorderContent
-
-    Item {
-        id: recorderRoot
-        anchors.fill: parent
-
-        property bool recording: false
-        property int elapsedSeconds: 0
-
-        Timer {
-            id: recorderTimer
-            interval: 1000
-            repeat: true
-            running: recorderRoot.recording
-
-            onTriggered: {
-                recorderRoot.elapsedSeconds++;
-            }
-        }
-
-        Column {
-            anchors.fill: parent
-            spacing: 8
-
-            Text {
-                text: "Recorder"
-                color: Core.Colors.foreground
-                font.family: Core.Colors.fontFamily
-                font.pixelSize: 12
-                font.bold: true
-            }
-
-            Rectangle {
-                width: parent.width
-                height: 44
-                radius: 10
-
-                color: recorderMouse.containsMouse
-                       ? Qt.rgba(
-                             Core.Colors.accent.r,
-                             Core.Colors.accent.g,
-                             Core.Colors.accent.b,
-                             0.25
-                         )
-                       : Qt.rgba(1, 1, 1, 0.05)
-
-                border.width: 1
-                border.color: recorderRoot.recording
-                              ? "#ff5555"
-                              : Core.Colors.accent
-
-                Behavior on color {
-                    ColorAnimation { duration: 100 }
-                }
-
-                Row {
-                    anchors.centerIn: parent
-                    spacing: 10
-
-                    Text {
-                        text: recorderRoot.recording ? "\uf04d" : "\uf03d"
-                        color: recorderRoot.recording
-                               ? "#ff5555"
-                               : Core.Colors.foreground
-                        font.family: "Symbols Nerd Font"
-                        font.pixelSize: 16
-                    }
-
-                    Text {
-                        text: recorderRoot.recording
-                              ? Qt.formatTime(
-                                    new Date(
-                                        0,
-                                        0,
-                                        0,
-                                        0,
-                                        0,
-                                        recorderRoot.elapsedSeconds
-                                    ),
-                                    recorderRoot.elapsedSeconds >= 3600
-                                        ? "hh:mm:ss"
-                                        : "mm:ss"
-                                )
-                              : "Record"
-
-                        color: Core.Colors.foreground
-                        font.family: Core.Colors.fontFamily
-                        font.pixelSize: 11
-                    }
-                }
-
-                MouseArea {
-                    id: recorderMouse
-                    anchors.fill: parent
-                    hoverEnabled: true
-
-                    onClicked: {
-                        if (recorderRoot.recording) {
-
-                            Quickshell.execDetached([
-                                "bash",
-                                "-c",
-                                "pkill -SIGINT -x gpu-screen-recorder"
-                            ]);
-
-                            recorderRoot.recording = false;
-                            recorderRoot.elapsedSeconds = 0;
-
-                        } else {
-
-                            Quickshell.execDetached([
-                                "bash",
-                                "-c",
-                                "mkdir -p \"$HOME/Videos/Recordings\" && " +
-                                "gpu-screen-recorder " +
-                                "-w screen " +
-                                "-f 60 " +
-                                "-o \"$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4\""
-                            ]);
-
-                            recorderRoot.recording = true;
-                            recorderRoot.elapsedSeconds = 0;
-                        }
-                    }
-                 }
-            }
-        }
-    }
-}
-
             // Component {
                 // id: volumeContent
                 // ColumnLayout {
@@ -865,19 +733,443 @@ Item {
                   }
                 }
 
-            // Component {
-                // id: notificationContent
-                // Column {
-                    // anchors.fill: parent; spacing: 6
-                    // Row { Text { text: "NOTIFICATIONS"; color: Core.Colors.foreground; font.bold: true; font.family: Core.Colors.fontFamily } }
-                    // ListView { width: parent.width; height: parent.height - 24; clip: true; model: Core.AppState.notifications
-                        // delegate: Rectangle { width: parent.width; height: 38; radius: 10; color: Qt.rgba(Core.Colors.background.r,Core.Colors.background.g,Core.Colors.background.b,.6); border.width: 1; border.color: Core.Colors.accent
-                            // Text { anchors.fill: parent; anchors.margins: 8; verticalAlignment: Text.AlignVCenter; text: modelData.summary + (modelData.body ? " — " + modelData.body : ""); color: Core.Colors.foreground; elide: Text.ElideRight; font.family: Core.Colors.fontFamily }
-                            // MouseArea { anchors.fill: parent; onClicked: Core.AppState.dismissNotification(modelData.id) }
-                        // }
-                    // }
-                // }
-            // }
+            Component {
+                id: notificationContent
+
+                ColumnLayout {
+                    anchors.fill: parent
+                    spacing: 8
+
+                    RowLayout {
+                        Layout.fillWidth: true
+
+                        Text {
+                            text: "NOTIFICATIONS"
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 12
+                            font.bold: true
+                            Layout.fillWidth: true
+                        }
+
+                        Text {
+                            text: "CLEAR ALL"
+                            color: Core.Colors.accent
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 10
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: Core.AppState.clearNotifications()
+                            }
+                        }
+                    }
+
+                    ListView {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        clip: true
+                        spacing: 4
+                        model: Core.AppState.notifications.slice(0, 3)
+
+                        delegate: Rectangle {
+                            required property var modelData
+                            width: ListView.view.width
+                            height: 54
+                            radius: 10
+                            color: Qt.rgba(1, 1, 1, 0.06)
+                            border.width: 1
+                            border.color: Core.Colors.muted
+
+                            Column {
+                                anchors.left: parent.left
+                                anchors.right: dismiss.left
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.leftMargin: 10
+                                spacing: 2
+
+                                Text {
+                                    text: modelData.summary
+                                    color: Core.Colors.foreground
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 11
+                                    font.bold: true
+                                    elide: Text.ElideRight
+                                    width: parent.width
+                                }
+
+                                Text {
+                                    text: modelData.body
+                                    color: Core.Colors.muted
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 10
+                                    elide: Text.ElideRight
+                                    width: parent.width
+                                }
+                            }
+
+                            Text {
+                                id: dismiss
+                                anchors.right: parent.right
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.rightMargin: 10
+                                text: "×"
+                                color: Core.Colors.accent
+                                font.pixelSize: 18
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: Core.AppState.dismissNotification(modelData.id)
+                                }
+                            }
+                        }
+
+                        Text {
+                            anchors.centerIn: parent
+                            visible: Core.AppState.notifications.length === 0
+                            text: "NO NOTIFICATIONS"
+                            color: Core.Colors.muted
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 10
+                        }
+                    }
+                }
+            }
+// 
+            Component {
+                id: wifiContent
+
+                Item {
+                    id: wifiRoot
+                    anchors.fill: parent
+                    focus: true
+                    property var connected: null
+                    property var networks: []
+                    property var saved: []
+                    property string view: "default"
+                    property string promptSsid: ""
+                    property string promptError: ""
+
+                    function secure(security) {
+                        const value = String(security || "").trim().toLowerCase();
+                        return value.length > 0 && value !== "--" && value !== "open";
+                    }
+                    function parseWifi(text) {
+                        const rows = [];
+                        for (const line of text.split("\n")) {
+                            const fields = line.split(":");
+                            if (fields.length < 4 || fields[1].trim().length === 0) continue;
+                            rows.push({ inUse: fields[0].trim(), ssid: fields[1], security: fields[2], signal: Number(fields[3]) || 0 });
+                        }
+                        connected = rows.find(item => item.inUse === "*") || null;
+                        networks = rows.filter(item => item.inUse !== "*");
+                    }
+                    function parseSaved(text) {
+                        const rows = [];
+                        for (const line of text.split("\n")) {
+                            const fields = line.split(":");
+                            if (fields.length >= 3 && fields[1] === "802-11-wireless") rows.push({ ssid: fields[0], security: "saved", signal: 0 });
+                        }
+                        saved = rows;
+                    }
+                    function scan() { wifiScan.running = true; wifiSaved.running = true; }
+                    function refresh() { wifiRescan.running = true; wifiSaved.running = true; }
+                    function choose(network) {
+                        if (!network) return;
+                        if (network.inUse === "*") view = "connected";
+                        else if (secure(network.security)) {
+                            promptSsid = network.ssid; promptError = ""; view = "prompt"; passwordInput.forceActiveFocus();
+                        } else connect(network.ssid, "");
+                    }
+                    function connect(ssid, password) {
+                        wifiConnect.command = password.length > 0
+                            ? ["nmcli", "device", "wifi", "connect", ssid, "password", password]
+                            : ["nmcli", "device", "wifi", "connect", ssid];
+                        wifiConnect.running = true;
+                    }
+
+                    Component.onCompleted: scan()
+                    Keys.onEscapePressed: {
+                        if (view === "default") Core.AppState.closeMorph();
+                        else view = "default";
+                        event.accepted = true;
+                    }
+
+                    Process {
+                        id: wifiScan
+                        command: ["nmcli", "-t", "-e", "no", "-f", "IN-USE,SSID,SECURITY,SIGNAL", "device", "wifi", "list"]
+                        stdout: StdioCollector { onStreamFinished: wifiRoot.parseWifi(this.text) }
+                    }
+                    Process {
+                        id: wifiRescan
+                        command: ["nmcli", "device", "wifi", "rescan"]
+                        onExited: wifiScan.running = true
+                    }
+                    Process {
+                        id: wifiSaved
+                        command: ["nmcli", "-t", "-e", "no", "-f", "NAME,TYPE,DEVICE", "connection", "show"]
+                        stdout: StdioCollector { onStreamFinished: wifiRoot.parseSaved(this.text) }
+                    }
+                    Process {
+                        id: wifiConnect
+                        onExited: (exitCode, exitStatus) => {
+                            if (exitCode === 0) Core.AppState.closeMorph();
+                            else { wifiRoot.promptError = "Connection failed"; wifiFailure.restart(); }
+                        }
+                    }
+                    Process {
+                        id: wifiDisconnect
+                        command: wifiRoot.connected ? ["nmcli", "connection", "down", "id", wifiRoot.connected.ssid] : []
+                        onExited: Core.AppState.closeMorph()
+                    }
+                    Timer { id: wifiFailure; interval: 1100; onTriggered: Core.AppState.closeMorph() }
+
+                    ColumnLayout {
+                        anchors.fill: parent
+                        spacing: 6
+                        visible: wifiRoot.view !== "prompt" && wifiRoot.view !== "connected"
+                        RowLayout {
+                            Layout.fillWidth: true
+                            Text {
+                                text: wifiRoot.view === "default" ? "WIFI" : wifiRoot.view.toUpperCase()
+                                color: Core.Colors.foreground
+                                font.family: Core.Colors.fontFamily
+                                font.bold: true
+                                Layout.fillWidth: true
+                            }
+                            Text {
+                                text: wifiRoot.view === "default" ? "" : "BACK"
+                                color: Core.Colors.accent
+                                font.family: Core.Colors.fontFamily
+                                font.pixelSize: 10
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: wifiRoot.view = "default"
+                                }
+                            }
+                        }
+                        Rectangle {
+                            Layout.fillWidth: true
+                            height: 1
+                            color: Core.Colors.accent
+                            opacity: 0.35
+                        }
+                        Rectangle {
+                            visible: wifiRoot.view === "default" && wifiRoot.connected !== null
+                            Layout.fillWidth: true
+                            height: 38
+                            radius: 10
+                            color: Qt.rgba(Core.Colors.accent.r, Core.Colors.accent.g, Core.Colors.accent.b, 0.16)
+                            border.width: 1
+                            border.color: Core.Colors.accent
+                            RowLayout {
+                                anchors.fill: parent
+                                anchors.margins: 9
+                                Text {
+                                    text: "●  " + wifiRoot.connected.ssid
+                                    color: Core.Colors.foreground
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 10
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                }
+                                Text {
+                                    text: "DETAILS"
+                                    color: Core.Colors.muted
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 9
+                                    MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: wifiRoot.view = "connected"
+                                    }
+                                }
+                            }
+                        }
+                        Rectangle {
+                            visible: wifiRoot.view === "default"
+                            Layout.fillWidth: true
+                            height: 1
+                            color: Core.Colors.accent
+                            opacity: 0.25
+                        }
+                        ListView {
+                            id: wifiList
+                            visible: wifiRoot.view !== "default" || wifiRoot.connected === null
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            clip: true
+                            spacing: 4
+                            model: wifiRoot.view === "default" ? wifiRoot.networks.slice(0, 4) : (wifiRoot.view === "all" ? wifiRoot.networks : wifiRoot.saved)
+                            delegate: Rectangle {
+                                width: wifiList.width
+                                height: 32
+                                radius: 10
+                                color: wifiRow.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : Qt.rgba(1, 1, 1, 0.05)
+                                border.width: 1
+                                border.color: Core.Colors.muted
+                                RowLayout {
+                                    anchors.fill: parent
+                                    anchors.leftMargin: 10
+                                    anchors.rightMargin: 10
+                                    Text {
+                                        text: modelData.ssid
+                                        color: Core.Colors.foreground
+                                        font.family: Core.Colors.fontFamily
+                                        font.pixelSize: 10
+                                        elide: Text.ElideRight
+                                        Layout.fillWidth: true
+                                    }
+                                    Text {
+                                        visible: modelData.signal > 0
+                                        text: modelData.signal + "%"
+                                        color: Core.Colors.muted
+                                        font.family: Core.Colors.fontFamily
+                                        font.pixelSize: 9
+                                    }
+                                }
+                                MouseArea {
+                                    id: wifiRow
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                    onClicked: wifiRoot.choose(modelData)
+                                }
+                            }
+                        }
+                        Row {
+                            visible: wifiRoot.view === "default"
+                            Layout.alignment: Qt.AlignHCenter
+                            spacing: 4
+                            Repeater {
+                                model: [
+                                    { label: "↻", action: "refresh" },
+                                    { label: "ALL", action: "all" },
+                                    { label: "SAVED", action: "saved" }
+                                ]
+                                delegate: Rectangle {
+                                    width: modelData.action === "refresh" ? 32 : 60
+                                    height: 26
+                                    radius: 10
+                                    color: wifiAction.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
+                                    border.width: 1
+                                    border.color: Core.Colors.accent
+                                    Text {
+                                        anchors.centerIn: parent
+                                        text: modelData.label
+                                        color: Core.Colors.accent
+                                        font.family: Core.Colors.fontFamily
+                                        font.pixelSize: 9
+                                        font.bold: true
+                                    }
+                                    MouseArea {
+                                        id: wifiAction
+                                        anchors.fill: parent
+                                        hoverEnabled: true
+                                        onClicked: {
+                                            if (modelData.action === "refresh") wifiRoot.refresh()
+                                            else wifiRoot.view = modelData.action
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ColumnLayout {
+                        anchors.fill: parent
+                        spacing: 8
+                        visible: wifiRoot.view === "prompt" || wifiRoot.view === "connected"
+                        Text {
+                            text: wifiRoot.view === "connected" ? wifiRoot.connected.ssid : "CONNECT TO " + wifiRoot.promptSsid
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 12
+                            font.bold: true
+                        }
+                        Text {
+                            visible: wifiRoot.view === "connected"
+                            text: "Connected\nSignal: " + wifiRoot.connected.signal + "%"
+                            color: Core.Colors.muted
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 10
+                        }
+                        TextInput {
+                            id: passwordInput
+                            visible: wifiRoot.view === "prompt"
+                            Layout.fillWidth: true
+                            height: 32
+                            echoMode: TextInput.Password
+                            color: Core.Colors.foreground
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 11
+                            onAccepted: wifiRoot.connect(wifiRoot.promptSsid, text)
+                            Rectangle {
+                                anchors.fill: parent
+                                z: -1
+                                radius: 10
+                                color: Qt.rgba(1, 1, 1, 0.06)
+                                border.width: 1
+                                border.color: Core.Colors.accent
+                            }
+                        }
+                        Text {
+                            visible: wifiRoot.promptError.length > 0
+                            text: wifiRoot.promptError
+                            color: Core.Colors.accent
+                            font.family: Core.Colors.fontFamily
+                            font.pixelSize: 10
+                        }
+                        Row {
+                            Layout.alignment: Qt.AlignHCenter
+                            spacing: 4
+                            Rectangle {
+                                width: 78
+                                height: 28
+                                radius: 10
+                                color: wifiPrompt.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
+                                border.width: 1
+                                border.color: Core.Colors.accent
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: wifiRoot.view === "connected" ? "DISCONNECT" : "CONNECT"
+                                    color: Core.Colors.accent
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 9
+                                }
+                                MouseArea {
+                                    id: wifiPrompt
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                    onClicked: {
+                                        if (wifiRoot.view === "connected") wifiDisconnect.running = true
+                                        else wifiRoot.connect(wifiRoot.promptSsid, passwordInput.text)
+                                    }
+                                }
+                            }
+                            Rectangle {
+                                width: 52
+                                height: 28
+                                radius: 10
+                                color: wifiBack.containsMouse ? Qt.rgba(1, 1, 1, 0.12) : "transparent"
+                                border.width: 1
+                                border.color: Core.Colors.muted
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: "BACK"
+                                    color: Core.Colors.muted
+                                    font.family: Core.Colors.fontFamily
+                                    font.pixelSize: 9
+                                }
+                                MouseArea {
+                                    id: wifiBack
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                    onClicked: wifiRoot.view = "default"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 // 
             // Component {
     // id: wifiContent

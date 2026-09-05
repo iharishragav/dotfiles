@@ -4,11 +4,12 @@
 #
 # >>> EDIT HERE: swap in your own shortcut list. Format: (title, url, icon).
 
-import json
 import random
 import subprocess
 import sys
 from pathlib import Path
+from color_utils import load_colors
+from paths import QUTEBROWSER_CONFIG, STARTPAGE_WALLPAPERS, WAL_COLORS
 
 
 SHORTCUTS = [
@@ -91,7 +92,7 @@ def fill(template, mapping):
 
 def generate_startpage_wallpapers(base_color, background_color):
     wallpaper_dir = (
-        Path.home() / ".cache/quickshell-rice/startpage-wallpapers"
+        STARTPAGE_WALLPAPERS
     )
     wallpaper_dir.mkdir(parents=True, exist_ok=True)
 
@@ -165,7 +166,7 @@ def main():
     colors_json_path = (
         Path(sys.argv[1])
         if len(sys.argv) > 1 and sys.argv[1]
-        else Path.home() / ".cache/wal/colors.json"
+        else WAL_COLORS
     )
 
     wall = (
@@ -177,7 +178,7 @@ def main():
     out_dir = (
         Path(sys.argv[3])
         if len(sys.argv) > 3 and sys.argv[3]
-        else Path.home() / ".config/qutebrowser"
+        else QUTEBROWSER_CONFIG
     )
 
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -190,8 +191,7 @@ def main():
         )
         sys.exit(1)
 
-    with open(colors_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_colors(colors_json_path)
 
     bg = data["special"]["background"]
     fg = data["special"]["foreground"]

@@ -5,9 +5,8 @@ Bar 1.0 widgets/Bar.qml
 BarMorph 1.0 widgets/BarMorph.qml
 Dock 1.0 widgets/Dock.qml
 HoloRings 1.0 widgets/HoloRings.qml
-NotificationCenter 1.0 widgets/NotificationCenter.qml
 AppLauncher 1.0 widgets/AppLauncher.qml
+WifiMenu 1.0 widgets/WifiMenu.qml
 ClipboardHistory 1.0 widgets/ClipboardHistory.qml
 WallpaperSelector 1.0 widgets/WallpaperSelector.qml
-Recorder 1.0 widgets/Recorder.qml
 ArchSymbol 1.0 widgets/ArchSymbol.qml
