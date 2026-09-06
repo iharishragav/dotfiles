@@ -19,4 +19,5 @@ function dotpush
     
     git commit -m "$comment"
     git push
+    cd
 end
