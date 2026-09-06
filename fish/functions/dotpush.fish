@@ -1,8 +1,5 @@
 function dotpush
     set comment "$argv"
-    
-    confbak -c "$comment"
-    
     rm -rf ~/github/dotfiles/*
     
     cp ~/.config/starship.toml ~/github/dotfiles/
@@ -11,7 +8,7 @@ function dotpush
     cp -r ~/.config/kitty ~/github/dotfiles/
     cp -r ~/.config/fastfetch ~/github/dotfiles/
     cp -r ~/.config/qutebrowser ~/github/dotfiles/
-    
+    cp -r ~/.config/quickshell/ ~/github/quickshell
     cd ~/github/dotfiles
     
     git add -A
