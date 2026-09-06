@@ -9,6 +9,7 @@ function dotpush
     cp -r ~/.config/fastfetch ~/github/dotfiles/
     cp -r ~/.config/qutebrowser ~/github/dotfiles/
     cp -r ~/.config/quickshell/ ~/github/dotfiles/
+    cp -r ~/.config/nvim ~/github/dotfiles/
     cd ~/github/dotfiles
     
     git add -A
