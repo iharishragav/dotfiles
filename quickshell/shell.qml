@@ -14,6 +14,7 @@ ShellRoot {
     WifiMenu {}
     ArchSymbol{}
     Dock{}
+    TodoBoard{}
     Variants {
 
         model: Quickshell.screens

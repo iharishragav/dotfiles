@@ -31,17 +31,17 @@ QtObject {
 
     // Width of the visualizer.
     
-    readonly property int visualizerWidth:  700
+    readonly property int visualizerWidth:  1200
 
     // Maximum visualizer area.
-    readonly property int visualizerHeight: 600
+    readonly property int visualizerHeight: 500
 
     // Maximum audio peak height.
     //
     // Lower = shorter peaks.
     // Higher = taller peaks.
     
-    readonly property real maximumHeight: 50
+    readonly property real maximumHeight: 60
 
     // Minimum height when audio is quiet.
     
@@ -98,7 +98,7 @@ QtObject {
     // 96 = very detailed
     // 128 = extremely detailed
     
-    readonly property int barCount: 64
+    readonly property int barCount: 55
 
 
     // ============================================================
@@ -112,7 +112,7 @@ QtObject {
     // 1.5 = strong
     // 2.0 = very reactive
     
-    readonly property real sensitivity: 1.5
+    readonly property real sensitivity: 1.2
 
 
     // ============================================================
@@ -127,7 +127,7 @@ QtObject {
     // For trap / fast hats:
     // 0.015 - 0.035
     
-    readonly property real attack: 0.015
+    readonly property real attack: 0.035
 
 
     // How quickly peaks fall.
@@ -156,7 +156,7 @@ QtObject {
 
     // Mid frequencies.
     
-    readonly property real midBoost: 1.00
+    readonly property real midBoost: 2.00
 
     // Treble / hi-hats / high frequency percussion.
     
@@ -174,7 +174,7 @@ QtObject {
     // 2.0 = sharp
     // 2.5 = very sharp
     
-    readonly property real ridgeSharpness: 1.70
+    readonly property real ridgeSharpness: 2.5
 
 
     // Blends neighboring bars.
@@ -214,21 +214,21 @@ QtObject {
     // Lower = more bass area.
     // Higher = more even distribution.
     
-    readonly property real frequencyCurve: 0.82
+    readonly property real frequencyCurve: 0.5
 
 
     // How strongly bass affects the center.
     
-    readonly property real centerBassWeight: 0.45
+    readonly property real centerBassWeight: 0.70
 
     // Extra bass energy added directly to the center.
     
-    readonly property real centerBassEnergy: 0.35
+    readonly property real centerBassEnergy: 0.7
 
 
     // How strongly treble is emphasized at the edges.
     
-    readonly property real edgeHighWeight: 1.00
+    readonly property real edgeHighWeight: 0.50
 
 
     // ============================================================

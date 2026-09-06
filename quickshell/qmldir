@@ -10,3 +10,4 @@ WifiMenu 1.0 widgets/WifiMenu.qml
 ClipboardHistory 1.0 widgets/ClipboardHistory.qml
 WallpaperSelector 1.0 widgets/WallpaperSelector.qml
 ArchSymbol 1.0 widgets/ArchSymbol.qml
+TodoBoard 1.0 widgets/TodoBoard.qml

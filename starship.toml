@@ -61,6 +61,7 @@ utc_time_offset = "local"
 style = "italic dimmed white"
 
 [battery]
+disabled = false
 format = "[ $percentage $symbol]($style)"
 full_symbol = "█"
 charging_symbol = "[↑](italic bold green)"
@@ -79,6 +80,10 @@ style = "italic dimmed bright-purple"
 [[battery.display]]
 threshold = 70
 style = "italic dimmed yellow"
+
+[[battery.display]]
+threshold = 100
+style = "italic dimmed white"
 
 [git_branch]
 format = " [$branch(:$remote_branch)]($style)"

@@ -1,6 +1,7 @@
 pragma Singleton
 import QtQuick
 import Quickshell
+import Quickshell.Io
 
 QtObject {
     id: root
@@ -10,6 +11,7 @@ QtObject {
     // The morph mode is the single shared surface state.
     property alias activePanel: root.barMorph
     property var notifications: []
+    property var todos: []
     property int notificationSerial: 0
     property bool notificationDrawerVisible: false
 
@@ -29,6 +31,46 @@ QtObject {
 
     signal morphRequested(string name)
     signal morphClosed(string screenName)
+
+    property Process todoReader: Process {
+        command: ["python3", Quickshell.shellDir + "/scripts/todo-store.py", "read"]
+        stdout: StdioCollector {
+            onStreamFinished: root.applyTodos(this.text)
+        }
+    }
+    property Process todoMutation: Process {
+        command: ["true"]
+        stdout: StdioCollector {
+            onStreamFinished: root.loadTodos()
+        }
+    }
+
+    Component.onCompleted: root.loadTodos()
+
+    function loadTodos() {
+        todoReader.running = false
+        todoReader.running = true
+    }
+
+    function applyTodos(raw) {
+        try {
+            const parsed = JSON.parse(raw || "[]")
+            todos = Array.isArray(parsed) ? parsed : []
+        } catch (error) {
+            console.warn("TodoBoard: failed to parse todo store", error)
+            todos = []
+        }
+    }
+
+    function checkTodo(id) {
+        todoMutation.command = ["python3", Quickshell.shellDir + "/scripts/todo-store.py", "check", "--id", String(id)]
+        todoMutation.running = true
+    }
+
+    function markTodoNotified(id) {
+        todoMutation.command = ["python3", Quickshell.shellDir + "/scripts/todo-store.py", "notify", "--id", String(id)]
+        todoMutation.running = true
+    }
 
     function openMorph(name, originX, originY, originWidth, originHeight, screenName, screenHeight) {
         morphOriginX = originX

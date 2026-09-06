@@ -262,7 +262,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("qs -p /home/kamal/.config/quickshell
 --screen shot and record
 
 -- Start partial-screen recording
-hl.bind("CTRL + SHIFT + R",
+hl.bind(mainMod .."+SHIFT + R",
     hl.dsp.exec_cmd([[sh -c '
         mkdir -p "$HOME/Videos/Recordings"
         region=$(slurp | sed -E "s/^([0-9]+),([0-9]+) ([0-9]+x[0-9]+)$/\3+\1+\2/")
@@ -278,7 +278,7 @@ hl.bind("CTRL + SHIFT + X",
     hl.dsp.exec_cmd([[pkill -SIGINT -f 'gpu-screen-recorder']]))
 
 -- Toggle partial-screen recording
-hl.bind("CTRL + R",
+hl.bind(mainMod .."+ R",
     hl.dsp.exec_cmd([[sh -c '
         if pgrep -f "gpu-screen-recorder" >/dev/null; then
             pkill -SIGINT -f "gpu-screen-recorder"

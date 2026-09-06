@@ -3,22 +3,27 @@ function dotfetch
     
     git pull
     
+    mv ~/.config/starship.toml ~/.config/starship.toml.bak
     cp ~/github/dotfiles/starship.toml ~/.config/
     
-    rm -rf ~/.config/hypr
+    mv ~/.config/hypr ~/.config/hypr-bak
     cp -r ~/github/dotfiles/hypr ~/.config/
     
-    rm -rf ~/.config/fish
+    mv ~/.config/fish ~/.config/fish-bak
     cp -r ~/github/dotfiles/fish ~/.config/
     
-    rm -rf ~/.config/kitty
+    mv ~/.config/kitty ~/.config/kitty-bak
     cp -r ~/github/dotfiles/kitty ~/.config/
     
-    rm -rf ~/.config/fastfetch
+    mv ~/.config/fastfetch ~/.config/fastfetch-bak
     cp -r ~/github/dotfiles/fastfetch ~/.config/
     
-    rm -rf ~/.config/qutebrowser
+    mv ~/.config/quickshell/ ~/.config/quickshell-bak
+    cp -r ~/github/dotfiles/quickshell/ ~/.config/quickshell/
+    
+    mv ~/.config/qutebrowser/ ~/.config/qutebrowser-bak
     cp -r ~/github/dotfiles/qutebrowser ~/.config/
     
     echo "Dotfiles fetched and replaced."
+    cd
 end
