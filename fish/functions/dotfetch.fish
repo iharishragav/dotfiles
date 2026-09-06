@@ -1,31 +1,69 @@
 function dotfetch
-    cd ~/github/dotfiles
+    set -l repo ~/github/dotfiles
+    set -l backup_root ~/.config/dotfiles-backups
+    set -l timestamp (date "+%Y-%m-%d_%H-%M-%S")
+    set -l backup $backup_root/$timestamp
+    
+    echo "Updating dotfiles repository..."
+    
+    cd $repo
     
     git pull
-    rm -rf ~/.config/starship.toml.bak
-    mv ~/.config/starship.toml ~/.config/starship.toml.bak
-    cp ~/github/dotfiles/starship.toml ~/.config/
+    or begin
+        echo "ERROR: git pull failed. Nothing was changed."
+        cd ~
+        return 1
+    end
     
-    rm -rf ~/.config/hypr-bak
-    mv ~/.config/hypr ~/.config/hypr-bak
-    cp -r ~/github/dotfiles/hypr ~/.config/
-    rm -rf ~/.config/fish-bak/
-    mv ~/.config/fish ~/.config/fish-bak
-    cp -r ~/github/dotfiles/fish ~/.config/
-    rm -rf ~/.config/kitty-bak/
-    mv ~/.config/kitty ~/.config/kitty-bak
-    cp -r ~/github/dotfiles/kitty ~/.config/
-    rm -rf ~/.config/fastfetch-bak/
-    mv ~/.config/fastfetch ~/.config/fastfetch-bak
-    cp -r ~/github/dotfiles/fastfetch ~/.config/
-    rm -rf ~/.config/quickshell-bak/
-    mv ~/.config/quickshell/ ~/.config/quickshell-bak
-    cp -r ~/github/dotfiles/quickshell/ ~/.config/quickshell/
-    rm -rf ~/.config/qutebrowser-bak/
-    mv ~/.config/qutebrowser/ ~/.config/qutebrowser-bak
-    cp -r ~/github/dotfiles/qutebrowser ~/.config/
-    rm -rf ~/.config/nvim-bak/
-    mv ~/.config/nvim ~/.config/nvim-bak
-    echo "Dotfiles fetched and replaced."
-    cd
+    echo
+    echo "Creating backup:"
+    echo $backup
+    
+    mkdir -p $backup
+    
+    # Backup current configuration.
+    cp -r ~/.config/hypr $backup/ || return 1
+    cp -r ~/.config/fish $backup/ || return 1
+    cp -r ~/.config/kitty $backup/ || return 1
+    cp -r ~/.config/fastfetch $backup/ || return 1
+    cp -r ~/.config/qutebrowser $backup/ || return 1
+    cp -r ~/.config/quickshell $backup/ || return 1
+    cp -r ~/.config/nvim $backup/ || return 1
+    cp ~/.config/starship.toml $backup/ || return 1
+    
+    echo "Backup created."
+    
+    echo
+    echo "Installing dotfiles..."
+    
+    # Replace configurations.
+    rm -rf ~/.config/hypr
+    cp -r $repo/hypr ~/.config/ || return 1
+    
+    rm -rf ~/.config/fish
+    cp -r $repo/fish ~/.config/ || return 1
+    
+    rm -rf ~/.config/kitty
+    cp -r $repo/kitty ~/.config/ || return 1
+    
+    rm -rf ~/.config/fastfetch
+    cp -r $repo/fastfetch ~/.config/ || return 1
+    
+    rm -rf ~/.config/qutebrowser
+    cp -r $repo/qutebrowser ~/.config/ || return 1
+    
+    rm -rf ~/.config/quickshell
+    cp -r $repo/quickshell ~/.config/ || return 1
+    
+    rm -rf ~/.config/nvim
+    cp -r $repo/nvim ~/.config/ || return 1
+    
+    rm -f ~/.config/starship.toml
+    cp $repo/starship.toml ~/.config/ || return 1
+    
+    echo
+    echo "Dotfiles fetched successfully."
+    echo "Backup: $backup"
+    
+    cd ~
 end
