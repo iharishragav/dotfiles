@@ -9,7 +9,7 @@ function dotfetch
     rm -rf ~/.config/hypr-bak
     mv ~/.config/hypr ~/.config/hypr-bak
     cp -r ~/github/dotfiles/hypr ~/.config/
-    rm -rf ~/.config/fish.bak/
+    rm -rf ~/.config/fish-bak/
     mv ~/.config/fish ~/.config/fish-bak
     cp -r ~/github/dotfiles/fish ~/.config/
     rm -rf ~/.config/kitty-bak/
