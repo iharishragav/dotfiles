@@ -21,7 +21,8 @@ c.content.javascript.enabled = True
 
 # Cookies
 c.content.cookies.accept = "all"
-
+c.content.local_content_can_access_remote_urls = True
+c.content.local_content_can_access_file_urls = True
 # Images
 c.content.images = True
 

@@ -30,7 +30,7 @@ hl.monitor({
 
 local terminal    = "kitty"
 local fileManager = "thunar"
-local menu        = "hyprlauncher"
+--local menu        = "hyprlauncher"
 local browser     = "qutebrowser"
 local music = "elisa"
 local notes = "obsidian"
@@ -246,7 +246,7 @@ hl.bind("ALT + F4", hl.dsp.exec_cmd("systemctl suspend"))
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+--hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. "+ CTRL+ O", hl.dsp.exec_cmd(code))
@@ -263,17 +263,35 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("qs -p /home/kamal/.config/quickshell
 
 -- Start partial-screen recording
 hl.bind("CTRL + SHIFT + R",
-    hl.dsp.exec_cmd([[sh -c 'mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w region -region "$(slurp)" -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"']]))
-
+    hl.dsp.exec_cmd([[sh -c '
+        mkdir -p "$HOME/Videos/Recordings"
+        region=$(slurp | sed -E "s/^([0-9]+),([0-9]+) ([0-9]+x[0-9]+)$/\3+\1+\2/")
+        [ -n "$region" ] || exit 0
+        gpu-screen-recorder \
+            -w "$region" \
+            -f 60 \
+            -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"
+    ']]))
 
 -- Stop recording
 hl.bind("CTRL + SHIFT + X",
     hl.dsp.exec_cmd([[pkill -SIGINT -f 'gpu-screen-recorder']]))
 
--- Partial-screen recording: select an area with the mouse
+-- Toggle partial-screen recording
 hl.bind("CTRL + R",
-    hl.dsp.exec_cmd([[sh -c 'if pgrep -x gpu-screen-recorder >/dev/null; then pkill -SIGINT -x gpu-screen-recorder; else mkdir -p "$HOME/Videos/Recordings" && gpu-screen-recorder -w region -region "$(slurp)" -f 60 -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"; fi']]))
-
+    hl.dsp.exec_cmd([[sh -c '
+        if pgrep -f "gpu-screen-recorder" >/dev/null; then
+            pkill -SIGINT -f "gpu-screen-recorder"
+        else
+            mkdir -p "$HOME/Videos/Recordings"
+            region=$(slurp | sed -E "s/^([0-9]+),([0-9]+) ([0-9]+x[0-9]+)$/\3+\1+\2/")
+            [ -n "$region" ] || exit 0
+            gpu-screen-recorder \
+                -w "$region" \
+                -f 60 \
+                -o "$HOME/Videos/Recordings/$(date +%Y-%m-%d_%H-%M-%S).mp4"
+        fi
+    ']]))
 
 hl.bind(mainMod .. "+ CTRL+ S",
     hl.dsp.exec_cmd([[mkdir -p "$HOME/Pictures/Screenshots/tmp" && grim -g "$(slurp)" "$HOME/Pictures/Screenshots/tmp/$(date +'%Y-%m-%d_%H-%M-%S').png"]]))
