@@ -24,7 +24,7 @@ function dotfetch
     rm -rf ~/.config/qutebrowser-bak/
     mv ~/.config/qutebrowser/ ~/.config/qutebrowser-bak
     cp -r ~/github/dotfiles/qutebrowser ~/.config/
-    rm -rf  ~/.config/nvim-bak/
+    rm -rf ~/.config/nvim-bak/
     mv ~/.config/nvim ~/.config/nvim-bak
     echo "Dotfiles fetched and replaced."
     cd
