@@ -1,0 +1,13 @@
+singleton AppState 1.0 core/AppState.qml
+singleton Colors 1.0 core/Colors.qml
+singleton MenuStyle 1.0 core/MenuStyle.qml
+Bar 1.0 widgets/Bar.qml
+BarMorph 1.0 widgets/BarMorph.qml
+Dock 1.0 widgets/Dock.qml
+HoloRings 1.0 widgets/HoloRings.qml
+AppLauncher 1.0 widgets/AppLauncher.qml
+WifiMenu 1.0 widgets/WifiMenu.qml
+ClipboardHistory 1.0 widgets/ClipboardHistory.qml
+WallpaperSelector 1.0 widgets/WallpaperSelector.qml
+ArchSymbol 1.0 widgets/ArchSymbol.qml
+TodoBoard 1.0 widgets/TodoBoard.qml
