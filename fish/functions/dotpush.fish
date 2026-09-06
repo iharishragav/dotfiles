@@ -8,7 +8,7 @@ function dotpush
     cp -r ~/.config/kitty ~/github/dotfiles/
     cp -r ~/.config/fastfetch ~/github/dotfiles/
     cp -r ~/.config/qutebrowser ~/github/dotfiles/
-    cp -r ~/.config/quickshell/ ~/github/quickshell
+    cp -r ~/.config/quickshell/ ~/github/dotfiles/
     cd ~/github/dotfiles
     
     git add -A
